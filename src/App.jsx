@@ -3,7 +3,7 @@ import Dashboard from './pages/Dashboard'
 import {Routes,Route} from 'react-router-dom'
 import Pcc1 from './pages/Pcc1'
 import Pcc3 from './pages/Pcc3'
-import SinglePage from './pages/SinglePage'
+import SingleMeter from './pages/SingleMeter'
 import { Meter1, Meter10, Meter11, Meter12, Meter13, Meter14, Meter2, Meter3, Meter4, Meter5, Meter6, Meter7, Meter8, Meter9 } from './pages/singlepages'
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         <Route path='/' element={<Dashboard/>} />
         <Route path='/Pcc1' element={<Pcc1/>} />
         <Route path='/Pcc3' element={<Pcc3/>} />
-        <Route path='/Meter1' element={<Meter1/>} />
+        <Route path='/SingleMeter/:id' element={<SingleMeter/>} />
         <Route path='/Meter2' element={<Meter2/>} />
         <Route path='/Meter3' element={<Meter3/>} />
         <Route path='/Meter4' element={<Meter4/>} />
