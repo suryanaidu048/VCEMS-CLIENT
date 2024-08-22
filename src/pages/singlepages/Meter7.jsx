@@ -33,7 +33,7 @@ const Meter7 = () => {
         </header>
 
         <div className='flex flex-col items-center my-10'>
-        <h2 className='font-bold text-xl text-center'>VDC Block 2&3 Lighting</h2>
+        <h2 className='font-bold text-xl text-center'>VDC Block-1 AC's</h2>
         <div className='flex gap-4 justify-center text-lg my-10 w-9/12'>
             <div className='border border-black p-4 rounded-xl'>
                 <h2 className='font-semibold'>Phase Voltage</h2>
