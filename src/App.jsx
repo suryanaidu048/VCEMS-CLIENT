@@ -5,6 +5,7 @@ import Pcc1 from './pages/Pcc1'
 import Pcc3 from './pages/Pcc3'
 import SingleMeter from './pages/SingleMeter'
 import { Meter1, Meter10, Meter11, Meter12, Meter13, Meter14, Meter2, Meter3, Meter4, Meter5, Meter6, Meter7, Meter8, Meter9 } from './pages/singlepages'
+import PageNotFound from './components/PageNotFound'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/Meter12' element={<Meter12/>} />
         <Route path='/Meter13' element={<Meter13/>} />
         <Route path='/Meter14' element={<Meter14/>} />
+        <Route path='*' element={<PageNotFound/>} />
       </Routes>
     </div>
   )
