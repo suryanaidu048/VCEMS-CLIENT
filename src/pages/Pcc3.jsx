@@ -111,9 +111,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter4'><h2 className='parameter'>
                         Sumedha Hostel AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_4}
                       </p>
@@ -129,9 +129,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter5'><h2 className='parameter'>
                         Sita Auditorium AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_5}
                       </p>
@@ -147,9 +147,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter6'><h2 className='parameter'>
                         VDC Girls Hostels
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_6}
                       </p>
@@ -165,9 +165,9 @@ const Pcc3 = () => {
                     </div>
     
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter7'><h2 className='parameter'>
                         VDC Block-1 AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_7}
                       </p>
@@ -183,9 +183,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter8'><h2 className='parameter'>
                         VDC Library AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_8}
                       </p>
@@ -201,9 +201,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className="parameter">
+                    <Link to='/Meter9'><h2 className="parameter">
                         SVECW Library AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_9}
                       </p>
@@ -219,9 +219,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter10'><h2 className='parameter'>
                         CSSD Building
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_10}
                       </p>
@@ -237,9 +237,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter1'>
+                    <Link to='/Meter11'><h2 className='parameter1'>
                         Medha Hostel Lighting
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_11}
                       </p>
@@ -255,9 +255,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter1'>
+                    <Link to='/Meter12'><h2 className='parameter1'>
                        Geysers
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_12}
                       </p>
@@ -273,9 +273,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter1'>
+                    <Link to='/Meter13'><h2 className='parameter1'>
                         Medha Hostel Geysers
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_13}
                       </p>
@@ -291,9 +291,9 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter1'>
+                    <Link to='/Meter14'><h2 className='parameter1'>
                         Hostel Geysers VDC
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
                         {data?.Total_KW_meter_14}
                       </p>
