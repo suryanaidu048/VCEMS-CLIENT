@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import CurrentTime from '../components/CurrentTime'
+import CurrentTime from '../../components/CurrentTime'
 import axios from 'axios';
 
-const SinglePage = () => {
+const Meter3 = () => {
     const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -33,43 +33,43 @@ const SinglePage = () => {
         </header>
 
         <div className='flex flex-col items-center my-10'>
-        <h2 className='font-bold text-xl text-center'>VDC Block 2&3 Lighting</h2>
+        <h2 className='font-bold text-xl text-center'>Mini Auditorium AC's</h2>
         <div className='flex gap-4 justify-center text-lg my-10 w-9/12'>
             <div className='border border-black p-4 rounded-xl'>
                 <h2 className='font-semibold'>Phase Voltage</h2>
-                <p>R - {data?.Voltage_V1N_meter_1}</p>
-                <p>Y - {data?.Voltage_V2N_meter_1}</p>
-                <p>B - {data?.Voltage_V3N_meter_1}</p>
+                <p>R - {data?.Voltage_V1N_meter_3}</p>
+                <p>Y - {data?.Voltage_V2N_meter_3}</p>
+                <p>B - {data?.Voltage_V3N_meter_3}</p>
             </div>
             <div className='border border-black p-4 rounded-xl'>
                 <h2 className='font-semibold'>Line Voltage</h2>
-                <p>R - {data?.Voltage_V12_meter_1}</p>
-                <p>Y - {data?.Voltage_V23_meter_1}</p>
-                <p>B - {data?.Voltage_V31_meter_1}</p>
+                <p>R - {data?.Voltage_V12_meter_3}</p>
+                <p>Y - {data?.Voltage_V23_meter_3}</p>
+                <p>B - {data?.Voltage_V31_meter_3}</p>
             </div>
             <div className='border border-black p-4 rounded-xl'>
                 <h2 className='font-semibold'>Current Phases</h2>
-                <p>R - {data?.Current_I1_meter_1}</p>
-                <p>Y - {data?.Current_I2_meter_1}</p>
-                <p>B - {data?.Current_I3_meter_1}</p>
+                <p>R - {data?.Current_I1_meter_3}</p>
+                <p>Y - {data?.Current_I2_meter_3}</p>
+                <p>B - {data?.Current_I3_meter_3}</p>
             </div>
             <div className='border border-black p-4 rounded-xl'>
-                <p>KW - {data?.Total_KW_meter_1}</p>
-                <p>KVA - {data?.Total_KVA_meter_1}</p>
-                <p>KVAR - {data?.Total_KVAR_meter_1}</p>
-                <p>Power Factor - {data?.Avg_PF_meter_1}</p>
+                <p>KW - {data?.Total_KW_meter_3}</p>
+                <p>KVA - {data?.Total_KVA_meter_3}</p>
+                <p>KVAR - {data?.Total_KVAR_meter_3}</p>
+                <p>Power Factor - {data?.Avg_PF_meter_3}</p>
             </div>
             <div className='border border-black p-4 rounded-xl'>
-                <p>KWH - {data?.TotalNet_KWH_meter_1}</p>
-                <p>KVAH - {data?.TotalNet_KVAH_meter_1}</p>
-                <p>KVARH - {data?.TotalNet_KVARH_meter_1}</p>
-                <p>Neutral Current - {data?.Neutral_Current_meter_1}</p>
+                <p>KWH - {data?.TotalNet_KWH_meter_3}</p>
+                <p>KVAH - {data?.TotalNet_KVAH_meter_3}</p>
+                <p>KVARH - {data?.TotalNet_KVARH_meter_3}</p>
+                <p>Neutral Current - {data?.Neutral_Current_meter_3}</p>
             </div>
             <div className='border border-black p-4 rounded-xl'>
-                <p>THD_V1 - {data?.THD_V1_meter_1}</p>
-                <p>THD_V2 - {data?.THD_V2_meter_1}</p>
-                <p>THD_V3 - {data?.THD_V3_meter_1}</p>
-                <p>THD_V4 - {data?.THD_I1_meter_1}</p>
+                <p>THD_V1 - {data?.THD_V1_meter_3}</p>
+                <p>THD_V2 - {data?.THD_V2_meter_3}</p>
+                <p>THD_V3 - {data?.THD_V3_meter_3}</p>
+                <p>THD_V4 - {data?.THD_I1_meter_3}</p>
             </div>
         </div>
         </div>
@@ -77,4 +77,4 @@ const SinglePage = () => {
   )
 }
 
-export default SinglePage
+export default Meter3

@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 
 const Pcc3 = () => {
 
-    const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://energybackend-v86d.onrender.com/api/sensordata1"
+          "https://vems-api.onrender.com/api/sensordata"
         );
-        setData(response.data);
-        console.log(response.data);
+        setData(response.data[0]);
+        console.log(response.data[0]);
       } catch (error) {
         console.error("Error fetching sensor data:", error);
       }
@@ -22,7 +22,7 @@ const Pcc3 = () => {
 
     fetchData();
 
-    const interval = setInterval(fetchData, 10000); // Fetch data every 60 seconds
+    const interval = setInterval(fetchData, 1500); // Fetch data every 60 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
@@ -47,7 +47,7 @@ const Pcc3 = () => {
 
                 <div className="">
                   <div className="param-div">
-                    <Link to='/single'><h2
+                    <Link to='/Meter1'><h2
                       className='parameter'
                     >
                       VDC Block 2&3 Lighting
@@ -55,58 +55,58 @@ const Pcc3 = () => {
                     <p
                       className='value'
                     >
-                      {data?.lineVlotageR}
+                      {data?.Total_KW_meter_1.toFixed(2)}
                     </p>
                     <p
                       className='value'
                     >
-                      {data?.lineVlotageR}
+                      {data?.TotalNet_KWH_meter_1.toFixed(2)}
                     </p>
                     <p
                       className='value'
                     >
-                      {data?.lineVlotageR}
+                      {data?.Avg_PF_meter_1.toFixed(2)}
                     </p>
                     <p
                       className='value'
                     >
-                      {data?.lineVlotageR}
+                      {data?.Total_KVA_meter_1.toFixed(2)}
                     </p>
                   </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter2'><h2 className='parameter'>
                         VDC Block 2&3 AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
-                        {data?.lineVoltageY}
+                        {data?.Total_KW_meter_2.toFixed(2)}
                       </p>
                       <p className='value'>
-                        {data?.lineVoltageY}
+                        {data?.TotalNet_KWH_meter_2.toFixed(2)}
                       </p>
                       <p className='value'>
-                        {data?.lineVoltageY}
+                        {data?.Avg_PF_meter_2.toFixed(2)}
                       </p>
                       <p className='value'>
-                        {data?.lineVoltageY}
+                        {data?.Total_KVA_meter_2.toFixed(2)}
                       </p>
                     </div>
 
                     <div className="param-div">
-                      <h2 className='parameter'>
+                    <Link to='/Meter3'><h2 className='parameter'>
                         Mini Auditorium AC's
-                      </h2>
+                      </h2></Link>
                       <p className='value'>
-                        {data?.lineVoltageB}
+                        {data?.Total_KW_meter_3}
                       </p>
                       <p className='value'>
-                        {data?.lineVoltageB}
+                        {data?.TotalNet_KWH_meter_3}
                       </p>
                       <p className='value'>
-                        {data?.lineVoltageB}
+                        {data?.Avg_PF_meter_3}
                       </p>
                       <p className='value'>
-                        {data?.lineVoltageB}
+                        {data?.Total_KVA_meter_3}
                       </p>
                     </div>
 
@@ -115,16 +115,16 @@ const Pcc3 = () => {
                         Sumedha Hostel AC's
                       </h2>
                       <p className='value'>
-                        {data?.phaseVolate1}
+                        {data?.Total_KW_meter_4}
                       </p>
                       <p className='value'>
-                        {data?.phaseVolate1}
+                        {data?.TotalNet_KWH_meter_4}
                       </p>
                       <p className='value'>
-                        {data?.phaseVolate1}
+                        {data?.Avg_PF_meter_4}
                       </p>
                       <p className='value'>
-                        {data?.phaseVolate1}
+                        {data?.Total_KVA_meter_4}
                       </p>
                     </div>
 
@@ -133,16 +133,16 @@ const Pcc3 = () => {
                         Sita Auditorium AC's
                       </h2>
                       <p className='value'>
-                        {data?.phaseVoltage2}
+                        {data?.Total_KW_meter_5}
                       </p>
                       <p className='value'>
-                        {data?.phaseVoltage2}
+                        {data?.TotalNet_KWH_meter_5}
                       </p>
                       <p className='value'>
-                        {data?.phaseVoltage2}
+                        {data?.Avg_PF_meter_5}
                       </p>
                       <p className='value'>
-                        {data?.phaseVoltage2}
+                        {data?.Total_KVA_meter_5}
                       </p>
                     </div>
 
@@ -151,16 +151,16 @@ const Pcc3 = () => {
                         VDC Girls Hostels
                       </h2>
                       <p className='value'>
-                        {data?.phaseVoltage3}
+                        {data?.Total_KW_meter_6}
                       </p>
                       <p className='value'>
-                        {data?.phaseVoltage3}
+                        {data?.TotalNet_KWH_meter_6}
                       </p>
                       <p className='value'>
-                        {data?.phaseVoltage3}
+                        {data?.Avg_PF_meter_6}
                       </p>
                       <p className='value'>
-                        {data?.phaseVoltage3}
+                        {data?.Total_KVA_meter_6}
                       </p>
                     </div>
     
@@ -169,16 +169,16 @@ const Pcc3 = () => {
                         VDC Block-1 AC's
                       </h2>
                       <p className='value'>
-                        {data?.current1}
+                        {data?.Total_KW_meter_7}
                       </p>
                       <p className='value'>
-                        {data?.current1}
+                        {data?.TotalNet_KWH_meter_7}
                       </p>
                       <p className='value'>
-                        {data?.current1}
+                        {data?.Avg_PF_meter_7}
                       </p>
                       <p className='value'>
-                        {data?.current1}
+                        {data?.Total_KVA_meter_7}
                       </p>
                     </div>
 
@@ -187,16 +187,16 @@ const Pcc3 = () => {
                         VDC Library AC's
                       </h2>
                       <p className='value'>
-                        {data?.current2}
+                        {data?.Total_KW_meter_8}
                       </p>
                       <p className='value'>
-                        {data?.current2}
+                        {data?.TotalNet_KWH_meter_8}
                       </p>
                       <p className='value'>
-                        {data?.current2}
+                        {data?.Avg_PF_meter_8}
                       </p>
                       <p className='value'>
-                        {data?.current2}
+                        {data?.Total_KVA_meter_8}
                       </p>
                     </div>
 
@@ -205,16 +205,16 @@ const Pcc3 = () => {
                         SVECW Library AC's
                       </h2>
                       <p className='value'>
-                        {data?.current3}
+                        {data?.Total_KW_meter_9}
                       </p>
                       <p className='value'>
-                        {data?.current3}
+                        {data?.TotalNet_KWH_meter_9}
                       </p>
                       <p className='value'>
-                        {data?.current3}
+                        {data?.Avg_PF_meter_9}
                       </p>
                       <p className='value'>
-                        {data?.current3}
+                        {data?.Total_KVA_meter_9}
                       </p>
                     </div>
 
@@ -223,16 +223,16 @@ const Pcc3 = () => {
                         CSSD Building
                       </h2>
                       <p className='value'>
-                        {data?.totalKW}
+                        {data?.Total_KW_meter_10}
                       </p>
                       <p className='value'>
-                        {data?.totalKW}
+                        {data?.TotalNet_KWH_meter_10}
                       </p>
                       <p className='value'>
-                        {data?.totalKW}
+                        {data?.Avg_PF_meter_10}
                       </p>
                       <p className='value'>
-                        {data?.totalKW}
+                        {data?.Total_KVA_meter_10}
                       </p>
                     </div>
 
@@ -241,16 +241,16 @@ const Pcc3 = () => {
                         Medha Hostel Lighting
                       </h2>
                       <p className='value'>
-                        {data?.totalKVA}
+                        {data?.Total_KW_meter_11}
                       </p>
                       <p className='value'>
-                        {data?.totalKVA}
+                        {data?.TotalNet_KWH_meter_11}
                       </p>
                       <p className='value'>
-                        {data?.totalKVA}
+                        {data?.Avg_PF_meter_11}
                       </p>
                       <p className='value'>
-                        {data?.totalKVA}
+                        {data?.Total_KVA_meter_11}
                       </p>
                     </div>
 
@@ -259,16 +259,16 @@ const Pcc3 = () => {
                        Geysers
                       </h2>
                       <p className='value'>
-                        {data?.powerFactor1}
+                        {data?.Total_KW_meter_12}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor1}
+                        {data?.TotalNet_KWH_meter_12}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor1}
+                        {data?.Avg_PF_meter_12}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor1}
+                        {data?.Total_KVA_meter_12}
                       </p>
                     </div>
 
@@ -277,16 +277,16 @@ const Pcc3 = () => {
                         Medha Hostel Geysers
                       </h2>
                       <p className='value'>
-                        {data?.powerFactor2}
+                        {data?.Total_KW_meter_13}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor2}
+                        {data?.TotalNet_KWH_meter_13}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor2}
+                        {data?.Avg_PF_meter_13}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor2}
+                        {data?.Total_KVA_meter_13}
                       </p>
                     </div>
 
@@ -295,16 +295,16 @@ const Pcc3 = () => {
                         Hostel Geysers VDC
                       </h2>
                       <p className='value'>
-                        {data?.powerFactor3}
+                        {data?.Total_KW_meter_14}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor3}
+                        {data?.TotalNet_KWH_meter_14}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor3}
+                        {data?.Avg_PF_meter_14}
                       </p>
                       <p className='value'>
-                        {data?.powerFactor3}
+                        {data?.Total_KVA_meter_14}
                       </p>
                     </div>
                     </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import CurrentTime from '../components/CurrentTime'
+import CurrentTime from '../../components/CurrentTime'
 import axios from 'axios';
 
-const SinglePage = () => {
+const Meter1 = () => {
     const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -77,4 +77,4 @@ const SinglePage = () => {
   )
 }
 
-export default SinglePage
+export default Meter1
