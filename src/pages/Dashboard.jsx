@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CurrentTime from '../components/CurrentTime'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+        try {
+            const response = await axios.get(
+            "https://vems-api.onrender.com/api/sensordata"
+            );
+            setData(response.data[0]);
+            console.log(response.data[0]);
+        } catch (error) {
+            console.error("Error fetching sensor data:", error);
+        }
+        };
+
+        fetchData();
+
+        const interval = setInterval(fetchData, 10000); 
+
+        return () => clearInterval(interval); 
+    }, []);
+
   return (
     <div>
         <header className='m-4 mx-10 flex justify-between'>
@@ -21,35 +44,35 @@ const Dashboard = () => {
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>Power(Kw)</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>{data?.Total_KW_meter_1.toFixed(2)}</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>Energy(Kwh)</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>{data?.TotalNet_KWH_meter_1.toFixed(1)}</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>Power Factor</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>{data?.Avg_PF_meter_1.toFixed(2)}</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>KVA</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
-                <p className='bg-[#efefef] w-20 py-1 rounded-full'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>{data?.Total_KVA_meter_1.toFixed(2)}</p>
+                <p className='dash-param'>100</p>
+                <p className='dash-param'>100</p>
             </div>
         </div>
         </div>
