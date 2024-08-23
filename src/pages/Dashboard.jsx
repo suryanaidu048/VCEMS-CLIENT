@@ -44,35 +44,35 @@ const Dashboard = () => {
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>Power(Kw)</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
                 <p className='dash-param'>{data?.Total_KW_meter_1.toFixed(2)}</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>Energy(Kwh)</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
                 <p className='dash-param'>{data?.TotalNet_KWH_meter_1.toFixed(1)}</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>Power Factor</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
                 <p className='dash-param'>{data?.Avg_PF_meter_1.toFixed(2)}</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
             </div>
             <div className='gap-8 flex flex-col text-center'>
                 <p className='font-bold'>KVA</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
                 <p className='dash-param'>{data?.Total_KVA_meter_1.toFixed(2)}</p>
-                <p className='dash-param'>100</p>
-                <p className='dash-param'>100</p>
+                <p className='dash-param'>0</p>
+                <p className='dash-param'>0</p>
             </div>
         </div>
         </div>

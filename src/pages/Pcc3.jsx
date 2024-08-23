@@ -237,7 +237,7 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                    <Link to='/SingleMeter/11'><h2 className='parameter1'>
+                    <Link to='/SingleMeter/11'><h2 className='parameter'>
                         Medha Hostel Lighting
                       </h2></Link>
                       <p className='value'>
@@ -255,7 +255,7 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                    <Link to='/SingleMeter/12'><h2 className='parameter1'>
+                    <Link to='/SingleMeter/12'><h2 className='parameter'>
                        Geysers
                       </h2></Link>
                       <p className='value'>
@@ -273,7 +273,7 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                    <Link to='/SingleMeter/13'><h2 className='parameter1'>
+                    <Link to='/SingleMeter/13'><h2 className='parameter'>
                         Medha Hostel Geysers
                       </h2></Link>
                       <p className='value'>
@@ -291,7 +291,7 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param-div">
-                    <Link to='/SingleMeter/14'><h2 className='parameter1'>
+                    <Link to='/SingleMeter/14'><h2 className='parameter'>
                         Hostel Geysers VDC
                       </h2></Link>
                       <p className='value'>
