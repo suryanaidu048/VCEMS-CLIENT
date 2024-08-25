@@ -26,7 +26,7 @@ const Panels = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="w-full">
       <div className="flex justify-between text-xl px-4 py-5 rounded-xl bg-[#bdbdbd]">
         <div className="font-medium gap-8 flex flex-col">
           <p className="font-bold text-[#bdbdbd]">PCC</p>
