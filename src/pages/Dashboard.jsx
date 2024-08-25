@@ -5,9 +5,11 @@ import { dark } from "../constants";
 import Panels from "../components/Panels";
 import RealTimePowerMeter from "../components/charts/RealTimePowerMeter";
 import axios from "axios";
+import RealTimeEnergyMeter from "../components/charts/RealTimeEnergyMeter";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
+  const [totalEnergy,setTotalEnergy] = useState(0)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,9 +32,9 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="flex md:flex-row flex-col">
+    <div className="flex md:flex-row flex-col w-full">
       <Sidebar />
-      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] py-2 w-full h-screen overflow-auto">
+      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] pr-5 py-2 w-full h-screen overflow-x-hidden overflow-x-hidde overflow-auto">
         <div className="mx-2 my-2">
           <div className="flex justify-between mx-10 font-Audiowide dark:text-[#e4e2e2]">
             <h2 className="font-bold text-2xl ">Energy Monitoring System</h2>
@@ -48,7 +50,12 @@ const Dashboard = () => {
         </div>
         <div className="flex mx-3 gap-3 my-6 w-full">
             <Panels/>
+            <div className="flex gap-3">
+            <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)}/>
             <RealTimePowerMeter kva={data?.Total_KVA_meter_1.toFixed(2)}/>
+            </div>
+        </div>
+        <div>
         </div>
       </section>
     </div>
