@@ -27,9 +27,9 @@ const Panels = () => {
 
   return (
     <div className="w-full">
-      <div className="flex justify-between text-xl px-4 py-5 rounded-xl bg-[#bdbdbd]">
+      <div className="flex justify-between text-lg px-4 py-5 rounded-xl bg-[#bdbdbd] font-OpenSans">
         <div className="font-medium gap-8 flex flex-col">
-          <p className="font-bold text-[#bdbdbd]">PCC</p>
+          <p className="font-bold font-Montserrat px-6 py-1 rounded-full cursor-pointer" >PCC</p>
           <Link to="/Pcc2">
             <p className="bg-[#6eabbf] px-6 py-1 rounded-full cursor-pointer">
               PCC2
@@ -52,28 +52,28 @@ const Panels = () => {
           </Link>
         </div>
         <div className="gap-8 flex flex-col text-center">
-          <p className="font-bold">Power(Kw)</p>
+          <p className="font-bold font-Montserrat">Power<span className="text-sm">(Kw)</span></p>
           <p className="dash-param">0</p>
           <p className="dash-param">0</p>
           <p className="dash-param">{data?.Total_KW_meter_1.toFixed(2)}</p>
           <p className="dash-param">0</p>
         </div>
         <div className="gap-8 flex flex-col text-center">
-          <p className="font-bold">Energy(Kwh)</p>
+          <p className="font-bold font-Montserrat">Energy <span className="text-sm">(Kwh)</span></p>
           <p className="dash-param">0</p>
           <p className="dash-param">0</p>
           <p className="dash-param">{data?.TotalNet_KWH_meter_1.toFixed(1)}</p>
           <p className="dash-param">0</p>
         </div>
         <div className="gap-8 flex flex-col text-center">
-          <p className="font-bold">Power Factor</p>
+          <p className="font-bold font-Montserrat">Power Factor</p>
           <p className="dash-param">0</p>
           <p className="dash-param">0</p>
           <p className="dash-param">{data?.Avg_PF_meter_1.toFixed(3)}</p>
           <p className="dash-param">0</p>
         </div>
         <div className="gap-8 flex flex-col text-center">
-          <p className="font-bold">KVA</p>
+          <p className="font-bold font-Montserrat">KVA</p>
           <p className="dash-param">0</p>
           <p className="dash-param">0</p>
           <p className="dash-param">{data?.Total_KVA_meter_1.toFixed(2)}</p>
