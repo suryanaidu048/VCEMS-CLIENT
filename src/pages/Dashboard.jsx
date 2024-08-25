@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import CurrentTime from '../components/CurrentTime'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Sidebar from '../components/Sidebar'
+import { dark } from '../constants'
 
 const Dashboard = () => {
     const [data, setData] = useState(null);
@@ -27,11 +29,21 @@ const Dashboard = () => {
     }, []);
 
   return (
-    <div>
-        <header className='m-4 mx-10 flex justify-between'>
-            <h1 className='text-2xl font-bold font-Montserrat'>Vishnu Energy Monitoring System</h1>
-            <p className='font-bold font-Montserrat'><CurrentTime/></p>
-        </header>
+    <div className="flex md:flex-row flex-col">
+      <Sidebar />
+      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full h-screen overflow-auto">
+        <div className="mx-2 my-2">
+          <div className="flex justify-between mx-10 font-Audiowide dark:text-[#e4e2e2]">
+            <h2 className="font-bold text-2xl ">Energy Monitoring System</h2>
+            <div className="flex flex-row justify-center text-sm items-center font-semibold gap-2">
+              <img
+                className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"
+                src={dark}
+                alt="add"
+              />
+              <CurrentTime />
+            </div>
+          </div>
         <div className='flex justify-center'>
         <div className='flex justify-between my-12 w-8/12 text-xl p-10 rounded-xl bg-[#bdbdbd]'>
             <div className='font-medium gap-8 flex flex-col'>
@@ -76,6 +88,8 @@ const Dashboard = () => {
             </div>
         </div>
         </div>
+    </div>
+    </section>
     </div>
   )
 }
