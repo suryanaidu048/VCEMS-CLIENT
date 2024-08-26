@@ -46,264 +46,264 @@ const Pcc3 = () => {
                 </div>
 
                 <div className="">
-                  <div className="param-div">
+                  <div className="param1-div">
                     <Link to='/SingleMeter/1'><h2
                       className='parameter'
                     >
                       VDC Block 2&3 Lighting
                     </h2></Link>
                     <p
-                      className='value'
+                      className='param-value'
                     >
                       {data?.Total_KW_meter_1.toFixed(2)}
                     </p>
                     <p
-                      className='value'
+                      className='param-value'
                     >
                       {data?.TotalNet_KWH_meter_1.toFixed(2)}
                     </p>
                     <p
-                      className='value'
+                      className='param-value'
                     >
                       {data?.Avg_PF_meter_1.toFixed(2)}
                     </p>
                     <p
-                      className='value'
+                      className='param-value'
                     >
                       {data?.Total_KVA_meter_1.toFixed(2)}
                     </p>
                   </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/2'><h2 className='parameter'>
                         VDC Block 2&3 AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_2.toFixed(2)}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_2.toFixed(2)}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_2.toFixed(2)}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_2.toFixed(2)}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/3'><h2 className='parameter'>
                         Mini Auditorium AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_3}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_3}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_3}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_3}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/4'><h2 className='parameter'>
                         Sumedha Hostel AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_4}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_4}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_4}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_4}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/5'><h2 className='parameter'>
                         Sita Auditorium AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_5}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_5}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_5}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_5}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/6'><h2 className='parameter'>
                         VDC Girls Hostels
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_6}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_6}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_6}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_6}
                       </p>
                     </div>
     
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/7'><h2 className='parameter'>
                         VDC Block-1 AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_7}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_7}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_7}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_7}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/8'><h2 className='parameter'>
                         VDC Library AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_8}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_8}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_8}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_8}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/9'><h2 className="parameter">
                         SVECW Library AC's
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_9}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_9}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_9}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_9}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/10'><h2 className='parameter'>
                         CSSD Building
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_10}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_10}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_10}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_10}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/11'><h2 className='parameter'>
                         Medha Hostel Lighting
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_11}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_11}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_11}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_11}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/12'><h2 className='parameter'>
                        Geysers
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_12}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_12}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_12}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_12}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/13'><h2 className='parameter'>
                         Medha Hostel Geysers
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_13}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_13}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_13}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_13}
                       </p>
                     </div>
 
-                    <div className="param-div">
+                    <div className="param1-div">
                     <Link to='/SingleMeter/14'><h2 className='parameter'>
                         Hostel Geysers VDC
                       </h2></Link>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KW_meter_14}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.TotalNet_KWH_meter_14}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Avg_PF_meter_14}
                       </p>
-                      <p className='value'>
+                      <p className='param-value'>
                         {data?.Total_KVA_meter_14}
                       </p>
                     </div>

@@ -1,0 +1,1 @@
+export const API_URL = "https://vems-api.onrender.com/api/sensordata";
