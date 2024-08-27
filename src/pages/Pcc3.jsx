@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CurrentTime from '../components/CurrentTime';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../components/ThemeContext';
+import { dark, light } from '../constants';
+import Sidebar from '../components/Sidebar'
 
 const Pcc3 = () => {
 
   const [data, setData] = useState(null);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,21 +32,35 @@ const Pcc3 = () => {
   }, []);
 
   return (
-    <div>
-        <header className='m-4 mx-10 flex justify-between'>
-            <h1 className='text-2xl font-bold font-Montserrat'>Vishnu Energy Monitoring System</h1>
-            <p className='font-bold font-Montserrat'><CurrentTime/></p>
-        </header>
+    <div className='flex md:flex-row flex-col'>
+      <Sidebar/>
+      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
+        <header className="justify-between flex items-center py-2">
+        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 font-Audiowide font-bold dark:text-[#e4e2e2]">
+          Vishnu Energy Monitoring System
+        </h1>
+        <span className="flex flex-row justify-center items-center">
+          <img
+            className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"
+            src={theme === "light" ? dark : light}
+            alt="add"
+            onClick={toggleTheme}
+          />
+          <p className="md:text-sm 2xl:text-2xl text-xs text-center px-4 text-gray-500 font-Audiowide font-medium dark:text-[#eae8e8]">
+            <CurrentTime />
+          </p>
+        </span>
+      </header>
         <section className="flex justify-center items-center">
-              <div className="w-fit my-10 bg-gray-400 xl:px-10 py-5 rounded-lg md:px-7 px-2">
-                <div className="flex rounded-md justify-between text-center items-center font-Montserrat font-bold pr-4 my-2 ">
+              <div className=" my-10 bg-gray-400 xl:px-10 py-5 rounded-lg md:px-7 px-2 overflow-x-auto">
+                <div className="flex rounded-md justify-between text-center items-center font-Montserrat font-bold pr-9 my-2 ">
                   <h2 className="rounded-full text-gray-400 w-64 ">
                     PCC
                   </h2>
                   <p className="rounded-full ">Power(Kw)</p>
                   <p className=" rounded-full">Energy(Kwh)</p>
-                  <p className=" rounded-full">Power Factor</p>
-                  <p className=" rounded-full">KVA</p>
+                  <p className=" rounded-full pr-4">Power Factor</p>
+                  <p className=" rounded-full pr-4">KVA</p>
                 </div>
 
                 <div className="">
@@ -309,6 +327,7 @@ const Pcc3 = () => {
                     </div>
                     </div>
               </div>
+            </section>
             </section>
     </div>
   )

@@ -127,7 +127,7 @@ const Panels = () => {
           <p className="dash-param">0</p>
         </div>
         <div className="gap-8 flex flex-col text-center">
-          <p className="font-bold font-Montserrat">Energy <span className="text-sm">(Kwh)</span></p>
+          <p className="font-bold font-Montserrat">Energy<span className="text-sm">(Kwh)</span></p>
           <p className="dash-param">0</p>
           <p className="dash-param">0</p>
           <p className="dash-param">{data?.TotalNet_KWH_meter_1.toFixed(1)}</p>

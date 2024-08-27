@@ -91,21 +91,24 @@ const Home = () => {
       </header>
       <div className="grid lg:grid-cols-2 gap-4 grid-cols-1 mt-2 2xl:mt-6">
         <div className="w-full flex flex-col justify-around bg-[#a4a4e3] rounded-lg min-[2000px]:text-4xl xl:text-xl text-lg max-[500px]:text-base font-medium shadow font-OpenSans py-4 px-3 2xl:px-7 max-[500px]:px-0">
-          <div className="flex rounded-md px-2 text-center items-center font-Montserrat font-bold justify-between my-2 max-[450px]:px-1">
-            <h2 className=" px-5 rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2">
+          <div className="param-div font-bold font-Montserrat text-lg">
+            <h2 className=" value bg-transparent">
               PCC
             </h2>
-            <p className=" ml-3 rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2">
-              Power <span className="text-sm">(Kw)</span>
+            <p className="  value bg-transparent">
+              Power <br /><span className="text-sm">(Kw)</span>
             </p>
-            <p className=" rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2">
-              Energy <span className="text-sm">(Kwh)</span>
+            <p className="  value bg-transparent">
+              Energy <br /><span className="text-sm">(Kwh)</span>
             </p>
-            <p className=" rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2">
-              Power Factor
-            </p>
-            <p className=" rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2 mr-3">
+            <p className="  value bg-transparent">
               KVA
+            </p>
+            <p className="  value bg-transparent">
+              Power <br /> Factor
+            </p>
+            <p className="  value bg-transparent">
+              KVAH
             </p>
           </div>
           <div className="param-div">
@@ -113,16 +116,19 @@ const Home = () => {
               PCC1
             </h2></Link>
             <p className="value">
-              {data?.Total_KW_meter_1.toFixed(2)}
+              0.000
             </p>
             <p className="value">
                 {!todayConsumption? <span>0.00000</span>:todayConsumption}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_1.toFixed(3)}
+              0.000
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_1.toFixed(2)}
+              0.000
+            </p>
+            <p className="value">
+              0.000000
             </p>
           </div>
           <div className="param-div">
@@ -130,16 +136,19 @@ const Home = () => {
               PCC2
             </h2></Link>
             <p className="value">
-              {data?.Total_KW_meter_1.toFixed(2)}
+              0.000
             </p>
             <p className="value">
                 {!todayConsumption? <span>0.00000</span>:todayConsumption}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_1.toFixed(3)}
+              0.000
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_1.toFixed(2)}
+              0.000
+            </p>
+            <p className="value">
+            0.000000
             </p>
           </div>
           <div className="param-div">
@@ -153,10 +162,13 @@ const Home = () => {
                 {!todayConsumption? <span>0.00000</span>:todayConsumption}
             </p>
             <p className="value">
+              {data?.Total_KVA_meter_1.toFixed(2)}
+            </p>
+            <p className="value">
               {data?.Avg_PF_meter_1.toFixed(3)}
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_1.toFixed(2)}
+              {data?.TotalNet_KVAH_meter_1.toFixed(1)}
             </p>
           </div>
           <div className="param-div">
@@ -164,16 +176,19 @@ const Home = () => {
               PCC4
             </h2></Link>
             <p className="value">
-              {data?.Total_KW_meter_1.toFixed(2)}
+              0.000
             </p>
             <p className="value">
                 {!todayConsumption? <span>0.00000</span>:todayConsumption}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_1.toFixed(3)}
+              0.000
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_1.toFixed(2)}
+              0.000
+            </p>
+            <p className="value">
+            0.000000
             </p>
           </div>
         </div>

@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react'
 import CurrentTime from '../components/CurrentTime'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import Sidebar from '../components/Sidebar';
+import { dark, light } from '../constants';
+import { useTheme } from '../components/ThemeContext';
 
 const SingleMeter = () => {
   const [data, setData] = useState(null);
+  const { theme, toggleTheme } = useTheme();
   let {id} = useParams();
 
   useEffect(() => {
@@ -45,11 +49,25 @@ const SingleMeter = () => {
   ]
 
   return (
-    <div>
-        <header className='m-4 mx-10 flex justify-between'>
-            <h1 className='text-2xl font-bold font-Montserrat'>Vishnu Energy Monitoring System</h1>
-            <p className='font-bold font-Montserrat'><CurrentTime /></p>
-        </header>
+    <div className='flex md:flex-row flex-col'>
+        <Sidebar/>
+      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
+        <header className="justify-between flex items-center py-2">
+        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 font-Audiowide font-bold dark:text-[#e4e2e2]">
+          Vishnu Energy Monitoring System
+        </h1>
+        <span className="flex flex-row justify-center items-center">
+          <img
+            className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"
+            src={theme === "light" ? dark : light}
+            alt="add"
+            onClick={toggleTheme}
+          />
+          <p className="md:text-sm 2xl:text-2xl text-xs text-center px-4 text-gray-500 font-Audiowide font-medium dark:text-[#eae8e8]">
+            <CurrentTime />
+          </p>
+        </span>
+      </header>
 
         <div className='flex flex-col items-center my-10'>
         <h2 className='font-bold text-xl text-center'>{meters.map((m)=><div>{m.id==id?m.name:''}</div>)}</h2>
@@ -92,6 +110,7 @@ const SingleMeter = () => {
             </div>
         </div>
         </div>
+        </section>
     </div>
   )
 }
