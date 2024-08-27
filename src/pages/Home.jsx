@@ -102,7 +102,7 @@ const Home = () => {
               Energy <span className="text-sm">(Kwh)</span>
             </p>
             <p className=" rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2">
-              PowerFactor
+              Power Factor
             </p>
             <p className=" rounded-full max-[450px]:px-2 min-[2000px]:px-6 2xl:py-2 mr-3">
               KVA

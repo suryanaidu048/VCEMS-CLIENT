@@ -30,7 +30,7 @@ const RealTimeEnergyMeter = () => {
   const COLORS = ['#8884d8', '#000000'];
 
   return (
-    <div className='bg-white flex px-4 items-center rounded-lg text-lg shadow font-OpenSans dark:bg-[#2c2c2c] dark:text-[#ffffff]'>
+    <div className='bg-white flex px-4 justify-center items-center rounded-lg text-lg shadow font-OpenSans dark:bg-[#2c2c2c] dark:text-[#ffffff]'>
       <ResponsiveContainer height={300} width={300}> 
         <PieChart>
           <Pie

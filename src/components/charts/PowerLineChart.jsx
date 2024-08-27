@@ -32,7 +32,7 @@ const PowerLineChart = () => {
   }, []);
 
   return (
-    <div className='max-md:py-5 bg-white rounded-lg w-full h-full p-0 md:p-1 xl:p-3 2xl:p-5 shadow font-OpenSans dark:bg-[#2c2c2c] min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs max-sm:h-full  font-medium'>
+    <div className='max-md:py-5 bg-white rounded-lg w-full h-full p-0 md:p-1 xl:p-3 2xl:p-5 shadow font-OpenSans dark:bg-[#2c2c2c] min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs font-medium'>
       {/* <h2>Power Over Time</h2> */}
       <ResponsiveContainer>
         <LineChart data={data}>
