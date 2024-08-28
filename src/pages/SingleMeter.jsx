@@ -102,12 +102,12 @@ const SingleMeter = () => {
                 <p>KVARH - {data?.[`TotalNet_KVARH_meter_${id}`]}</p>
                 <p>Neutral Current - {data?.[`Neutral_Current_meter_${id}`]}</p>
             </div>
-            <div className='border border-black p-4 rounded-xl'>
+            {/* <div className='border border-black p-4 rounded-xl'>
                 <p>THD_V1 - {data?.[`THD_V1_meter_${id}`]}</p>
                 <p>THD_V2 - {data?.[`THD_V2_meter_${id}`]}</p>
                 <p>THD_V3 - {data?.[`THD_V3_meter_${id}`]}</p>
                 <p>THD_I1 - {data?.[`THD_I1_meter_${id}`]}</p>
-            </div>
+            </div> */}
         </div>
         </div>
         </section>

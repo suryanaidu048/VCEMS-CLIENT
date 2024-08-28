@@ -12,6 +12,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PowerFactorCharts from "../components/charts/PowerFactorCharts";
 import PowerLineChart from "../components/charts/PowerLineChart";
+import KvaLineChart from '../components/charts/KvaLineChart'
+import EnergyUnits from "../components/EnergyUnits";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -95,20 +97,20 @@ const Home = () => {
             <h2 className=" value bg-transparent">
               PCC
             </h2>
-            <p className="  value bg-transparent">
-              Power <br /><span className="text-sm">(Kw)</span>
+            <p className="  value bg-transparent leading-5">
+              Power<p className="text-sm">(Kw)</p>
             </p>
-            <p className="  value bg-transparent">
-              Energy <br /><span className="text-sm">(Kwh)</span>
+            <p className="  value bg-transparent leading-5">
+              Energy<p className="text-sm">(Kwh)</p>
             </p>
             <p className="  value bg-transparent">
               KVA
             </p>
-            <p className="  value bg-transparent">
-              Power <br /> Factor
+            <p className="  value bg-transparent pr-8 leading-5">
+              Power<p>Factor</p>
             </p>
-            <p className="  value bg-transparent">
-              KVAH
+            <p className="  value bg-transparent pr-8">
+              KVAh
             </p>
           </div>
           <div className="param-div">
@@ -116,19 +118,19 @@ const Home = () => {
               PCC1
             </h2></Link>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00000</span>:todayConsumption}
+                {!todayConsumption? <span>0.00</span>:todayConsumption}
             </p>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-              0.000000
+              0.00
             </p>
           </div>
           <div className="param-div">
@@ -136,19 +138,19 @@ const Home = () => {
               PCC2
             </h2></Link>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00000</span>:todayConsumption}
+                {!todayConsumption? <span>0.00</span>:todayConsumption}
             </p>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-            0.000000
+            0.00
             </p>
           </div>
           <div className="param-div">
@@ -159,7 +161,7 @@ const Home = () => {
               {data?.Total_KW_meter_1.toFixed(2)}
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00000</span>:todayConsumption}
+              {data?.TotalNet_KWH_meter_1.toFixed(1)}
             </p>
             <p className="value">
               {data?.Total_KVA_meter_1.toFixed(2)}
@@ -176,24 +178,25 @@ const Home = () => {
               PCC4
             </h2></Link>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00000</span>:todayConsumption}
+                {!todayConsumption? <span>0.00</span>:todayConsumption}
             </p>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-              0.000
+              0.00
             </p>
             <p className="value">
-            0.000000
+            0.00
             </p>
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
-          <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} />
+          {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
+          <EnergyUnits/>
           <div className="flex flex-col gap-4">
             <RealTimePowerMeter kva={data?.Total_KW_meter_1.toFixed(2)} />
             <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} /> 
@@ -203,6 +206,7 @@ const Home = () => {
       <div className="flex md:flex-row gap-4 flex-col h-[44%] mt-4 ">
         <PowerLineChart/>
         <PowerLineChart/>
+        <KvaLineChart/>
       </div>
     </section>
   );
