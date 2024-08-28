@@ -96,7 +96,7 @@ const SingleMeter = () => {
             <div className='border border-black p-4 rounded-xl'>
                 <p>KW - {data?.[`Total_KW_meter_${id}`]}</p>
                 <p>KVA - {data?.[`Total_KVA_meter_${id}`]}</p>
-                <p>KVAR - {data?.[`Total_KVA_meter_${id}`]}</p>
+                <p>KVAR - {data?.[`Total_KVAR_meter_${id}`]}</p>
                 <p>Power Factor - {data?.[`Avg_PF_meter_${id}`]}</p>
             </div>
             <div className='border border-black p-4 rounded-xl'>

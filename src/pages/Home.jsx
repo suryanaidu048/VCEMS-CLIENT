@@ -178,19 +178,19 @@ const Home = () => {
               PCC4
             </h2></Link>
             <p className="value">
-              0.00
+                {data?.Total_KW_meter_15.toFixed(2)}
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00</span>:todayConsumption}
+                {data?.TotalNet_KWH_meter_15.toFixed(1)}
             </p>
             <p className="value">
-              0.00
+                {data?.Total_KVA_meter_15.toFixed(2)}
             </p>
             <p className="value">
-              0.00
+              {data?.Avg_PF_meter_15.toFixed(3)}
             </p>
             <p className="value">
-            0.00
+              {data?.TotalNet_KVAH_meter_15.toFixed(1)}
             </p>
           </div>
         </div>
@@ -198,8 +198,8 @@ const Home = () => {
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
           <EnergyUnits energy={data?.TotalNet_KWH_meter_1.toFixed(1)} />
           <div className="flex flex-col gap-4">
-            <RealTimePowerMeter kva={data?.Total_KW_meter_1.toFixed(2)} />
-            <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} /> 
+            <RealTimePowerMeter kva={data?.Total_KVA_meter_1.toFixed(2)} />
+            {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}
           </div>
         </div>
       </div>
