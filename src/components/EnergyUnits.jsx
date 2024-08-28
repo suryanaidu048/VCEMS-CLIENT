@@ -1,16 +1,16 @@
 import React from "react";
 
-const EnergyUnits = () => {
+const EnergyUnits = ({energy}) => {
   return (
-    <div>
-      <div className="bg-white rounded-lg shadow font-OpenSans dark:bg-[#2c2c2c] text-center">
-        <h2 className="font-bold text-xl text-center">
+      <div className="bg-white rounded-lg shadow  text-lg font-OpenSans dark:bg-[#2c2c2c] dark:text-white text-center p-5 w-full h-full">
+        <h2 className="font-bold text-xl text-center py-2 font-Montserrat">
           Energy Consumption
         </h2>
-        <p className="font-medium text-lg my-2">Units Consumed Today</p>
-        <p className="bg-gray-100 mx-4 p-2 rou">100</p>
+        <p className="font-medium mt-6">Units Consumed Today</p>
+        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">{energy}</p>
+        <p className="font-medium mt-6" >Day 1 Units Consumption</p>
+        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">{energy}</p>
       </div>
-    </div>
   );
 };
 

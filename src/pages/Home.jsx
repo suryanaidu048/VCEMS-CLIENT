@@ -196,7 +196,7 @@ const Home = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
-          <EnergyUnits/>
+          <EnergyUnits energy={data?.TotalNet_KWH_meter_1.toFixed(1)} />
           <div className="flex flex-col gap-4">
             <RealTimePowerMeter kva={data?.Total_KW_meter_1.toFixed(2)} />
             <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} /> 

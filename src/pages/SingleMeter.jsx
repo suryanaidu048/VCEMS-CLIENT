@@ -71,7 +71,8 @@ const SingleMeter = () => {
 
         <div className='flex flex-col items-center my-10'>
         <h2 className='font-bold text-xl text-center'>{meters.map((m)=><div>{m.id==id?m.name:''}</div>)}</h2>
-        <div className='flex gap-4 justify-center text-lg my-10 w-9/12'>
+        <div className='flex flex-col gap-4 justify-center text-lg my-10 w-9/12'>
+        <div className='flex '>
             <div className='border border-black p-4 rounded-xl'>
                 <h2 className='font-semibold'>Phase Voltage</h2>
                 <p>R - {data?.[`Voltage_V1N_meter_${id}`]}</p>
@@ -90,6 +91,8 @@ const SingleMeter = () => {
                 <p>Y - {data?.[`Current_I2_meter_${id}`]}</p>
                 <p>B - {data?.[`Current_I3_meter_${id}`]}</p>
             </div>
+            </div>
+            <div className='flex'>
             <div className='border border-black p-4 rounded-xl'>
                 <p>KW - {data?.[`Total_KW_meter_${id}`]}</p>
                 <p>KVA - {data?.[`Total_KVA_meter_${id}`]}</p>
@@ -101,6 +104,7 @@ const SingleMeter = () => {
                 <p>KVAH - {data?.[`TotalNet_KVAH_meter_${id}`]}</p>
                 <p>KVARH - {data?.[`TotalNet_KVARH_meter_${id}`]}</p>
                 <p>Neutral Current - {data?.[`Neutral_Current_meter_${id}`]}</p>
+            </div>
             </div>
             {/* <div className='border border-black p-4 rounded-xl'>
                 <p>THD_V1 - {data?.[`THD_V1_meter_${id}`]}</p>
