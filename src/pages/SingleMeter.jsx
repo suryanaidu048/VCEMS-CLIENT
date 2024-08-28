@@ -46,6 +46,18 @@ const SingleMeter = () => {
     { id: 12, name: "Geysers" },
     { id: 13, name: "Medha Hostel Geysers" },
     { id: 14, name: "Hostel Geysers VDC" },
+    { id: 15, name: "VIT Block-2 Lighting" },
+    { id: 16, name: "VIT Block-1 Lighting" },
+    { id: 17, name: "VIT Block-2 A/C's" },
+    { id: 18, name: "VIT Block-3 Lighting" },
+    { id: 19, name: "Vit Nlock-4 A/C's" },
+    { id: 20, name: "4th Phase Main Panel Supply Boy's Hostel" },
+    { id: 21, name: "VIT Block-1 AC's" },
+    { id: 22, name: "Seetha Canteen Lighting" },
+    { id: 23, name: "53 rooms lighting supply" },
+    { id: 24, name: "3 Hostels (RPSP & GVVS)" },
+    { id: 26, name: "VDC Block-1A" },
+    { id: 25, name: "Medha Hostel" },
   ];
 
   return (
