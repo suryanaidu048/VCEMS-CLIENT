@@ -81,52 +81,119 @@ const SingleMeter = () => {
           </span>
         </header>
 
-        <div className="flex flex-col items-center my-10">
-          <h2 className="font-bold text-xl text-center">
+        <div className="flex flex-col items-center my-10 ">
+          <h2 className="font-bold text-xl text-center font-Montserrat">
             {meters.map((m) => (
               <div>{m.id == id ? m.name : ""}</div>
             ))}
           </h2>
-          <div className="flex flex-col gap-4 justify-center text-lg my-10 w-9/12 gap-y-8">
-            <div className="flex md:flex-row gap-10 flex-col">
-              <div className="border w-full  p-8 rounded-xl bg-white shadow-md ">
-                <h2 className="font-bold mb-2 text-[#a4a4e3]">Phase Voltage</h2>
-                <p>R - {data?.[`Voltage_V1N_meter_${id}`]}</p>
-                <p>Y - {data?.[`Voltage_V2N_meter_${id}`]}</p>
-                <p>B - {data?.[`Voltage_V3N_meter_${id}`]}</p>
+          <div className="flex gap-4 justify-center text-lg my-10 xl:flex-row flex-col">
+            <div className="border flex flex-col gap-5 w-full p-10 rounded-xl bg-gray-400 shadow-md text-center">
+              <div className="flex justify-between items-center gap-4">
+                <h2 className="parameter">R - Phase Voltage</h2>
+                <p className="param-value">
+                  {data?.[`Voltage_V1N_meter_${id}`]} V
+                </p>
               </div>
-              <div className="border w-full p-8 rounded-xl bg-white shadow-md">
-                <h2 className="font-bold mb-2 text-[#a4a4e3]">Line Voltage</h2>
-                <p>R - {data?.[`Voltage_V12_meter_${id}`]} V</p>
-                <p>Y - {data?.[`Voltage_V23_meter_${id}`]}</p>
-                <p>B - {data?.[`Voltage_V31_meter_${id}`]}</p>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">Y - Phase Voltage</h2>
+                <p className="param-value">
+                  {data?.[`Voltage_V2N_meter_${id}`]} V
+                </p>
               </div>
-              <div className="border w-full p-8 rounded-xl bg-white shadow-md ">
-                <h2 className="font-bold mb-2 text-[#a4a4e3]">Phase Currents</h2>
-                <p>R - {data?.[`Current_I1_meter_${id}`]} A </p>
-                <p>Y - {data?.[`Current_I2_meter_${id}`]} A</p>
-                <p>B - {data?.[`Current_I3_meter_${id}`]} A</p>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">B - Phase Voltage</h2>
+                <p className="param-value">
+                  {data?.[`Voltage_V3N_meter_${id}`]} V
+                </p>
+              </div>
+
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">R - Line Voltage</h2>
+                <p className="param-value">
+                  {data?.[`Voltage_V12_meter_${id}`]} V
+                </p>
+              </div>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">Y - Line Voltage</h2>
+                <p className="param-value">
+                  {data?.[`Voltage_V23_meter_${id}`]} V
+                </p>
+              </div>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">B - Line Voltage</h2>
+                <p className="param-value">
+                  {data?.[`Voltage_V31_meter_${id}`]} V
+                </p>
+              </div>
+
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">R - Phase Currents</h2>
+                <p className="param-value">
+                  {data?.[`Current_I1_meter_${id}`]} A
+                </p>
+              </div>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">Y - Phase Currents</h2>
+                <p className="param-value">
+                  {data?.[`Current_I2_meter_${id}`]} A
+                </p>
+              </div>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">B - Phase Currents</h2>
+                <p className="param-value">
+                  {data?.[`Current_I3_meter_${id}`]} A
+                </p>
               </div>
             </div>
-            <div className="flex md:flex-row flex-col  gap-10 ">
-              <div className="border w-full p-6 rounded-xl bg-white shadow-md">
-                <p className=" ">KW - {data?.[`Total_KW_meter_${id}`]}</p>
-                <p className=" ">KVA - {data?.[`Total_KVA_meter_${id}`]}</p>
-                <p className=" ">KVAR - {data?.[`Total_KVA_meter_${id}`]}</p>
-                <p className=" ">Power Factor - {data?.[`Avg_PF_meter_${id}`]}</p>
+
+            <div className="border w-full flex flex-col gap-5 p-6 rounded-xl bg-gray-400 shadow-md text-center">
+              <div className="flex justify-between items-center gap-4">
+                <h2 className="parameter">KW </h2>
+                <p className="param-value">
+                  {data?.[`Total_KW_meter_${id}`]} 
+                </p>
               </div>
-              <div className="border w-full p-6 rounded-xl bg-white shadow-md">
-                <p className=" ">KWH - {data?.[`TotalNet_KWH_meter_${id}`]}</p>
-                <p className=" " >KVAH - {data?.[`TotalNet_KVAH_meter_${id}`]}</p>
-                <p className=" ">KVARH - {data?.[`TotalNet_KVARH_meter_${id}`]}</p>
-                <p className=" ">Neutral Current - {data?.[`Neutral_Current_meter_${id}`]}</p>
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">KVA </h2>
+                <p className="param-value">
+                  {data?.[`Total_KVA_meter_${id}`]} 
+                </p>
               </div>
-              {/* <div className='border border-black p-4 rounded-xl'>
-                <p>THD_V1 - {data?.[`THD_V1_meter_${id}`]}</p>
-                <p>THD_V2 - {data?.[`THD_V2_meter_${id}`]}</p>
-                <p>THD_V3 - {data?.[`THD_V3_meter_${id}`]}</p>
-                <p>THD_I1 - {data?.[`THD_I1_meter_${id}`]}</p>
-            </div> */}
+              <div className="flex justify-between items-center ">
+                <h2 className="parameter">KVAR </h2>
+                <p className="param-value">
+                  {data?.[`Total_KVAR_meter_${id}`]} 
+                </p>
+              </div>
+              <div className="flex justify-between items-center">
+                <h2 className="parameter">KWH </h2>
+                <p className="param-value">
+                  {data?.[`TotalNet_KWH_meter_${id}`]} 
+                </p>
+              </div>
+              <div className="flex justify-between items-center">
+                <h2 className="parameter">KVAH </h2>
+                <p className="param-value">
+                  {data?.[`TotalNet_KVAH_meter_${id}`]} 
+                </p>
+              </div>
+              <div className="flex justify-between items-center">
+                <h2 className="parameter">KVARH </h2>
+                <p className="param-value">
+                  {data?.[`TotalNet_KVARH_meter_${id}`]} 
+                </p>
+              </div>
+              <div className="flex justify-between items-center">
+                <h2 className="parameter">Power Factor </h2>
+                <p className="param-value">{data?.[`Avg_PF_meter_${id}`]} </p>
+              </div>
+              {/* <div className="flex justify-between items-center">
+                <h2 className="parameter">Neutral Current </h2>
+                <p className="param-value">
+                  {data?.[`Neutral_Current_meter_${id}`]} 
+                </p>
+              </div> */}
             </div>
           </div>
         </div>
