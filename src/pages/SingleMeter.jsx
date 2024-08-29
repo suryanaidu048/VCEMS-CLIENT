@@ -63,7 +63,7 @@ const SingleMeter = () => {
   return (
     <div className="flex md:flex-row flex-col">
       <Sidebar />
-      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] dark:text-white px-3 h-screen overflow-auto 2xl:px-5">
+      <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
         <header className="justify-between flex items-center py-2">
           <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 font-Audiowide font-bold dark:text-[#e4e2e2]">
             Vishnu Energy Monitoring System
@@ -82,14 +82,15 @@ const SingleMeter = () => {
         </header>
 
         <div className="flex flex-col items-center my-10 ">
-          <h2 className="font-bold text-xl text-center font-Montserrat">
+          <div className="gap-4 justify-center text-lg bg-gray-400 border rounded-xl shadow-md text-center max-[430px]:px-5 px-10 py-6">
+          <h2 className="font-bold text-xl text-center font-Montserrat mb-7">
             {meters.map((m) => (
               <div>{m.id == id ? m.name : ""}</div>
             ))}
           </h2>
-          <div className="flex gap-4 justify-center text-lg my-10 xl:flex-row flex-col">
-            <div className="border flex flex-col gap-5 w-full p-10 rounded-xl bg-gray-400 shadow-md text-center">
-              <div className="flex justify-between items-center gap-4">
+            <div className="flex min-[1020px]:flex-row flex-col gap-5 w-full">
+              <div className="flex flex-col gap-5">
+              <div className="flex justify-between items-center gap-4 max-[380px]:gap-2">
                 <h2 className="parameter">Voltage R - Phase</h2>
                 <p className="param-value">
                   {data?.[`Voltage_V1N_meter_${id}`]} V
@@ -126,7 +127,14 @@ const SingleMeter = () => {
                   {data?.[`Voltage_V31_meter_${id}`]} V
                 </p>
               </div>
-
+              <div className="flex justify-between items-center">
+                <h2 className="parameter">No of Units Consumed </h2>
+                <p className="param-value">
+                  {data?.[`TotalNet_KWH_meter_${id}`].toFixed(0)} kWh
+                </p>
+              </div>
+              </div>
+              <div className="flex flex-col gap-5">
               <div className="flex justify-between items-center ">
                 <h2 className="parameter">Current R - Phase</h2>
                 <p className="param-value">
@@ -145,10 +153,7 @@ const SingleMeter = () => {
                   {data?.[`Current_I3_meter_${id}`]} A
                 </p>
               </div>
-            </div>
-
-            <div className="border w-full flex flex-col gap-5 p-6 rounded-xl bg-gray-400 shadow-md text-center">
-              <div className="flex justify-between items-center gap-4">
+              <div className="flex justify-between items-center gap-4 max-[380px]:gap-2">
                 <h2 className="parameter">Real Power, P </h2>
                 <p className="param-value">
                   {data?.[`Total_KW_meter_${id}`]} kW
@@ -167,34 +172,17 @@ const SingleMeter = () => {
                 </p>
               </div>
               <div className="flex justify-between items-center">
-                <h2 className="parameter">No of Units Consumed </h2>
-                <p className="param-value">
-                  {data?.[`TotalNet_KWH_meter_${id}`]} kWh
-                </p>
-              </div>
-              {/* <div className="flex justify-between items-center">
-                <h2 className="parameter">KVAH </h2>
-                <p className="param-value">
-                  {data?.[`TotalNet_KVAH_meter_${id}`]} 
-                </p>
-              </div>
-              <div className="flex justify-between items-center">
-                <h2 className="parameter">KVARH </h2>
-                <p className="param-value">
-                  {data?.[`TotalNet_KVARH_meter_${id}`]} 
-                </p>
-              </div> */}
-              <div className="flex justify-between items-center">
                 <h2 className="parameter">Power Factor </h2>
                 <p className="param-value">{data?.[`Avg_PF_meter_${id}`]} </p>
               </div>
-              <div className="flex justify-between items-center">
+              </div>
+            </div>
+            <div className="flex justify-center items-center mt-5 gap-4 max-[380px]:gap-2">
                 <h2 className="parameter">Neutral Current </h2>
                 <p className="param-value">
                   {data?.[`Neutral_Current_meter_${id}`]} 
                 </p>
               </div>
-            </div>
           </div>
         </div>
       </section>
