@@ -50,7 +50,7 @@ const SingleMeter = () => {
     { id: 16, name: "VIT Block-1 Lighting" },
     { id: 17, name: "VIT Block-2 A/C's" },
     { id: 18, name: "VIT Block-3 Lighting" },
-    { id: 19, name: "Vit Nlock-4 A/C's" },
+    { id: 19, name: "Vit Block-4 A/C's" },
     { id: 20, name: "4th Phase Main Panel Supply Boy's Hostel" },
     { id: 21, name: "VIT Block-1 AC's" },
     { id: 22, name: "Seetha Canteen Lighting" },
@@ -90,57 +90,57 @@ const SingleMeter = () => {
           <div className="flex gap-4 justify-center text-lg my-10 xl:flex-row flex-col">
             <div className="border flex flex-col gap-5 w-full p-10 rounded-xl bg-gray-400 shadow-md text-center">
               <div className="flex justify-between items-center gap-4">
-                <h2 className="parameter">R - Phase Voltage</h2>
+                <h2 className="parameter">Voltage R - Phase</h2>
                 <p className="param-value">
                   {data?.[`Voltage_V1N_meter_${id}`]} V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">Y - Phase Voltage</h2>
+                <h2 className="parameter">Voltage Y - Phase</h2>
                 <p className="param-value">
                   {data?.[`Voltage_V2N_meter_${id}`]} V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">B - Phase Voltage</h2>
+                <h2 className="parameter">Voltage B - Phase</h2>
                 <p className="param-value">
                   {data?.[`Voltage_V3N_meter_${id}`]} V
                 </p>
               </div>
 
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">R - Line Voltage</h2>
+                <h2 className="parameter">Line Voltage V<sub>RY</sub></h2>
                 <p className="param-value">
                   {data?.[`Voltage_V12_meter_${id}`]} V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">Y - Line Voltage</h2>
+                <h2 className="parameter">Line Voltage V<sub>YB</sub></h2>
                 <p className="param-value">
                   {data?.[`Voltage_V23_meter_${id}`]} V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">B - Line Voltage</h2>
+                <h2 className="parameter">Line Voltage V<sub>BR</sub></h2>
                 <p className="param-value">
                   {data?.[`Voltage_V31_meter_${id}`]} V
                 </p>
               </div>
 
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">R - Phase Currents</h2>
+                <h2 className="parameter">Current R - Phase</h2>
                 <p className="param-value">
                   {data?.[`Current_I1_meter_${id}`]} A
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">Y - Phase Currents</h2>
+                <h2 className="parameter">Current Y - Phase</h2>
                 <p className="param-value">
                   {data?.[`Current_I2_meter_${id}`]} A
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">B - Phase Currents</h2>
+                <h2 className="parameter">Current B - Phase</h2>
                 <p className="param-value">
                   {data?.[`Current_I3_meter_${id}`]} A
                 </p>
@@ -149,30 +149,30 @@ const SingleMeter = () => {
 
             <div className="border w-full flex flex-col gap-5 p-6 rounded-xl bg-gray-400 shadow-md text-center">
               <div className="flex justify-between items-center gap-4">
-                <h2 className="parameter">KW </h2>
+                <h2 className="parameter">Real Power, P </h2>
                 <p className="param-value">
-                  {data?.[`Total_KW_meter_${id}`]} 
+                  {data?.[`Total_KW_meter_${id}`]} kW
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">KVA </h2>
+                <h2 className="parameter">Apparent Power, S </h2>
                 <p className="param-value">
-                  {data?.[`Total_KVA_meter_${id}`]} 
+                  {data?.[`Total_KVA_meter_${id}`]} kVA
                 </p>
               </div>
               <div className="flex justify-between items-center ">
-                <h2 className="parameter">KVAR </h2>
+                <h2 className="parameter">Reactive Power, Q </h2>
                 <p className="param-value">
-                  {data?.[`Total_KVAR_meter_${id}`]} 
+                  {data?.[`Total_KVAR_meter_${id}`]} kVAR
                 </p>
               </div>
               <div className="flex justify-between items-center">
-                <h2 className="parameter">KWH </h2>
+                <h2 className="parameter">No of Units Consumed </h2>
                 <p className="param-value">
-                  {data?.[`TotalNet_KWH_meter_${id}`]} 
+                  {data?.[`TotalNet_KWH_meter_${id}`]} kWh
                 </p>
               </div>
-              <div className="flex justify-between items-center">
+              {/* <div className="flex justify-between items-center">
                 <h2 className="parameter">KVAH </h2>
                 <p className="param-value">
                   {data?.[`TotalNet_KVAH_meter_${id}`]} 
@@ -183,17 +183,17 @@ const SingleMeter = () => {
                 <p className="param-value">
                   {data?.[`TotalNet_KVARH_meter_${id}`]} 
                 </p>
-              </div>
+              </div> */}
               <div className="flex justify-between items-center">
                 <h2 className="parameter">Power Factor </h2>
                 <p className="param-value">{data?.[`Avg_PF_meter_${id}`]} </p>
               </div>
-              {/* <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center">
                 <h2 className="parameter">Neutral Current </h2>
                 <p className="param-value">
                   {data?.[`Neutral_Current_meter_${id}`]} 
                 </p>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
