@@ -4,7 +4,7 @@ import { useTheme } from "../ThemeContext";
 const RealTimePowerMeter = ({ kva }) => {
   const { theme, toggleTheme } = useTheme();
   const minEnergy = 0;
-  const maxEnergy = 1600;
+  const maxEnergy = 600;
 
   const normalizedPower = (kva - minEnergy) / (maxEnergy - minEnergy);
   const gaugeColors =
