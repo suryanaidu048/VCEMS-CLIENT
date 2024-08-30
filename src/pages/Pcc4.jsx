@@ -167,7 +167,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/20'><h2 className='parameter'>
-                        4th Phase Main Panel Supply Boy's Hostel
+                        4th Phase Boy's Hostel
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_20}

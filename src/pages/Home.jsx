@@ -18,55 +18,60 @@ import EnergyUnits from "../components/EnergyUnits";
 const Home = () => {
   const [data, setData] = useState(null);
   const { theme, toggleTheme } = useTheme();
-  const [currentEnergy, setCurrentEnergy] = useState(null);
-  const [previousDayEnergy, setPreviousDayEnergy] = useState(null);
-  const [todayConsumption, setTodayConsumption] = useState(null);
-  const [totalEnergy, setTotalEnergy] = useState(0);
+  const [currentEnergy, setCurrentEnergy] = useState(Array(26).fill(null));
+  const [previousDayEnergy, setPreviousDayEnergy] = useState(Array(26).fill(null));
+  const [todayConsumption, setTodayConsumption] = useState(Array(26).fill(null));
+  const [totalEnergy, setTotalEnergy] = useState(Array(26).fill(0));
 
-  const notify = () => toast.error("Energy limit exceed!");
-  
-  /* useEffect(() => {
+  const notify = () => toast.error("Energy limit exceeded!");
+
+  useEffect(() => {
     const fetchPreviousDayEnergy = async () => {
       try {
-        const response = await axios.get(
-          `${API_URL}/api/previousDayEnergy`
-        );
-        setPreviousDayEnergy(response.data.initialEnergyValue);
+        const response = await axios.get(`${API_URL}/api/previousDayEnergy`);
+        setPreviousDayEnergy(response.data.initialEnergyValues);
       } catch (error) {
         console.error("Error fetching previous day energy:", error);
       }
     };
 
     fetchPreviousDayEnergy();
-  }, []); */
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://vems-api.onrender.com/api/sensordata"
-        );
-        setData(response.data[0]);
-        setCurrentEnergy(response.data[0].TotalNet_KWH_meter_1);
-      
+        const response = await axios.get("https://vems-api.onrender.com/api/sensordata");
+        const newData = response.data[0];
+        setData(newData);
+
+        const currentEnergyValues = Array.from({ length: 26 }, (_, i) => newData[`TotalNet_KWH_meter_${i + 1}`]);
+        setCurrentEnergy(currentEnergyValues);
+        
       } catch (error) {
         console.error("Error fetching sensor data:", error);
       }
     };
 
     fetchData();
-
-    const interval = setInterval(fetchData, 10000); // Fetch data every 60 seconds
+    const interval = setInterval(fetchData, 10000); // Fetch data every 10 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
-  /* useEffect(() => {
-    if (previousDayEnergy !== null && currentEnergy !== null) {
-      setTodayConsumption((currentEnergy - previousDayEnergy).toFixed(3));
-      setTotalEnergy((currentEnergy - previousDayEnergy + 300).toFixed(3));
+  useEffect(() => {
+    if (previousDayEnergy.every(val => val !== null) && currentEnergy.every(val => val !== null)) {
+      const todayConsumptionValues = currentEnergy.map((value, index) => 
+        (value - previousDayEnergy[index]).toFixed(3)
+      );
+      setTodayConsumption(todayConsumptionValues);
+
+      const totalEnergyValues = todayConsumptionValues.map(value => 
+        (parseFloat(value) + 300).toFixed(3)
+      );
+      setTotalEnergy(totalEnergyValues);
     }
-  }, [previousDayEnergy, currentEnergy]); */
+  }, [previousDayEnergy, currentEnergy]);
 
   if (!data) {
     return <div className="flex justify-center items-center w-full"><Loading/></div>;
@@ -121,7 +126,7 @@ const Home = () => {
               0.00
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00</span>:todayConsumption}
+                0.00
             </p>
             <p className="value">
               0.00
@@ -141,7 +146,7 @@ const Home = () => {
               0.00
             </p>
             <p className="value">
-                {!todayConsumption? <span>0.00</span>:todayConsumption}
+                0.00
             </p>
             <p className="value">
               0.00
@@ -198,7 +203,7 @@ const Home = () => {
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
           <EnergyUnits energy={data?.TotalNet_KWH_meter_1.toFixed(1)} />
           <div className="flex flex-col gap-4">
-            <RealTimePowerMeter kva={data?.Total_KVA_meter_1.toFixed(2)} />
+            <RealTimePowerMeter kva={(data?.Total_KVA_meter_1 + data?.Total_KVA_meter_15).toFixed(2)} />
             {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}
           </div>
         </div>
