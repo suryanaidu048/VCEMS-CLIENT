@@ -25,7 +25,7 @@ const Home = () => {
 
   const notify = () => toast.error("Energy limit exceeded!");
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchPreviousDayEnergy = async () => {
       try {
         const response = await axios.get(`${API_URL}/api/previousDayEnergy`);
@@ -36,7 +36,7 @@ const Home = () => {
     };
 
     fetchPreviousDayEnergy();
-  }, []);
+  }, []); */
 
   useEffect(() => {
     const fetchData = async () => {
