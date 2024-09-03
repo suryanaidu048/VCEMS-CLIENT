@@ -43,7 +43,7 @@ const EnergyConsumptionChart = () => {
                     <YAxis tick={{ fill: theme === 'light' ? '#000' : '#fff' }} />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="energy" fill="#8884d8" />
+                    <Bar dataKey="energy" fill="#8884d8" name="Energy" />
                 </BarChart>
             </ResponsiveContainer>
         </div>
