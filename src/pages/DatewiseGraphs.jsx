@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { format } from "date-fns";
 import DailyPowerGraph from "../components/graphs/DailyPowerGraph";
 import DailyEnergyGraph from "../components/graphs/DailyEnergyGraph";
-import Sidebar from "../Components/Sidebar";
+import Sidebar from "../components/Sidebar";
 import { useTheme } from "../components/ThemeContext";
 import { dark, light } from "../constants";
 import DailyKvaGraph from "../components/graphs/DailyKvaGraph";
