@@ -2,7 +2,7 @@ import GaugeChart from "react-gauge-chart";
 import { useTheme } from "../ThemeContext";
 import { useState } from "react";
 
-const RealTimePowerMeter = ({ kva }) => {
+const RealTimeKvaMeter = ({ kva }) => {
   const { theme, toggleTheme } = useTheme();
   const [value, setValue] = useState(0)
   const minEnergy = 0;
@@ -23,7 +23,7 @@ const RealTimePowerMeter = ({ kva }) => {
     <div
       className={`bg-white py-1 dark:text-white h-full rounded-lg w-full flex flex-col items-center shadow font-OpenSans dark:bg-[#2c2c2c]`}
     > 
-      <h2 className="font-bold text-xl font-Montserrat my-3">CMD</h2>
+      <h2 className="font-bold text-xl font-Montserrat ">CMD</h2>
       <GaugeChart
         id="gauge-chart"
         nrOfLevels={10}
@@ -34,9 +34,10 @@ const RealTimePowerMeter = ({ kva }) => {
         className="min-[2000px]:text-3xl xl:text-xl text-lg max-[500px]:text-base font-medium "
         /* needleColor={theme === 'light' ? '#000' : '#fff'} */
       />
-      <h2 className="font-OpenSans text-lg font-medium my-1 flex flex-col">Today Highest Peak Value  <span className="bg-red-400 font-semibold py-1 my-1 rounded-lg text-center">{value} Kva</span></h2>
+      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Today Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">{value} Kva</span></h2>
+      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">152.71 Kva</span></h2>
     </div>
   );
 };
 
-export default RealTimePowerMeter;
+export default RealTimeKvaMeter;

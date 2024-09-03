@@ -5,7 +5,6 @@ import Loading from '../components/Loading'
 import { useTheme } from "../components/ThemeContext";
 import { dark, light } from "../constants";
 import RealTimeEnergyMeter from '../components/charts/RealTimeEnergyMeter';
-import RealTimePowerMeter from "../components/charts/RealTimePowerMeter";
 import { Link } from "react-router-dom";
 import { API_URL } from "../data/api";
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,6 +13,8 @@ import PowerFactorCharts from "../components/charts/PowerFactorCharts";
 import PowerLineChart from "../components/charts/PowerLineChart";
 import KvaLineChart from '../components/charts/KvaLineChart'
 import EnergyUnits from "../components/EnergyUnits";
+import EnergyConsumptionChart from "../components/charts/EnergyConsumptionChart";
+import RealTimeKvaMeter from "../components/charts/RealTimeKvaMeter";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -203,13 +204,13 @@ const Home = () => {
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
           <EnergyUnits energy={data?.TotalNet_KWH_meter_1.toFixed(1)} />
           <div className="flex flex-col gap-4">
-            <RealTimePowerMeter kva={(data?.Total_KVA_meter_1 + data?.Total_KVA_meter_15).toFixed(2)} />
+            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_1 + data?.Total_KVA_meter_15).toFixed(2)} />
             {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}
           </div>
         </div>
       </div>
       <div className="flex md:flex-row gap-4 flex-col h-[44%] mt-4 ">
-        <PowerLineChart/>
+        <EnergyConsumptionChart/>
         <PowerLineChart/>
         <KvaLineChart/>
       </div>

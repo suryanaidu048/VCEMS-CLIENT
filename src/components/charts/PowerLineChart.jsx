@@ -15,9 +15,11 @@ const PowerLineChart = () => {
       try {
         const response = await axios.get('https://vems-api.onrender.com/api/sensordata'); // Adjust the endpoint as needed
         const currentTime = moment().format('HH:mm');   
+        const sumPower = parseFloat(response.data[0].Total_KW_meter_1) + parseFloat(response.data[0].Total_KW_meter_15);
+
         const newData = {
-          ...response.data[0],
-          timestamp: currentTime
+          timestamp: currentTime,
+          sumPower: sumPower
         };
         setData(prevData => [...prevData, newData]);
       } catch (error) {
@@ -40,7 +42,7 @@ const PowerLineChart = () => {
           <YAxis tick={{ fill: theme == 'light'?'#000':'#fff' }}/>
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="Total_KW_meter_1" stroke="#8884d8" name="Power" />
+          <Line type="monotone" dataKey="sumPower" stroke="#8884d8" name="Power" />
         </LineChart>
       </ResponsiveContainer>
     </div>
