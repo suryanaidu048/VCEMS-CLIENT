@@ -139,29 +139,10 @@ const Home = () => {
               0.00
             </p>
           </div>
+          
           <div className="param-div">
-            <Link to='/pcc2'><h2 className="pccs">
+          <Link to='/pcc2'><h2 className="pccs">
               PCC2
-            </h2></Link>
-            <p className="value">
-              0.00
-            </p>
-            <p className="value">
-                0.00
-            </p>
-            <p className="value">
-              0.00
-            </p>
-            <p className="value">
-              0.00
-            </p>
-            <p className="value">
-            0.00
-            </p>
-          </div>
-          <div className="param-div">
-          <Link to='/pcc3'><h2 className="pccs">
-              PCC3
             </h2></Link>
             <p className="value">
               {data?.Total_KW_meter_1.toFixed(2)}
@@ -180,8 +161,8 @@ const Home = () => {
             </p>
           </div>
           <div className="param-div">
-            <Link to='/pcc4'><h2 className="pccs">
-              PCC4
+            <Link to='/pcc3'><h2 className="pccs">
+              PCC3
             </h2></Link>
             <p className="value">
                 {data?.Total_KW_meter_15.toFixed(2)}
@@ -197,6 +178,26 @@ const Home = () => {
             </p>
             <p className="value">
               {data?.TotalNet_KVAH_meter_15.toFixed(1)}
+            </p>
+          </div>
+          <div className="param-div">
+            <Link to='/pcc4'><h2 className="pccs">
+              PCC4
+            </h2></Link>
+            <p className="value">
+              0.00
+            </p>
+            <p className="value">
+                0.00
+            </p>
+            <p className="value">
+              0.00
+            </p>
+            <p className="value">
+              0.00
+            </p>
+            <p className="value">
+            0.00
             </p>
           </div>
         </div>
