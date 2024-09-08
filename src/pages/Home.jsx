@@ -124,19 +124,19 @@ const Home = () => {
               PCC1
             </h2></Link>
             <p className="value">
-              0.00
+              {data?.Total_KW_meter_27.toFixed(2)}
             </p>
             <p className="value">
-                0.00
+              {data?.TotalNet_KWH_meter_27.toFixed(1)}
             </p>
             <p className="value">
-              0.00
+              {data?.Total_KVA_meter_27.toFixed(2)}
             </p>
             <p className="value">
-              0.00
+              {data?.Avg_PF_meter_27.toFixed(2)}
             </p>
             <p className="value">
-              0.00
+              {data.TotalNet_KVAH_meter_27.toFixed(1)}
             </p>
           </div>
           
