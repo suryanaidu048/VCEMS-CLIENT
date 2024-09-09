@@ -124,40 +124,40 @@ const Home = () => {
               PCC1
             </h2></Link>
             <p className="value">
-              {data?.Total_KW_meter_27.toFixed(2)}
+              {data?.Total_KW_meter_70.toFixed(2)}
             </p>
             <p className="value">
-              {data?.TotalNet_KWH_meter_27.toFixed(1)}
+              {data?.TotalNet_KWH_meter_70.toFixed(1)}
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_27.toFixed(2)}
+              {data?.Total_KVA_meter_70.toFixed(2)}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_27.toFixed(2)}
+              {data?.Avg_PF_meter_70.toFixed(2)}
             </p>
             <p className="value">
-              {data.TotalNet_KVAH_meter_27.toFixed(1)}
+              {data.TotalNet_KVAH_meter_70.toFixed(1)}
             </p>
           </div>
           
           <div className="param-div">
-          <Link to='/pcc2'><h2 className="pccs">
+            <Link to='/pcc2'><h2 className="pccs">
               PCC2
             </h2></Link>
             <p className="value">
-              {data?.Total_KW_meter_1.toFixed(2)}
+                {data?.Total_KW_meter_40.toFixed(2)}
             </p>
             <p className="value">
-              {data?.TotalNet_KWH_meter_1.toFixed(1)}
+                {data?.TotalNet_KWH_meter_40.toFixed(1)}
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_1.toFixed(2)}
+                {data?.Total_KVA_meter_40.toFixed(2)}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_1.toFixed(3)}
+              {data?.Avg_PF_meter_40.toFixed(3)}
             </p>
             <p className="value">
-              {data?.TotalNet_KVAH_meter_1.toFixed(1)}
+              {data?.TotalNet_KVAH_meter_40.toFixed(1)}
             </p>
           </div>
           <div className="param-div">
@@ -165,39 +165,19 @@ const Home = () => {
               PCC3
             </h2></Link>
             <p className="value">
-                {data?.Total_KW_meter_15.toFixed(2)}
+            {data?.Total_KW_meter_69.toFixed(2)}
             </p>
             <p className="value">
-                {data?.TotalNet_KWH_meter_15.toFixed(1)}
+            {data?.TotalNet_KWH_meter_69.toFixed(1)}
             </p>
             <p className="value">
-                {data?.Total_KVA_meter_15.toFixed(2)}
+            {data?.Total_KVA_meter_69.toFixed(2)}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_15.toFixed(3)}
+            {data?.Avg_PF_meter_69.toFixed(3)}
             </p>
             <p className="value">
-              {data?.TotalNet_KVAH_meter_15.toFixed(1)}
-            </p>
-          </div>
-          <div className="param-div">
-            <Link to='/pcc4'><h2 className="pccs">
-              PCC4
-            </h2></Link>
-            <p className="value">
-              0.00
-            </p>
-            <p className="value">
-                0.00
-            </p>
-            <p className="value">
-              0.00
-            </p>
-            <p className="value">
-              0.00
-            </p>
-            <p className="value">
-            0.00
+            {data?.TotalNet_KVAH_meter_69.toFixed(1)}
             </p>
           </div>
         </div>

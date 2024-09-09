@@ -53,7 +53,7 @@ const Pcc2 = () => {
       </header>
         <section className="flex justify-center items-center">
               <div className=" my-8 bg-gray-400 xl:px-10 py-5 rounded-lg md:px-7 px-2 overflow-x-auto">
-              <h2 className='font-bold text-xl text-center underline my-2 mb-6'>PCC2</h2>
+                <h2 className='font-bold text-xl text-center underline my-2 mb-6'>PCC2</h2>
                 <div className="flex rounded-md justify-between text-center items-center font-Montserrat font-bold pr-9 my-2 ">
                   <h2 className="rounded-full text-gray-400 w-64 ">
                     PCC
@@ -66,264 +66,228 @@ const Pcc2 = () => {
 
                 <div className="">
                   <div className="param1-div">
-                    <Link to='/SingleMeter/1'><h2
+                    <Link to='/SingleMeter/15'><h2
                       className='parameter'
                     >
-                      VDC Block 2&3 Lighting
+                      VIT Block 2 Lighting
                     </h2></Link>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_1.toFixed(2)}
+                      {data?.Total_KW_meter_15.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_1.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_15.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Avg_PF_meter_1.toFixed(2)}
+                      {data?.Avg_PF_meter_15.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_1.toFixed(2)}
+                      {data?.Total_KVA_meter_15.toFixed(2)}
                     </p>
                   </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/2'><h2 className='parameter'>
-                        VDC Block 2&3 AC's
+                    <Link to='/SingleMeter/16'><h2 className='parameter'>
+                        VIT Block 1 Lighting
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_2.toFixed(2)}
+                        {data?.Total_KW_meter_16.toFixed(2)}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_2.toFixed(2)}
+                        {data?.TotalNet_KWH_meter_16.toFixed(2)}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_2.toFixed(2)}
+                        {data?.Avg_PF_meter_16.toFixed(2)}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_2.toFixed(2)}
+                        {data?.Total_KVA_meter_16.toFixed(2)}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/3'><h2 className='parameter'>
-                        Mini Auditorium AC's
+                    <Link to='/SingleMeter/17'><h2 className='parameter'>
+                        VIT Block-2 A/C's
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_3}
+                        {data?.Total_KW_meter_17}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_3}
+                        {data?.TotalNet_KWH_meter_17}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_3}
+                        {data?.Avg_PF_meter_17}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_3}
+                        {data?.Total_KVA_meter_17}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/4'><h2 className='parameter'>
-                        Sumedha Hostel AC's
+                    <Link to='/SingleMeter/18'><h2 className='parameter'>
+                        VIT Block-3 lighting
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_4}
+                        {data?.Total_KW_meter_18}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_4}
+                        {data?.TotalNet_KWH_meter_18}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_4}
+                        {data?.Avg_PF_meter_18}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_4}
+                        {data?.Total_KVA_meter_18}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/5'><h2 className='parameter'>
-                        Sita Auditorium AC's
+                    <Link to='/SingleMeter/19'><h2 className='parameter'>
+                       VIT Block-4 A/C's
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_5}
+                        {data?.Total_KW_meter_19}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_5}
+                        {data?.TotalNet_KWH_meter_19}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_5}
+                        {data?.Avg_PF_meter_19}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_5}
+                        {data?.Total_KVA_meter_19}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/6'><h2 className='parameter'>
-                        VDC Girls Hostels
+                    <Link to='/SingleMeter/20'><h2 className='parameter'>
+                        4th Phase Boy's Hostel
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_6}
+                        {data?.Total_KW_meter_20}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_6}
+                        {data?.TotalNet_KWH_meter_20}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_6}
+                        {data?.Avg_PF_meter_20}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_6}
+                        {data?.Total_KVA_meter_20}
                       </p>
                     </div>
     
                     <div className="param1-div">
-                    <Link to='/SingleMeter/7'><h2 className='parameter'>
-                        VDC Block-1 AC's
+                    <Link to='/SingleMeter/21'><h2 className='parameter'>
+                        VIT Block-1 AC's
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_7}
+                        {data?.Total_KW_meter_21}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_7}
+                        {data?.TotalNet_KWH_meter_21}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_7}
+                        {data?.Avg_PF_meter_21}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_7}
+                        {data?.Total_KVA_meter_21}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/8'><h2 className='parameter'>
-                        VDC Library AC's
+                    <Link to='/SingleMeter/22'><h2 className='parameter'>
+                        Seetha Canteen Lighting
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_8}
+                        {data?.Total_KW_meter_22}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_8}
+                        {data?.TotalNet_KWH_meter_22}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_8}
+                        {data?.Avg_PF_meter_22}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_8}
+                        {data?.Total_KVA_meter_22}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/9'><h2 className="parameter">
-                        SVECW Library AC's
+                    <Link to='/SingleMeter/23'><h2 className='parameter'>
+                        53 rooms lighting supply
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_9}
+                        {data?.Total_KW_meter_23}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_9}
+                        {data?.TotalNet_KWH_meter_23}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_9}
+                        {data?.Avg_PF_meter_23}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_9}
+                        {data?.Total_KVA_meter_23}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/10'><h2 className='parameter'>
-                        CSSD Building
+                    <Link to='/SingleMeter/24'><h2 className='parameter'>
+                        "3" Hostels (RPSP & GVVS)
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_10}
+                        {data?.Total_KW_meter_24}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_10}
+                        {data?.TotalNet_KWH_meter_24}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_10}
+                        {data?.Avg_PF_meter_24}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_10}
+                        {data?.Total_KVA_meter_24}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/11'><h2 className='parameter'>
-                        Medha Hostel Lighting
+                    <Link to='/SingleMeter/25'><h2 className="parameter">
+                        Medha Hostel
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_11}
+                        {data?.Total_KW_meter_25}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_11}
+                        {data?.TotalNet_KWH_meter_25}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_11}
+                        {data?.Avg_PF_meter_25}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_11}
+                        {data?.Total_KVA_meter_25}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/12'><h2 className='parameter'>
-                       Geysers
+                    <Link to='/SingleMeter/26'><h2 className='parameter'>
+                        VDC Block 1A
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_12}
+                        {data?.Total_KW_meter_26}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_12}
+                        {data?.TotalNet_KWH_meter_26}
                       </p>
                       <p className='param-value'>
-                        {data?.Avg_PF_meter_12}
+                        {data?.Avg_PF_meter_26}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_12}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/13'><h2 className='parameter'>
-                        Medha Hostel Geysers
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_13}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_13}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Avg_PF_meter_13}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_13}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/14'><h2 className='parameter'>
-                        Hostel Geysers VDC
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_14}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_14}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Avg_PF_meter_14}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_14}
+                        {data?.Total_KVA_meter_26}
                       </p>
                     </div>
                     </div>
