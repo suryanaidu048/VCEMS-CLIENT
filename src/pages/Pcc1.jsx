@@ -53,7 +53,7 @@ const Pcc1 = () => {
       </header>
         <section className="flex justify-center items-center">
               <div className=" my-8 bg-gray-400 xl:px-10 py-5 rounded-lg md:px-7 px-2 overflow-x-auto">
-              <h2 className='font-bold text-xl text-center underline my-2 mb-6'>PCC2</h2>
+              <h2 className='font-bold text-xl text-center underline my-2 mb-6'>PCC1</h2>
                 <div className="flex rounded-md justify-between text-center items-center font-Montserrat font-bold pr-9 my-2 ">
                   <h2 className="rounded-full text-gray-400 w-64 ">
                     PCC
