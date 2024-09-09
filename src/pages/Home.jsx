@@ -185,7 +185,7 @@ const Home = () => {
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
           <EnergyUnits energy={data?.TotalNet_KWH_meter_1.toFixed(1)} />
           <div className="flex flex-col gap-4">
-            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_1 + data?.Total_KVA_meter_15).toFixed(2)} />
+            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_70 + data?.Total_KVA_meter_40 + data?.Total_KVA_meter_69).toFixed(2)} />
             {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}
           </div>
         </div>

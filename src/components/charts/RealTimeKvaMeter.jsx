@@ -35,7 +35,7 @@ const RealTimeKvaMeter = ({ kva }) => {
         /* needleColor={theme === 'light' ? '#000' : '#fff'} */
       />
       <h2 className="font-OpenSans text-sm font-medium flex flex-col">Today Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">{value} Kva</span></h2>
-      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">152.71 Kva</span></h2>
+      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">529.71 Kva</span></h2>
     </div>
   );
 };

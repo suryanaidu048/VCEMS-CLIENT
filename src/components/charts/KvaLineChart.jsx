@@ -17,7 +17,7 @@ const PowerLineChart = () => {
         const currentTime = moment().format('HH:mm');
 
         // Calculate the sum of Total_KVA_meter_1 and Total_KVA_meter_15
-        const sumKVA = parseFloat(response.data[0].Total_KVA_meter_1) + parseFloat(response.data[0].Total_KVA_meter_15);
+        const sumKVA = parseFloat(response.data[0].Total_KVA_meter_70) + parseFloat(response.data[0].Total_KVA_meter_40 ) + parseFloat(response.data[0].Total_KVA_meter_69 );
 
         const newData = {
           timestamp: currentTime,

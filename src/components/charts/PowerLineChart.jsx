@@ -15,7 +15,7 @@ const PowerLineChart = () => {
       try {
         const response = await axios.get('https://vems-api.onrender.com/api/sensordata'); // Adjust the endpoint as needed
         const currentTime = moment().format('HH:mm');   
-        const sumPower = parseFloat(response.data[0].Total_KW_meter_1) + parseFloat(response.data[0].Total_KW_meter_15);
+        const sumPower = parseFloat(response.data[0].Total_KW_meter_70) + parseFloat(response.data[0].Total_KW_meter_40) + parseFloat(response.data[0].Total_KW_meter_69);
 
         const newData = {
           timestamp: currentTime,
