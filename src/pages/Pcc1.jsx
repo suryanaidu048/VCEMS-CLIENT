@@ -65,6 +65,25 @@ const Pcc1 = () => {
                 </div>
 
                 <div className="">
+
+                <div className="param1-div">
+                    <Link to='/SingleMeter/70'><h2 className='parameter'>
+                       Main Meter
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_70.toFixed(2)}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_70.toFixed(2)}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Avg_PF_meter_70.toFixed(2)}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_70.toFixed(2)}
+                      </p>
+                    </div>
+
                   <div className="param1-div">
                     <Link to='/SingleMeter/28'><h2
                       className='parameter'

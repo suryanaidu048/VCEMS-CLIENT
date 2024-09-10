@@ -65,6 +65,36 @@ const Pcc3 = () => {
                 </div>
 
                 <div className="">
+
+                <div className="param1-div">
+                    <Link to='/SingleMeter/69'><h2
+                      className='parameter'
+                    >
+                     Main meter
+                    </h2></Link>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KW_meter_69.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.TotalNet_KWH_meter_69.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Avg_PF_meter_69.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KVA_meter_69.toFixed(2)}
+                    </p>
+                  </div>
+
+
                 <div className="param1-div">
                     <Link to='/SingleMeter/42'><h2
                       className='parameter'
@@ -624,6 +654,34 @@ const Pcc3 = () => {
                     </div>
 
                     <h2 className='text-center text-lg font-semibold underline mt-4 my-2'>PCC3-A</h2>
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/41'><h2
+                      className='parameter'
+                    >
+                      Main meter
+                    </h2></Link>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KW_meter_41.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.TotalNet_KWH_meter_41.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Avg_PF_meter_41.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KVA_meter_41.toFixed(2)}
+                    </p>
+                  </div>
+
                     <div className="param1-div">
                     <Link to='/SingleMeter/1'><h2
                       className='parameter'
