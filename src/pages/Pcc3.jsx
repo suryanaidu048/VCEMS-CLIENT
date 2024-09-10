@@ -99,7 +99,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/42'><h2
                       className='parameter'
                     >
-                     42
+                     11F1 800A TPN ACB
                     </h2></Link>
                     <p
                       className='param-value'
@@ -127,7 +127,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/43'><h2
                       className='parameter'
                     >
-                      43
+                      10F1 400A TPN SFU
                     </h2></Link>
                     <p
                       className='param-value'
@@ -155,7 +155,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/44'><h2
                       className='parameter'
                     >
-                      44
+                      10F2 400A TPN SFU
                     </h2></Link>
                     <p
                       className='param-value'
@@ -183,7 +183,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/45'><h2
                       className='parameter'
                     >
-                      45
+                      Womens Ground Panel
                     </h2></Link>
                     <p
                       className='param-value'
@@ -211,7 +211,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/46'><h2
                       className='parameter'
                     >
-                      46
+                      SVECW Seminar Hall
                     </h2></Link>
                     <p
                       className='param-value'
@@ -239,7 +239,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/47'><h2
                       className='parameter'
                     >
-                      47
+                      9F1 400A TPN SFU
                     </h2></Link>
                     <p
                       className='param-value'
@@ -267,7 +267,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/48'><h2
                       className='parameter'
                     >
-                      48
+                      9F2 400A TPN SFU
                     </h2></Link>
                     <p
                       className='param-value'
@@ -295,7 +295,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/49'><h2
                       className='parameter'
                     >
-                      49
+                      9F3 315A TPN SFU
                     </h2></Link>
                     <p
                       className='param-value'
@@ -323,7 +323,7 @@ const Pcc3 = () => {
                     <Link to='/SingleMeter/50'><h2
                       className='parameter'
                     >
-                      50
+                      9F4 250A TPN SFU
                     </h2></Link>
                     <p
                       className='param-value'
@@ -349,7 +349,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/51'><h2 className='parameter'>
-                        51
+                        8F1 400A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_51.toFixed(2)}
@@ -367,7 +367,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/52'><h2 className='parameter'>
-                        52
+                    8F2 400A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_52}
@@ -385,7 +385,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/53'><h2 className='parameter'>
-                        53
+                    8F3 315A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_53}
@@ -402,26 +402,8 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/54'><h2 className='parameter'>
-                        54
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_54}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_54}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Avg_PF_meter_54}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_54}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
                     <Link to='/SingleMeter/55'><h2 className='parameter'>
-                        55
+                    8F4 250A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_55}
@@ -439,7 +421,7 @@ const Pcc3 = () => {
     
                     <div className="param1-div">
                     <Link to='/SingleMeter/56'><h2 className='parameter'>
-                        56
+                        6F1 400A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_56}
@@ -457,7 +439,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/57'><h2 className='parameter'>
-                        57
+                      6F2 400A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_57}
@@ -475,7 +457,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/58'><h2 className="parameter">
-                        58
+                    6F3 315A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_58}
@@ -493,7 +475,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/59'><h2 className='parameter'>
-                        59
+                    6F4 250A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_59}
@@ -511,7 +493,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/60'><h2 className='parameter'>
-                        60
+                        Womens Ground Panel
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_60}
@@ -529,7 +511,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/61'><h2 className='parameter'>
-                       61
+                       Jewel Lab AC'S
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_61}
@@ -547,7 +529,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/62'><h2 className='parameter'>
-                        62
+                        4F3 315A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_62}
@@ -565,7 +547,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/63'><h2 className='parameter'>
-                        63
+                        SVECW Seminar Hall AC'S
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_63}
@@ -583,7 +565,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/64'><h2 className='parameter'>
-                        64
+                        3F1 800A TPN ACB
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_64}
@@ -601,7 +583,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/65'><h2 className='parameter'>
-                        65
+                        3F2 800A TPN ACB
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_65}
@@ -619,7 +601,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/66'><h2 className='parameter'>
-                        66
+                        APRC Panel Supply 
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_66}
@@ -637,7 +619,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/67'><h2 className='parameter'>
-                        67
+                        Power Room-1 Loop Supply
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_67}

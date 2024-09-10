@@ -6,7 +6,7 @@ const RealTimeKvaMeter = ({ kva }) => {
   const { theme, toggleTheme } = useTheme();
   const [value, setValue] = useState(0)
   const minEnergy = 0;
-  const maxEnergy = 600;
+  const maxEnergy = 1200;
 
   const normalizedPower = (kva - minEnergy) / (maxEnergy - minEnergy);
   const gaugeColors =
@@ -35,7 +35,7 @@ const RealTimeKvaMeter = ({ kva }) => {
         /* needleColor={theme === 'light' ? '#000' : '#fff'} */
       />
       <h2 className="font-OpenSans text-sm font-medium flex flex-col">Today Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">{value} Kva</span></h2>
-      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">529.71 Kva</span></h2>
+      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">829.71 Kva</span></h2>
     </div>
   );
 };
