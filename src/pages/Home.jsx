@@ -3,7 +3,7 @@ import axios from "axios";
 import CurrentTime from "../components/CurrentTime";
 import Loading from '../components/Loading'
 import { useTheme } from "../components/ThemeContext";
-import { dark, light } from "../constants";
+import { dark, green_fusion, light, vishnu } from "../constants";
 import RealTimeEnergyMeter from '../components/charts/RealTimeEnergyMeter';
 import { Link } from "react-router-dom";
 import { API_URL } from "../data/api";
@@ -82,8 +82,8 @@ const Home = () => {
     <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
       <ToastContainer />
       <header className="justify-between flex items-center py-2">
-        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 font-Audiowide font-bold dark:text-[#e4e2e2]">
-          Vishnu Energy Monitoring System
+        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
+        Green Fusion IoT Solution<img src={green_fusion} className="w-20" alt="" /> 
         </h1>
         <span className="flex flex-row justify-center items-center">
           <img
@@ -97,26 +97,26 @@ const Home = () => {
           </p>
         </span>
       </header>
-      <div className="grid lg:grid-cols-2 gap-4 grid-cols-1 mt-2 2xl:mt-6">
+      <div className="grid lg:grid-cols-2 gap-4 grid-cols-1 mt- 2xl:mt-6">
         <div className="w-full flex flex-col justify-around bg-[#a4a4e3] rounded-lg min-[2000px]:text-4xl xl:text-xl text-lg max-[500px]:text-base font-medium shadow font-OpenSans py-4 px-3 2xl:px-7 max-[500px]:px-0">
           <div className="param-div font-bold font-Montserrat text-lg">
             <h2 className=" value bg-transparent">
               PCC
             </h2>
-            <p className="  value bg-transparent leading-5">
-              Power<p className="text-sm">(Kw)</p>
+            <p className="  value bg-transparent pr-2 leading-5">
+              Power<p className="text-sm">(kW)</p>
             </p>
-            <p className="  value bg-transparent leading-5">
-              Energy<p className="text-sm">(Kwh)</p>
+            <p className="  value bg-transparent pr-2 leading-5">
+              Energy<p className="text-sm">(kWh)</p>
             </p>
-            <p className="  value bg-transparent">
-              KVA
+            <p className="  value bg-transparent pr-2">
+              kVA
             </p>
-            <p className="  value bg-transparent pr-8 leading-5">
+            <p className="  value bg-transparent leading-5 pr-1">
               Power<p>Factor</p>
             </p>
-            <p className="  value bg-transparent pr-8">
-              KVAh
+            <p className="  value bg-transparent pr-5">
+              kVAh
             </p>
           </div>
           <div className="param-div">

@@ -6,7 +6,10 @@ import user from './logos/user.png'
 import light from './logos/light.png'
 import dark from './logos/dark.png'
 import pcc from './logos/pccs.png'
+import vishnu from './logos/logo1.png'
+import green_fusion from './logos/green-fusion.png'
+import vishnu1 from './logos/vishnu.png'
 
 export {
-    home,chart,power,user,light,dark,pcc,logo
+    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { home, chart, power, pcc } from "../constants";
+import { home, chart, power, pcc, vishnu, logo, vishnu1 } from "../constants";
 import { Link } from "react-router-dom";
 import { Dropdown, Avatar } from "rsuite";
 
@@ -8,9 +8,9 @@ const Sidebar = () => {
 
   return (
     <div className="bg-[#2c2c2c] flex md:flex-col flex-row justify-between md:w-fit dark:bg-[#2c2c2c]">
-      <ul className="flex md:flex-col gap-4 flex-row text-nowrap mx-5 md:my-2 justify-between">
+      <ul className="flex md:flex-col gap-4 flex-row text-nowrap mx-5 md:my-4 justify-between">
         <li className="w-full text-lg font-medium rounded-lg md:my-2 my-6 md:mx-[8px] ">
-          <img src={power} alt="add" />
+          <img src={vishnu1} className="w-8" alt="add" />
         </li>
         <li className="w-full text-lg font-medium cursor-pointer md:my-8 md:mx-2 ml-5 my-6">
           <Link to="/">
@@ -28,7 +28,6 @@ const Sidebar = () => {
             <Dropdown.Item className="hover:bg-white px-2 rounded-sm hover:text-black"><Link to='/pcc1'>PCC1</Link></Dropdown.Item>
             <Dropdown.Item className="hover:bg-white px-2 rounded-sm hover:text-black"><Link to='/pcc2'>PCC2</Link></Dropdown.Item>
             <Dropdown.Item className="hover:bg-white px-2 rounded-sm hover:text-black"><Link to='/pcc3'>PCC3</Link></Dropdown.Item>
-            <Dropdown.Item className="hover:bg-white px-2 rounded-sm hover:text-black"><Link to='/pcc4'>PCC4</Link></Dropdown.Item>
             </div>
           </Dropdown>
         </li>

@@ -85,7 +85,7 @@ const DailyKvaGraph = ({ date }) => {
             type="monotone"
             dataKey="TotalNet_KWH_meter_1"
             stroke="#8884d8"
-            name="KVA"
+            name="kVA"
           />
         </LineChart>
       </ResponsiveContainer>

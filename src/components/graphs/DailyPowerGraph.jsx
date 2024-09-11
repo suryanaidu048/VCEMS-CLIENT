@@ -52,7 +52,7 @@ const DailyPowerGraph = ({ date }) => {
   return (
     <div className="bg-white max-md:py-5 p-0 md:p-1 xl:p-3 2xl:p-5 w-full h-full rounded-lg min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs max-sm:h-full font-medium shadow font-OpenSans dark:bg-[#2c2c2c]">
       <h2 className="p-2 m-2 font-semibold text-lg font-Montserrat dark:text-[#e4e2e2]">
-        Real-Time Energy vs. Time ({format(new Date(date), "yyyy-MM-dd")})
+        Real-Time Power vs. Time ({format(new Date(date), "yyyy-MM-dd")})
       </h2>
       <ResponsiveContainer
         width="100%"

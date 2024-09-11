@@ -30,12 +30,12 @@ const RealTimeKvaMeter = ({ kva }) => {
         colors={gaugeColors}
         percent={normalizedPower}
         textColor={theme === 'light' ? "#000000" : "#ffffff"}
-        formatTextValue={() => `${kva} KVA`}
+        formatTextValue={() => `${kva} kVA`}
         className="min-[2000px]:text-3xl xl:text-xl text-lg max-[500px]:text-base font-medium "
         /* needleColor={theme === 'light' ? '#000' : '#fff'} */
       />
-      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Today Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">{value} Kva</span></h2>
-      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">829.71 Kva</span></h2>
+      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Today Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">{value} kVA</span></h2>
+      <h2 className="font-OpenSans text-sm font-medium flex flex-col">Month Highest Peak Value  <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">829.71 kVA</span></h2>
     </div>
   );
 };

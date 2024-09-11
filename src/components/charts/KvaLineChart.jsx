@@ -44,7 +44,7 @@ const PowerLineChart = () => {
           <YAxis tick={{ fill: theme === 'light' ? '#000' : '#fff' }} />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="sumKVA" stroke="#8884d8" name="KVA" />
+          <Line type="monotone" dataKey="sumKVA" stroke="#8884d8" name="kVA" />
         </LineChart>
       </ResponsiveContainer>
     </div>

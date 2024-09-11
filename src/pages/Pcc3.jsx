@@ -58,10 +58,10 @@ const Pcc3 = () => {
                   <h2 className="rounded-full text-gray-400 w-64 ">
                     PCC
                   </h2>
-                  <p className="rounded-full ">Power(Kw)</p>
-                  <p className=" rounded-full">Energy(Kwh)</p>
+                  <p className="rounded-full ">Power(kW)</p>
+                  <p className=" rounded-full">Energy(kWh)</p>
                   <p className=" rounded-full pr-4">Power Factor</p>
-                  <p className=" rounded-full pr-4">KVA</p>
+                  <p className=" rounded-full pr-4">kVA</p>
                 </div>
 
                 <div className="">
@@ -481,7 +481,7 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_59}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_59}
+                        {!data?.TotalNet_KWH_meter_59 ? 0 : data?.TotalNet_KWH_meter_59}
                       </p>
                       <p className='param-value'>
                         {data?.Avg_PF_meter_59}
