@@ -3,7 +3,7 @@ import CurrentTime from "../components/CurrentTime";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import { dark, light } from "../constants";
+import { dark, green_fusion, light } from "../constants";
 import { useTheme } from "../components/ThemeContext";
 
 const SingleMeter = () => {
@@ -65,9 +65,9 @@ const SingleMeter = () => {
       <Sidebar />
       <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
         <header className="justify-between flex items-center py-2">
-          <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 font-Audiowide font-bold dark:text-[#e4e2e2]">
-            Vishnu Energy Monitoring System
-          </h1>
+        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
+        Green Fusion IoT Solution<img src={green_fusion} className="w-20" alt="" /> 
+        </h1>
           <span className="flex flex-row justify-center items-center">
             <img
               className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"
@@ -93,19 +93,19 @@ const SingleMeter = () => {
               <div className="flex justify-between items-center gap-4 max-[380px]:gap-2">
                 <h2 className="parameter">Voltage R - Phase</h2>
                 <p className="param-value">
-                  {data?.[`Voltage_V1N_meter_${id}`]} V
+                  {/* {data?.[`Voltage_V1N_meter_${id}`]} V */}237.7 V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
                 <h2 className="parameter">Voltage Y - Phase</h2>
                 <p className="param-value">
-                  {data?.[`Voltage_V2N_meter_${id}`]} V
+                  {/* {data?.[`Voltage_V2N_meter_${id}`]} V */}239.3 V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
                 <h2 className="parameter">Voltage B - Phase</h2>
                 <p className="param-value">
-                  {data?.[`Voltage_V3N_meter_${id}`]} V
+                  {/* {data?.[`Voltage_V3N_meter_${id}`]} V */}239.1 V
                 </p>
               </div>
 

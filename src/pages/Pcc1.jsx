@@ -3,7 +3,7 @@ import axios from 'axios'
 import CurrentTime from '../components/CurrentTime';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../components/ThemeContext';
-import { dark, light } from '../constants';
+import { dark, green_fusion, light } from '../constants';
 import Sidebar from '../components/Sidebar'
 
 const Pcc1 = () => {
@@ -36,8 +36,8 @@ const Pcc1 = () => {
       <Sidebar/>
       <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
         <header className="justify-between flex items-center py-2">
-        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 font-Audiowide font-bold dark:text-[#e4e2e2]">
-          Vishnu Energy Monitoring System
+        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
+        Green Fusion IoT Solution<img src={green_fusion} className="w-20" alt="" /> 
         </h1>
         <span className="flex flex-row justify-center items-center">
           <img
