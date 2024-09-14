@@ -83,7 +83,7 @@ const Home = () => {
       <ToastContainer />
       <header className="justify-between flex items-center py-2">
         <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
-        Green Fusion IoT Solution<img src={green_fusion} className="w-20" alt="" /> 
+        Green Fusion IoT Solutions<img src={green_fusion} className="w-20" alt="" /> 
         </h1>
         <span className="flex flex-row justify-center items-center">
           <img
