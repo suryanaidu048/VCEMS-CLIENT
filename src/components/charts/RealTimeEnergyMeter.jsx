@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { PieChart, Pie, Cell, ResponsiveContainer, Label, Legend } from 'recharts';
+import { API_URL } from '../../data/api';
 
 const RealTimeEnergyMeter = () => {
   const [energyMeter, setEnergyMeter] = useState(0);
@@ -8,7 +9,7 @@ const RealTimeEnergyMeter = () => {
 
   const fetchCurrentEnergy = async () => {
     try {
-      const response = await axios.get('https://vems-api.onrender.com/api/sensordata');
+      const response = await axios.get(`${API_URL}`);
       setEnergyMeter(response.data[0].TotalNet_KWH_meter_1);
     } catch (error) {
       console.error('Error fetching current energy:', error);

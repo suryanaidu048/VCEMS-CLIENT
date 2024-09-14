@@ -69,6 +69,7 @@ export default Dashboard;
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { API_URL } from "./data/api";
 
 const Panels = () => {
     const [data, setData] = useState(null);
@@ -77,7 +78,7 @@ const Panels = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://vems-api.onrender.com/api/sensordata"
+          `${API_URL}`
         );
         setData(response.data[0]);
         console.log(response.data[0]);

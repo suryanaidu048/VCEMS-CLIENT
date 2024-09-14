@@ -42,7 +42,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://vems-api.onrender.com/api/sensordata");
+        const response = await axios.get(`${API_URL}`);
         const newData = response.data[0];
         setData(newData);
 

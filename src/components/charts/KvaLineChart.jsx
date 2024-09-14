@@ -5,6 +5,7 @@ import {
 } from 'recharts';
 import moment from 'moment';
 import { useTheme } from '../ThemeContext';
+import { API_URL } from '../../data/api';
 
 const PowerLineChart = () => {
   const [data, setData] = useState([]);
@@ -13,7 +14,7 @@ const PowerLineChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://vems-api.onrender.com/api/sensordata'); // Adjust the endpoint as needed
+        const response = await axios.get(`${API_URL}`); // Adjust the endpoint as needed
         const currentTime = moment().format('HH:mm');
 
         // Calculate the sum of Total_KVA_meter_1 and Total_KVA_meter_15

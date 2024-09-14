@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../components/ThemeContext';
 import { dark, green_fusion, light } from '../constants';
 import Sidebar from '../components/Sidebar'
+import { API_URL } from '../data/api';
 
 const Pcc3 = () => {
 
@@ -15,7 +16,7 @@ const Pcc3 = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://vems-api.onrender.com/api/sensordata"
+          `${API_URL}`
         );
         setData(response.data[0]);
         console.log(response.data[0]);
