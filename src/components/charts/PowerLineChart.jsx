@@ -16,7 +16,7 @@ const PowerLineChart = () => {
       try {
         const response = await axios.get(`${API_URL}`); // Adjust the endpoint as needed
         const currentTime = moment().format('HH:mm');   
-        const sumPower = parseFloat(response.data[0].Total_KW_meter_70) + parseFloat(response.data[0].Total_KW_meter_40) + parseFloat(response.data[0].Total_KW_meter_69);
+        const sumPower = parseFloat(response.data[0].Total_KW_meter_70) + parseFloat(response.data[0].Total_KW_meter_20) + parseFloat(response.data[0].Total_KW_meter_69);
 
         const newData = {
           timestamp: currentTime,

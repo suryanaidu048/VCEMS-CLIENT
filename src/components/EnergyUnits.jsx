@@ -7,7 +7,7 @@ const EnergyUnits = ({energy}) => {
           Energy Consumption
         </h2>
         <p className="font-medium mt-6">Units Consumed Today</p>
-        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">15279.90 Units</p>
+        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">1589.12 Units</p>
         <p className="font-medium mt-6" >Units Consumed This Month</p>
         <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">82596.24 Units</p>
       </div>

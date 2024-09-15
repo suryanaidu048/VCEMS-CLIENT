@@ -94,19 +94,19 @@ const SingleMeter = () => {
               <div className="flex justify-between items-center gap-4 max-[380px]:gap-2">
                 <h2 className="parameter">Voltage R - Phase</h2>
                 <p className="param-value">
-                  {/* {data?.[`Voltage_V1N_meter_${id}`]} V */}237.7 V
+                  {data?.[`Voltage_V1N_meter_${id}`]} V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
                 <h2 className="parameter">Voltage Y - Phase</h2>
                 <p className="param-value">
-                  {/* {data?.[`Voltage_V2N_meter_${id}`]} V */}239.3 V
+                  {data?.[`Voltage_V2N_meter_${id}`]} V
                 </p>
               </div>
               <div className="flex justify-between items-center ">
                 <h2 className="parameter">Voltage B - Phase</h2>
                 <p className="param-value">
-                  {/* {data?.[`Voltage_V3N_meter_${id}`]} V */}239.1 V
+                  {data?.[`Voltage_V3N_meter_${id}`]} V
                 </p>
               </div>
 
