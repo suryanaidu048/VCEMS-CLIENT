@@ -41,6 +41,7 @@ const Home = () => {
   const notify = () => toast.error("Energy limit exceeded!");
 
   useEffect(() => {
+    // Fetch previous day's energy (initial energy)
     const fetchPreviousDayEnergy = async () => {
       try {
         const response = await axios.get(`${API_URL2}/api/previousDayEnergy`);
@@ -59,6 +60,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    // Fetch current energy values every minute
     const fetchData = async () => {
       try {
         const response = await axios.get(`${API_URL}`);
@@ -76,21 +78,32 @@ const Home = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 10000); // Fetch data every 10 seconds
+    const interval = setInterval(fetchData, 60000); // Fetch data every 1 minute
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   useEffect(() => {
+    // Calculate consumption based on initial energy and current energy
     if (initialEnergyValues && currentEnergy) {
       setTodayConsumption({
-        meter_70: (currentEnergy.meter_70 - initialEnergyValues.meter_70 || 0).toFixed(3),
-        meter_40: (currentEnergy.meter_40 - initialEnergyValues.meter_40 || 0).toFixed(3),
-        meter_69: (currentEnergy.meter_69 - initialEnergyValues.meter_69 || 0).toFixed(3),
-        meter_41: (currentEnergy.meter_41 - initialEnergyValues.meter_41 || 0).toFixed(3),
+        meter_70: initialEnergyValues.meter_70 && currentEnergy.meter_70 ? 
+          (currentEnergy.meter_70 - initialEnergyValues.meter_70).toFixed(3) : 0,
+        meter_40: initialEnergyValues.meter_40 && currentEnergy.meter_40 ? 
+          (currentEnergy.meter_40 - initialEnergyValues.meter_40).toFixed(3) : 0,
+        meter_69: initialEnergyValues.meter_69 && currentEnergy.meter_69 ? 
+          (currentEnergy.meter_69 - initialEnergyValues.meter_69).toFixed(3) : 0,
+        meter_41: initialEnergyValues.meter_41 && currentEnergy.meter_41 ? 
+          (currentEnergy.meter_41 - initialEnergyValues.meter_41).toFixed(3) : 0,
       });
     }
   }, [initialEnergyValues, currentEnergy]);
+
+  const energy = (
+    Number(todayConsumption.meter_70) + 
+    Number(todayConsumption.meter_69) + 
+    Number(todayConsumption.meter_40)
+  ).toFixed(2);
 
   if (!data) {
     return <div className="flex justify-center items-center w-full"><Loading/></div>;
@@ -101,7 +114,7 @@ const Home = () => {
       <ToastContainer />
       <header className="justify-between flex items-center py-2">
         <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
-        Green Fusion IoT Solutions<img src={green_fusion} className="w-20" alt="" />
+        Green Fusion IoT Solutions<img src={green_fusion} className="w-20" alt="" /> 
         </h1>
         <span className="flex flex-row justify-center items-center">
           <img
@@ -201,7 +214,7 @@ const Home = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
-          <EnergyUnits energy={(todayConsumption.meter_70 + todayConsumption.meter_40 + todayConsumption.meter_69)} />
+          <EnergyUnits energy={energy} />
           <div className="flex flex-col gap-4">
             <RealTimeKvaMeter kva={(data?.Total_KVA_meter_70 + data?.Total_KVA_meter_20 + data?.Total_KVA_meter_69).toFixed(2)} />
             {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}

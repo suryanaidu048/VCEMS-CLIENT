@@ -67,7 +67,7 @@ const Pcc2 = () => {
 
                 <div className="">
 
-                <div className="param1-div">
+                {/* <div className="param1-div">
                     <Link to='/SingleMeter/40'><h2 className='parameter'>
                         Main Meter
                       </h2></Link>
@@ -83,7 +83,7 @@ const Pcc2 = () => {
                       <p className='param-value'>
                         {data?.Total_KVA_meter_40.toFixed(2)}
                       </p>
-                    </div>
+                    </div> */}
 
 
                   <div className="param1-div">

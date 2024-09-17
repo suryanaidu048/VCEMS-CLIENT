@@ -4,7 +4,7 @@ import DailyPowerGraph from "../components/graphs/DailyPowerGraph";
 import DailyEnergyGraph from "../components/graphs/DailyEnergyGraph";
 import Sidebar from "../components/Sidebar";
 import { useTheme } from "../components/ThemeContext";
-import { dark, light } from "../constants";
+import { dark, green_fusion, light } from "../constants";
 import DailyKvaGraph from "../components/graphs/DailyKvaGraph";
 
 const DatewiseGraphs = () => {
@@ -19,9 +19,9 @@ const DatewiseGraphs = () => {
         <Sidebar />
         <section className="w-full">
           <header className="justify-between flex items-center p-4 mx-2">
-            <h1 className="md:text-2xl 2xl:text-5xl text-xl font-Audiowide font-bold dark:text-[#e4e2e2]">
-              Vishnu Energy Monitoring System
-            </h1>
+          <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
+        Green Fusion IoT Solutions<img src={green_fusion} className="w-20" alt="" />
+        </h1>
             <span className="flex flex-row justify-center items-center md:gap-4 gap-2">
               <img
                 className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"

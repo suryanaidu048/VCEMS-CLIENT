@@ -24,7 +24,7 @@ const DailyPowerGraph = ({ date }) => {
     while (currentTime <= endTime) {
       generatedData.push({
         timestamp: currentTime.getTime(),
-        TotalNet_KWH_meter_1: Math.floor(Math.random() * 5) + 50.63, // Random value between 700 and 850
+        Total_KVA_meter_1: Math.floor(Math.random() * 5) + 70.4, // Random value between 700 and 850
       });
       currentTime = addHours(currentTime, 1); // Increment by 1 hour
     }
@@ -83,7 +83,7 @@ const DailyPowerGraph = ({ date }) => {
           <Legend />
           <Line
             type="monotone"
-            dataKey="TotalNet_KWH_meter_1"
+            dataKey="Total_KVA_meter_1"
             stroke="#8884d8"
             name="Power"
           />
@@ -111,7 +111,7 @@ import { format, startOfDay, endOfDay, addMinutes } from "date-fns";
 import { useTheme } from "../ThemeContext";
 import { API_URL } from "../../data/api";
 
-const DailyPowerGraph = ({ date }) => {
+const DailyKvaGraph = ({ date }) => {
   const [data, setData] = useState([]);
   const { theme, toggleTheme } = useTheme();
 
@@ -122,7 +122,7 @@ const DailyPowerGraph = ({ date }) => {
       );
       const formattedData = response.data.map((entry) => ({
         timestamp: new Date(entry.timestamp).getTime(), // Convert to milliseconds for recharts
-        Total_KW_meter_1: entry.Total_KW_meter_1,
+        Total_KVA_meter_1: entry.Total_KVA_meter_1,
       }));
       setData(formattedData);
     } catch (error) {
@@ -181,12 +181,11 @@ const DailyPowerGraph = ({ date }) => {
             labelFormatter={(label) => format(new Date(label), "HH:mm")}
           />
           <Legend />
-          <Line type="monotone" dataKey="Total_KW_meter_1" stroke="#8884d8" name="Power" />
+          <Line type="monotone" dataKey="Total_KVA_meter_1" stroke="#8884d8" name="Kva" />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-export default DailyPowerGraph;
- */
+export default DailyKvaGraph; */
