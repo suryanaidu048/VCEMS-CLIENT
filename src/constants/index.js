@@ -9,7 +9,8 @@ import pcc from './logos/pccs.png'
 import vishnu from './logos/logo1.png'
 import green_fusion from './logos/green-fusion.png'
 import vishnu1 from './logos/vishnu.png'
+import growth from './logos/growth.png'
 
 export {
-    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1
+    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1, growth
 }

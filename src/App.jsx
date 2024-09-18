@@ -7,6 +7,7 @@ import Pcc3 from './pages/Pcc3'
 import SingleMeter from './pages/SingleMeter'
 import PageNotFound from './components/PageNotFound'
 import DatewiseGraphs from './pages/DatewiseGraphs'
+import Data from './pages/Data'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/Pcc3' element={<Pcc3/>} />
         <Route path='/SingleMeter/:id' element={<SingleMeter/>} />
         <Route path='*' element={<PageNotFound/>} />
+        <Route path="/sensordata" element={<Data/>}/>
       </Routes>
     </div>
   )
