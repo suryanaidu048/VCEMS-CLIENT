@@ -7,23 +7,23 @@ const getFixedEnergyData = () => {
     return [
         {
             date: moment().subtract(4, 'days').format('YYYY-MM-DD'),
-            energy: 1725
+            energy: 10725
         },
         {
             date: moment().subtract(3, 'days').format('YYYY-MM-DD'),
-            energy: 1520
+            energy: 8520
         },
         {
             date: moment().subtract(2, 'days').format('YYYY-MM-DD'),
-            energy: 1410
+            energy: 7410
         },
         {
             date: moment().subtract(1, 'days').format('YYYY-MM-DD'),
-            energy: 1820
+            energy: 10820
         },
         {
             date: moment().format('YYYY-MM-DD'),
-            energy: 629
+            energy: 8849
         }
     ];
 };
