@@ -24,7 +24,7 @@ const Data = () => {
   const fetchSensorData = async (selectedDate) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:3306/api/sensordatabydate/${selectedDate}`);
+      const response = await fetch(`https://vems-server.onrender.com/api/sensordatabydate/${selectedDate}`);
       const data = await response.json();
       setSensorData(data);
       setError(null); // Clear any previous error
