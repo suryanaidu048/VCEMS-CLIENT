@@ -8,7 +8,7 @@ const Data = () => {
   const [error, setError] = useState(null);
 
   // Fetch data every 30 seconds and when the date changes
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchInterval = setInterval(() => {
       fetchSensorData(date);
     }, 30000); // 30000 ms = 30 seconds
@@ -18,6 +18,23 @@ const Data = () => {
 
     // Cleanup interval on component unmount or when date changes
     return () => clearInterval(fetchInterval);
+  }, [date]);
+
+  // Function to fetch sensor data based on the selected date
+  const fetchSensorData = async (selectedDate) => {
+    setLoading(true);
+    try {
+      const response = await fetch(`http://localhost:3306/api/sensordatabydate/${selectedDate}`);
+      const data = await response.json();
+      setSensorData(data);
+      setError(null); // Clear any previous error
+    } catch (err) {
+      setError('Failed to fetch data');
+    }
+    setLoading(false);
+  }; */
+  useEffect(() => {
+    fetchSensorData(date);
   }, [date]);
 
   // Function to fetch sensor data based on the selected date
