@@ -19,7 +19,7 @@ import RealTimeKvaMeter from "../components/charts/RealTimeKvaMeter";
 const Home = () => {
   const [data, setData] = useState(null);
   const API_URL = process.env.NODE_ENV === 'production'
-  ? '/data/api'  // Use Vercel proxy in production
+  ? '/src/data/proxy'  // Use Vercel proxy in production
   : 'http://3.25.91.3:4000/api/sensordata';  // Use HTTP API locally in development
 
   const { theme, toggleTheme } = useTheme();
@@ -44,7 +44,7 @@ const Home = () => {
 
   const notify = () => toast.error("Energy limit exceeded!");
 
-  useEffect(() => {
+  /* useEffect(() => {
     // Fetch previous day's energy (initial energy)
     const fetchPreviousDayEnergy = async () => {
       try {
@@ -61,7 +61,7 @@ const Home = () => {
     };
 
     fetchPreviousDayEnergy();
-  }, []);
+  }, []); */
 
   useEffect(() => {
     // Fetch current energy values every minute
