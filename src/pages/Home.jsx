@@ -18,9 +18,6 @@ import RealTimeKvaMeter from "../components/charts/RealTimeKvaMeter";
 
 const Home = () => {
   const [data, setData] = useState(null);
-  const API_URL = process.env.NODE_ENV === 'production'
-  ? 'http://3.25.91.3:4000/api/sensordata'  // Use Vercel proxy in production
-  : 'http://3.25.91.3:4000/api/sensordata';  // Use HTTP API locally in development
 
   const { theme, toggleTheme } = useTheme();
   const [currentEnergy, setCurrentEnergy] = useState({
