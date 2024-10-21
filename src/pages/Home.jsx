@@ -38,27 +38,40 @@ const Home = () => {
     meter_69: null,
     meter_41: null,
   });
+  const [monthlyEnergy, setMonthlyEnergy] = useState(null)
+  const [highestkva, setHighestkva] = useState({
+    today:null,
+    month:null
+  })
 
   const notify = () => toast.error("Energy limit exceeded!");
 
-  /* useEffect(() => {
+  useEffect(() => {
     // Fetch previous day's energy (initial energy)
     const fetchPreviousDayEnergy = async () => {
       try {
-        const response = await axios.get(`${API_URL2}/api/previousDayEnergy`);
+        const response = await axios.get(`${API_URL2}/previousDayEnergy`);
+        const response1 = await axios.get(`${API_URL2}/monthly-energy`);
+        const response3 = await axios.get(`${API_URL2}/highest-kva`);
+
         setInitialEnergyValues(response.data.initialEnergyValues || {
           meter_70: null,
           meter_40: null,
           meter_69: null,
           meter_41: null,
         });
+        setMonthlyEnergy(response1.data.totalEnergyConsumption.toFixed(3))
+        setHighestkva({
+          today: response3.data.highestKvaToday,
+          month: response3.data.highestKvaMonth
+        })
       } catch (error) {
         console.error("Error fetching previous day energy:", error);
       }
     };
 
     fetchPreviousDayEnergy();
-  }, []); */
+  }, []);
 
   useEffect(() => {
     // Fetch current energy values every minute
@@ -104,7 +117,7 @@ const Home = () => {
     Number(todayConsumption.meter_70) + 
     Number(todayConsumption.meter_69) + 
     Number(todayConsumption.meter_40)
-  ).toFixed(2);
+  ).toFixed(3);
 
   if (!data) {
     return <div className="flex justify-center items-center w-full"><Loading/></div>;
@@ -116,7 +129,7 @@ const Home = () => {
       <header className="justify-between flex items-center py-2">
         <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
         Green Fusion IoT Solutions<img src={green_fusion} className="w-20" alt="" /> 
-        </h1>
+        </h1> 
         <span className="flex flex-row justify-center items-center">
           <img
             className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"
@@ -215,9 +228,9 @@ const Home = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
-          <EnergyUnits energy={energy} />
+          <EnergyUnits energy={energy} monthlyEnergy={monthlyEnergy} />
           <div className="flex flex-col gap-4">
-            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_70 + data?.Total_KVA_meter_20 + data?.Total_KVA_meter_69).toFixed(2)} />
+            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_70 + data?.Total_KVA_meter_40 + data?.Total_KVA_meter_69).toFixed(2)} todayKva={highestkva.today} monthKva = {highestkva.month} />
             {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}
           </div>
         </div>
