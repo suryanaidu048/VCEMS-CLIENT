@@ -92,7 +92,7 @@ const Home = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 60000); // Fetch data every 1 minute
+    const interval = setInterval(fetchData, 6000); // Fetch data every 1 minute
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
@@ -118,6 +118,15 @@ const Home = () => {
     Number(todayConsumption.meter_69) + 
     Number(todayConsumption.meter_40)
   ).toFixed(3);
+
+  const getPFClass = (avgPF) => {
+    if (avgPF < 0.7) {
+        return 'bg-red-300'; // Class for red background
+    } else if (avgPF < 0.8) {
+        return 'bg-yellow-300'; // Class for yellow background
+    }
+    return ''; // No special class
+  }
 
   if (!data) {
     return <div className="flex justify-center items-center w-full"><Loading/></div>;
@@ -218,7 +227,7 @@ const Home = () => {
             <p className="value">
             {data?.Total_KVA_meter_69.toFixed(2)}
             </p>
-            <p className="value">
+            <p className={`value ${getPFClass(data?.Avg_PF_meter_69)}`}>
             {data?.Avg_PF_meter_69.toFixed(3)}
             </p>
             <p className="value">
