@@ -18,7 +18,7 @@ const RealTimeEnergyMeter = () => {
 
   useEffect(() => {
     fetchCurrentEnergy(); // Initial fetch
-    const intervalId = setInterval(fetchCurrentEnergy, 10000); // Fetch every 60 seconds
+    const intervalId = setInterval(fetchCurrentEnergy, 30000); // Fetch every 60 seconds
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);

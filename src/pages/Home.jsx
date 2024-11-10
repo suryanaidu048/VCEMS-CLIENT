@@ -92,7 +92,7 @@ const Home = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 6000); // Fetch data every 1 minute
+    const interval = setInterval(fetchData, 30000); // Fetch data every 1 minute
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);

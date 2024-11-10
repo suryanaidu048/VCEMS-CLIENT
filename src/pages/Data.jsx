@@ -100,7 +100,7 @@ const Data = () => {
                 {sensorData.map((data, index) => (
                   <React.Fragment key={data.id}>
                     <tr>
-                      <td className="py-2 px-4 border" rowSpan="4">{index + 1}</td>
+                      <td className="py-2 px-4 border" rowSpan="4">{data.timestamp}</td>
                       <td className="py-2 px-4 border">Meter 70</td>
                       <td className="py-2 px-4 border">{data.Total_KW_meter_70}</td>
                       <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_70}</td>

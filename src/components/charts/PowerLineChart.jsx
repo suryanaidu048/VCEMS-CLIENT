@@ -29,7 +29,7 @@ const PowerLineChart = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 10000); // Fetch data every 30 seconds
+    const interval = setInterval(fetchData, 30000); // Fetch data every 30 seconds
 
     return () => clearInterval(interval);
   }, []);
