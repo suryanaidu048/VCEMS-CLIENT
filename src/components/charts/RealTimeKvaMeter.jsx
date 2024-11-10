@@ -1,7 +1,6 @@
 import GaugeChart from "react-gauge-chart";
 import { useTheme } from "../ThemeContext";
 import { useState, useEffect, useRef } from "react";
-import alertSound from '../../constants/alert.mp3';
 
 const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
   const { theme } = useTheme();
@@ -13,44 +12,35 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
   const gaugeColors = ["#00ff00", "#ff0000"];
   
   const [showAlert, setShowAlert] = useState(false);
-  const audioRef = useRef(new Audio(alertSound));
-  const audioPlayedRef = useRef(false); // Track if the alert audio has played
 
   // Function to check KVA limit and show alert
+
   const checkLimit = () => {
     if (kva > 1100) {
       setShowAlert(true);
-      if (!audioPlayedRef.current) {
-        audioRef.current.play();
-        audioPlayedRef.current = true; // Set flag to indicate audio has been played
-      }
     } else {
       setShowAlert(false);
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reset audio
-      audioPlayedRef.current = false; // Reset flag for future alerts
     }
   };
 
   // Update the value and check limit when KVA changes
   useEffect(() => {
-    setValue(kva);
+    if (kva > value) {
+      setValue(kva);
+    }
     checkLimit();
-  }, [kva]);
+  }, [kva, value]);
 
   // Function to dismiss the alert
   const dismissAlert = () => {
     setShowAlert(false);
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0; // Reset audio
-    audioPlayedRef.current = false; // Reset flag for future alerts
   };
 
   return (
     <div className={`relative bg-white py-1 dark:text-white h-full rounded-lg w-full flex flex-col items-center shadow font-OpenSans dark:bg-[#2c2c2c]`}>
       {/* Top Alert Box */}
       {showAlert && (
-        <div className="fixed top-0 left-0 right-0 font-bold p-4 bg-red-500 text-white text-center z-50 flex justify-between items-center">
+        <div className="fixed top-0 left-0 right-0 font-bold  p-4 bg-red-500 text-white text-center z-50 flex justify-between items-center">
           <span>Energy Limit Exceeded</span>
           <button onClick={dismissAlert} className="text-white hover:text-gray-200">
             {/* Cancel Icon (SVG) */}
