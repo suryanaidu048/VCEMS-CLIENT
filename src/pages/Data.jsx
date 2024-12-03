@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
+import { API_URL2 } from '../data/api';
 
 const Data = () => {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10)); // Default to today's date
@@ -41,7 +42,7 @@ const Data = () => {
   const fetchSensorData = async (selectedDate) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://vems-api.onrender.com/api1/sensordatabydate/${selectedDate}`);
+      const response = await fetch(`${API_URL2}/sensordatabydate/${selectedDate}`);
       const data = await response.json();
       setSensorData(data);
       setError(null); // Clear any previous error

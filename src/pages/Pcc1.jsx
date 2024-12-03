@@ -256,10 +256,10 @@ const Pcc1 = () => {
                         {data?.Total_KW_meter_36}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_36}
+                        {/* {data?.TotalNet_KWH_meter_36} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_36)}`}>
-                        {data?.Avg_PF_meter_36}
+                        {/* {data?.Avg_PF_meter_36} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_36}

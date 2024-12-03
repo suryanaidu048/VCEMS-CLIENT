@@ -114,17 +114,17 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_42.toFixed(2)}
+                      {/* {data?.Total_KW_meter_42.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_42.toFixed(2)}
+                      {/* {data?.TotalNet_KWH_meter_42.toFixed(2)} */}0
                     </p>
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_42)}`}
                     >
-                      {data?.Avg_PF_meter_42.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_42.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -142,22 +142,22 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_43.toFixed(2)}
+                      {/* {data?.Total_KW_meter_43.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_43.toFixed(2)}
+                      {/* {data?.TotalNet_KWH_meter_43.toFixed(2)} */}0
                     </p>
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_43)}`}
                     >
-                      {data?.Avg_PF_meter_43.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_43.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_43.toFixed(2)}
+                      {/* {data?.Total_KVA_meter_43.toFixed(2)} */}0
                     </p>
                   </div>
 
@@ -180,7 +180,7 @@ const Pcc3 = () => {
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_44)}`}
                     >
-                      {data?.Avg_PF_meter_44.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_44.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -254,7 +254,7 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_47.toFixed(2)}
+                      {/* {data?.Total_KW_meter_47.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -264,7 +264,7 @@ const Pcc3 = () => {
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_47)}`}
                     >
-                      {data?.Avg_PF_meter_47.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_47.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -292,7 +292,7 @@ const Pcc3 = () => {
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_48)}`}
                     >
-                      {data?.Avg_PF_meter_48.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_48.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -320,7 +320,7 @@ const Pcc3 = () => {
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_49)}`}
                     >
-                      {data?.Avg_PF_meter_49.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_49.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -348,7 +348,7 @@ const Pcc3 = () => {
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_50)}`}
                     >
-                      {data?.Avg_PF_meter_50.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_50.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -368,7 +368,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_51.toFixed(2)}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_51)}`}>
-                        {data?.Avg_PF_meter_51.toFixed(2)}
+                        {/* {data?.Avg_PF_meter_51.toFixed(2)} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_51.toFixed(2)}
@@ -386,7 +386,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_52}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_52)}`}>
-                        {data?.Avg_PF_meter_52}
+                        {/* {data?.Avg_PF_meter_52} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_52}
@@ -404,7 +404,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_53}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_53)}`}>
-                        {data?.Avg_PF_meter_53}
+                        {/* {data?.Avg_PF_meter_53} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_53}
@@ -422,7 +422,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_55}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_55)}`}>
-                        {data?.Avg_PF_meter_55}
+                        {/* {data?.Avg_PF_meter_55} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_55}
@@ -437,10 +437,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_56}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_56}
+                        {/* {data?.TotalNet_KWH_meter_56} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_56)}`}>
-                        {data?.Avg_PF_meter_56}
+                        {/* {data?.Avg_PF_meter_56} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_56}
@@ -455,10 +455,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_57}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_57}
+                       {/*  {data?.TotalNet_KWH_meter_57} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_57)}`}>
-                        {data?.Avg_PF_meter_57}
+                        {/* {data?.Avg_PF_meter_57} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_57}
@@ -476,7 +476,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_58}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_58)}`}>
-                        {data?.Avg_PF_meter_58}
+                        {/* {data?.Avg_PF_meter_58} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_58}
@@ -494,7 +494,7 @@ const Pcc3 = () => {
                         {!data?.TotalNet_KWH_meter_59 ? 0 : data?.TotalNet_KWH_meter_59}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_59)}`}>
-                        {data?.Avg_PF_meter_59}
+                        {/* {data?.Avg_PF_meter_59} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_59}
@@ -509,10 +509,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_60}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_60}
+                       {/*  {data?.TotalNet_KWH_meter_60} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_60)}`}>
-                        {data?.Avg_PF_meter_60}
+                       {/*  {data?.Avg_PF_meter_60} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_60}
@@ -527,10 +527,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_61}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_61}
+                        {/* {data?.TotalNet_KWH_meter_61} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_61)}`}>
-                        {data?.Avg_PF_meter_61}
+                        {/* {data?.Avg_PF_meter_61} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_61}
@@ -545,10 +545,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_62}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_62}
+                        {/* {data?.TotalNet_KWH_meter_62} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_62)}`}>
-                        {data?.Avg_PF_meter_62}
+                        {/* {data?.Avg_PF_meter_62} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_62}
@@ -563,10 +563,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_63}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_63}
+                        {/* {data?.TotalNet_KWH_meter_63} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_63)}`}>
-                        {data?.Avg_PF_meter_63}
+                        {/* {data?.Avg_PF_meter_63} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_63}
@@ -584,7 +584,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_64}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_64)}`}>
-                        {data?.Avg_PF_meter_64}
+                        {/* {data?.Avg_PF_meter_64} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_64}
@@ -602,7 +602,7 @@ const Pcc3 = () => {
                         {data?.TotalNet_KWH_meter_65}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_65)}`}>
-                        {data?.Avg_PF_meter_65}
+                        {/* {data?.Avg_PF_meter_65} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_65}
@@ -635,10 +635,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_67}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_67}
+                        {/* {data?.TotalNet_KWH_meter_67} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_67)}`}>
-                        {data?.Avg_PF_meter_67}
+                        {/* {data?.Avg_PF_meter_67} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_67}
@@ -688,12 +688,12 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_1.toFixed(2)}
+                      {/* {data?.TotalNet_KWH_meter_1.toFixed(2)} */}0
                     </p>
                     <p
                       className={`param-value ${getPFClass(data?.Avg_PF_meter_1)}`}
                     >
-                      {data?.Avg_PF_meter_1.toFixed(2)}
+                      {/* {data?.Avg_PF_meter_1.toFixed(2)} */}0
                     </p>
                     <p
                       className='param-value'
@@ -764,10 +764,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_5}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_5}
+                        {/* {data?.TotalNet_KWH_meter_5} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_5)}`}>
-                        {data?.Avg_PF_meter_5}
+                        {/* {data?.Avg_PF_meter_5} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_5}
@@ -800,10 +800,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_7}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_7}
+                        {/* {data?.TotalNet_KWH_meter_7} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_7)}`}>
-                        {data?.Avg_PF_meter_7}
+                        {/* {data?.Avg_PF_meter_7} */}0 
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_7}
@@ -818,10 +818,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_8}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_8}
+                       {/*  {data?.TotalNet_KWH_meter_8} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_8)}`}>
-                        {data?.Avg_PF_meter_8}
+                        {/* {data?.Avg_PF_meter_8} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_8}
@@ -836,10 +836,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_9}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_9}
+                        {/* {data?.TotalNet_KWH_meter_9} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_9)}`}>
-                        {data?.Avg_PF_meter_9}
+                        {/* {data?.Avg_PF_meter_9} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_9}
@@ -890,10 +890,10 @@ const Pcc3 = () => {
                         {data?.Total_KW_meter_12}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_12}
+                        {/* {data?.TotalNet_KWH_meter_12} */}0
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_12)}`}>
-                        {data?.Avg_PF_meter_12}
+                        {/* {data?.Avg_PF_meter_12} */}0
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_12}

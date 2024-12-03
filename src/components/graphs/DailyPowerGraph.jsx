@@ -56,7 +56,7 @@ const DailyPowerGraph = ({ date }) => {
       </h2>
       <ResponsiveContainer
         width="100%"
-        height={400}
+        height={400}  
         className="font-semibold text-lg font-OpenSans"
       >
         <LineChart data={data}>
