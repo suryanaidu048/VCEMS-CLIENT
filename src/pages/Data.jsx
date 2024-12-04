@@ -7,33 +7,6 @@ const Data = () => {
   const [sensorData, setSensorData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  // Fetch data every 30 seconds and when the date changes
-  /* useEffect(() => {
-    const fetchInterval = setInterval(() => {
-      fetchSensorData(date);
-    }, 30000); // 30000 ms = 30 seconds
-
-    // Initial fetch when the component mounts or when the date changes
-    fetchSensorData(date);
-
-    // Cleanup interval on component unmount or when date changes
-    return () => clearInterval(fetchInterval);
-  }, [date]);
-
-  // Function to fetch sensor data based on the selected date
-  const fetchSensorData = async (selectedDate) => {
-    setLoading(true);
-    try {
-      const response = await fetch(`http://localhost:3306/api/sensordatabydate/${selectedDate}`);
-      const data = await response.json();
-      setSensorData(data);
-      setError(null); // Clear any previous error
-    } catch (err) {
-      setError('Failed to fetch data');
-    }
-    setLoading(false);
-  }; */
   useEffect(() => {
     fetchSensorData(date);
   }, [date]);
@@ -101,7 +74,7 @@ const Data = () => {
                 {sensorData.map((data, index) => (
                   <React.Fragment key={data.id}>
                     <tr>
-                      <td className="py-2 px-4 border" rowSpan="4">{data.timestamp}</td>
+                      <td className="py-2 px-4 border" rowSpan="4">{new Date(data.timestamp).toLocaleTimeString()}</td>
                       <td className="py-2 px-4 border">Meter 70</td>
                       <td className="py-2 px-4 border">{data.Total_KW_meter_70}</td>
                       <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_70}</td>

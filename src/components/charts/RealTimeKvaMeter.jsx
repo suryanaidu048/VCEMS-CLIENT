@@ -1,7 +1,7 @@
 import GaugeChart from "react-gauge-chart";
 import { useTheme } from "../ThemeContext";
 import { useState, useEffect, useRef } from "react";
-import alertSound from "../../constants/alert.mp3";
+//import alertSound from "../../constants/alert.mp3";
 
 const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
   const { theme } = useTheme();
@@ -13,19 +13,14 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
   const gaugeColors = ["#00ff00", "#ff0000"];
 
   const [showAlert, setShowAlert] = useState(false);
-  const audioRef = useRef(new Audio(alertSound));
 
   // Function to check KVA limit and show alert
 
   const checkLimit = () => {
     if (kva > 1100) {
       setShowAlert(true);
-      audioRef.current.loop = true; // Set audio to loop
-      audioRef.current.play(); // Play alert sound
     } else {
       setShowAlert(false);
-      audioRef.current.pause(); // Stop alert sound if not exceeding limit
-      audioRef.current.currentTime = 0; // Reset audio to start
     }
   };
 
@@ -40,8 +35,6 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
   // Function to dismiss the alert
   const dismissAlert = () => {
     setShowAlert(false);
-    audioRef.current.pause(); // Stop alert sound
-    audioRef.current.currentTime = 0; // Reset audio to start
   };
 
   return (
@@ -94,7 +87,7 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
       <h2 className="font-OpenSans text-sm font-medium flex flex-col">
         Month Highest Peak Value
         <span className="bg-red-300 font-semibold py-1 my-1 rounded-lg text-center">
-          {monthKva} kVA
+          {monthKva > value ? monthKva : value} kVA
         </span>
       </h2>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/* import React, { useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -93,7 +93,7 @@ const DailyPowerGraph = ({ date }) => {
   );
 };
 
-export default DailyPowerGraph;
+export default DailyPowerGraph; */
 
 /* import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -109,21 +109,21 @@ import {
 } from "recharts";
 import { format, startOfDay, endOfDay, addMinutes } from "date-fns";
 import { useTheme } from "../ThemeContext";
-import { API_URL } from "../../data/api";
 
 const DailyKvaGraph = ({ date }) => {
   const [data, setData] = useState([]);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   const fetchPowerData = async () => {
     try {
       const response = await axios.get(
-        `${API_URL}/api/daywise-graph/${date}`
+        `http://localhost:4000/api1/daywise-graph/${date}`
       );
       const formattedData = response.data.map((entry) => ({
-        timestamp: new Date(entry.timestamp).getTime(), // Convert to milliseconds for recharts
-        Total_KVA_meter_1: entry.Total_KVA_meter_1,
+        timestamp: new Date(entry.timestamp).getTime(), // Convert UTC ISODate to milliseconds
+        Total_KVA_meter: parseFloat(entry.Total_KVA_meter_70) + parseFloat(entry.Total_KVA_meter_40) + parseFloat(entry.Total_KVA_meter_69) + parseFloat(entry.Total_KVA_meter_41),
       }));
+      console.log(formattedData);
       setData(formattedData);
     } catch (error) {
       console.error("Error fetching power data:", error);
@@ -131,8 +131,8 @@ const DailyKvaGraph = ({ date }) => {
   };
 
   useEffect(() => {
-    fetchPowerData(date); // Initial fetch
-    const intervalId = setInterval(() => fetchPowerData(date), 30000); // Fetch every 60 seconds
+    fetchPowerData(date); // Fetch data when the component mounts or date changes
+    const intervalId = setInterval(() => fetchPowerData(date), 30000); // Refresh data every 30 seconds
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [date]);
@@ -143,14 +143,14 @@ const DailyKvaGraph = ({ date }) => {
     let currentTime = startOfDay(new Date(date));
     const endTime = endOfDay(new Date(date));
     while (currentTime <= endTime) {
-      ticks.push(currentTime.getTime()); // Convert to milliseconds for recharts
+      ticks.push(currentTime.getTime()); // Convert to milliseconds for Recharts
       currentTime = addMinutes(currentTime, 30);
     }
     return ticks;
   };
 
   return (
-    <div className="bg-white max-md:py-5 p-0 md:p-1 xl:p-3 2xl:p-5 w-full h-full rounded-lg min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs max-sm:h-full font-medium shadow font-OpenSans dark:bg-[#2c2c2c] ">
+    <div className="bg-white max-md:py-5 p-0 md:p-1 xl:p-3 2xl:p-5 w-full h-full rounded-lg min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs max-sm:h-full font-medium shadow font-OpenSans dark:bg-[#2c2c2c]">
       <h2 className="p-2 m-2 font-semibold text-lg font-Montserrat dark:text-white">
         Real-Time Power vs. Time (12 AM - 11:59 PM)
       </h2>
@@ -170,18 +170,23 @@ const DailyKvaGraph = ({ date }) => {
             ]}
             tickFormatter={(unixTime) => format(new Date(unixTime), "HH:mm")}
             ticks={generateTimeTicks()}
-            className=" 2xl:text-xl text-sm max-[500px]:text-xs font-medium"
-            tick={{ fill: theme == "light" ? "#000" : "#fff" }}
+            className="2xl:text-xl text-sm max-[500px]:text-xs font-medium"
+            tick={{ fill: theme === "light" ? "#000" : "#fff" }}
           />
           <YAxis
-            tick={{ fill: theme == "light" ? "#000" : "#fff" }}
+            tick={{ fill: theme === "light" ? "#000" : "#fff" }}
             className="2xl:text-xl text-sm max-[500px]:text-xs font-medium"
           />
           <Tooltip
             labelFormatter={(label) => format(new Date(label), "HH:mm")}
           />
           <Legend />
-          <Line type="monotone" dataKey="Total_KVA_meter_1" stroke="#8884d8" name="Kva" />
+          <Line
+            type="monotone"
+            dataKey="Total_KVA_meter"
+            stroke="#8884d8"
+            name="Kva"
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
@@ -189,3 +194,78 @@ const DailyKvaGraph = ({ date }) => {
 };
 
 export default DailyKvaGraph; */
+
+import React from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import { format, startOfDay, endOfDay, addMinutes } from "date-fns";
+import { useTheme } from "../ThemeContext";
+
+const DailyPowerGraph = ({ date, data }) => {
+  const { theme } = useTheme();
+
+  // Function to generate timestamps for every 30 minutes
+  const generateTimeTicks = () => {
+    const ticks = [];
+    let currentTime = startOfDay(new Date(date));
+    const endTime = endOfDay(new Date(date));
+    while (currentTime <= endTime) {
+      ticks.push(currentTime.getTime()); // Convert to milliseconds for Recharts
+      currentTime = addMinutes(currentTime, 30);
+    }
+    return ticks;
+  };
+
+  return (
+    <div className="bg-white max-md:py-5 p-0 md:p-1 xl:p-3 2xl:p-5 w-full h-full rounded-lg min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs max-sm:h-full font-medium shadow font-OpenSans dark:bg-[#2c2c2c]">
+      <h2 className="p-2 m-2 font-semibold text-lg font-Montserrat dark:text-white">
+        Real-Time Power vs. Time (12 AM - 11:59 PM)
+      </h2>
+      <ResponsiveContainer
+        width="100%"
+        height={400}
+        className="font-semibold text-lg font-OpenSans"
+      >
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis
+            dataKey="timestamp"
+            type="number"
+            domain={[
+              startOfDay(new Date(date)).getTime(),
+              endOfDay(new Date(date)).getTime(),
+            ]}
+            tickFormatter={(unixTime) => format(new Date(unixTime), "HH:mm")}
+            ticks={generateTimeTicks()}
+            className="2xl:text-xl text-sm max-[500px]:text-xs font-medium"
+            tick={{ fill: theme === "light" ? "#000" : "#fff" }}
+          />
+          <YAxis
+            tick={{ fill: theme === "light" ? "#000" : "#fff" }}
+            className="2xl:text-xl text-sm max-[500px]:text-xs font-medium"
+          />
+          <Tooltip
+            labelFormatter={(label) => format(new Date(label), "HH:mm")}
+          />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="Total_KW_meter"
+            stroke="#8884d8"
+            name="Power"
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default DailyPowerGraph;
