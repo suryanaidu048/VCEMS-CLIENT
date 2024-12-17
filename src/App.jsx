@@ -8,6 +8,8 @@ import SingleMeter from './pages/SingleMeter'
 import PageNotFound from './components/PageNotFound'
 import DatewiseGraphs from './pages/DatewiseGraphs'
 import Data from './pages/Data'
+import Prediction from './pages/Prediction'
+
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path='/SingleMeter/:id' element={<SingleMeter/>} />
         <Route path='*' element={<PageNotFound/>} />
         <Route path="/sensordata" element={<Data/>}/>
+        <Route path='/predictions' element={<Prediction/>} />
+
       </Routes>
     </div>
   )
