@@ -9,7 +9,6 @@ import PageNotFound from './components/PageNotFound'
 import DatewiseGraphs from './pages/DatewiseGraphs'
 import Prediction from './pages/Prediction'
 import Data from './pages/Data'
-import Prediction from './pages/Prediction'
 
 
 const App = () => {
@@ -25,10 +24,6 @@ const App = () => {
         <Route path='*' element={<PageNotFound/>} />
         <Route path="/sensordata" element={<Data/>}/>
         <Route path='/predictions' element={<Prediction/>} />
-<<<<<<< HEAD
-=======
-
->>>>>>> 8764a8a8fb99156bddb35523e3d9dc8b823be9b8
       </Routes>
     </div>
   )
