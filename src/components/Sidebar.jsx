@@ -1,5 +1,5 @@
 import React from "react";
-import { home, chart, power, pcc, vishnu, logo, vishnu1, growth } from "../constants";
+import { home, chart, power, pcc, vishnu, logo, vishnu1, growth, predictions } from "../constants";
 import { Link } from "react-router-dom";
 import { Dropdown, Avatar } from "rsuite";
 
@@ -30,6 +30,11 @@ const Sidebar = () => {
             <Dropdown.Item className="hover:bg-white px-2 rounded-sm hover:text-black"><Link to='/pcc3'>PCC3</Link></Dropdown.Item>
             </div>
           </Dropdown>
+        </li>
+        <li className="w-full text-lg font-medium rounded-lg md:my-6 md:ml-2 ml-4  my-6">
+          <Link to="/predictions">
+            <img src={predictions} alt="add" />
+          </Link>
         </li>
         <li className="w-full text-lg font-medium rounded-lg md:my-6 md:ml-2 ml-4  my-6">
           <Link to="/sensordata">
