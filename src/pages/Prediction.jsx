@@ -1,8 +1,13 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+<<<<<<< HEAD
 import PredictionChart1 from "../components/charts/PredictionChart1";
 import PredictionChart from "../components/charts/PredictionChart";
+=======
+import EnergyConsumptionChart from "../components/EnergyConsumptionChart";
+import EnergyConsumptionChart1 from "../components/EnergyConsumptionChart1";
+>>>>>>> 8764a8a8fb99156bddb35523e3d9dc8b823be9b8
 
 const Prediction = () => {
     const data = [
@@ -45,8 +50,13 @@ const Prediction = () => {
                     </div>
                 </div>
                 <div className="xl:flex gap-4 h-full ">
+<<<<<<< HEAD
                     <PredictionChart1 />
                     <PredictionChart/>
+=======
+                    <EnergyConsumptionChart1 />
+                    <EnergyConsumptionChart/>
+>>>>>>> 8764a8a8fb99156bddb35523e3d9dc8b823be9b8
                 </div>
             </div>
         </div>
