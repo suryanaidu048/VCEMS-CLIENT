@@ -18,7 +18,6 @@ import RealTimeKvaMeter from "../components/charts/RealTimeKvaMeter";
 
 const Home = () => {
   const [data, setData] = useState(null);
-
   const { theme, toggleTheme } = useTheme();
   const [currentEnergy, setCurrentEnergy] = useState({
     meter_70: null,

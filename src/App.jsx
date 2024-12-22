@@ -9,6 +9,7 @@ import PageNotFound from './components/PageNotFound'
 import DatewiseGraphs from './pages/DatewiseGraphs'
 import Prediction from './pages/Prediction'
 import Data from './pages/Data'
+import PredictionBarChart from './pages/PredictionBarChart'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='*' element={<PageNotFound/>} />
         <Route path="/sensordata" element={<Data/>}/>
         <Route path='/predictions' element={<Prediction/>} />
+        <Route path='/pred' element={<PredictionBarChart/>} />
       </Routes>
     </div>
   )

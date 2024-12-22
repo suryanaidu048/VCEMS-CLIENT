@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import PredictionChart1 from "../components/charts/PredictionChart1";
 import PredictionChart from "../components/charts/PredictionChart";
+import axios from 'axios';
 
 const Prediction = () => {
     const data = [
@@ -17,6 +18,23 @@ const Prediction = () => {
         { name: 'March', uv: 8744 },
         { name: 'April', uv: 9900 },
       ];
+      const [predictions, setPredictions] = useState([]); // Initialize as an empty array
+
+      useEffect(() => {
+        const predict = async () => {
+          try {
+            const response = await axios.get("http://localhost:4000/api1/predict");
+            const data = Array.isArray(response.data) ? response.data : []; // Ensure the data is an array
+            setPredictions(data);
+            console.log("Predictions fetched:", data);
+          } catch (error) {
+            console.error("Error fetching predictions:", error);
+          }
+        };
+
+        predict();
+      }, []);
+
   return (
     <div>
       <section className="w-full h-fit flex md:flex-row flex-col">
@@ -51,6 +69,17 @@ const Prediction = () => {
             </div>
         </div>
       </section>
+      <div>
+      {predictions.length > 0 ? (
+        predictions.map((pred, index) => (
+          <div key={index}>
+            <h2>{pred.predictions}</h2>
+          </div>
+        ))
+      ) : (
+        <p>Loading predictions...</p>
+      )}
+    </div>
     </div>
   );
 };
