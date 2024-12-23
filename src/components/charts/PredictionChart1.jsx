@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const PredictionChart1 = () => {
   // Generate mock data for 7 days
@@ -23,10 +23,11 @@ const PredictionChart1 = () => {
 
   return (
     <div className="bg-white max-md:py-5 p-0 md:p-1 xl:p-3 2xl:p-5 w-full h-full rounded-lg min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs max-sm:h-full font-medium shadow font-OpenSans dark:bg-[#2c2c2c]">
+      <h1 className="text-center font-bold text-xl mb-4">Predicted vs Consumed Bar Chart</h1>
+      <ResponsiveContainer width="100%" height={300}>
       <BarChart
-        width={600}
-        height={300}
         data={energyData}
+        className="dark:text-black"
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />
@@ -36,6 +37,7 @@ const PredictionChart1 = () => {
         <Bar dataKey="actual" fill="#82ca9d" name="Consumed Energy (kWh)" />
         <Bar dataKey="predicted" fill="#8884d8" name="Predicted Energy (kWh)" />
       </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };

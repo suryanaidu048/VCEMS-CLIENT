@@ -4,42 +4,40 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'r
 import PredictionChart1 from "../components/charts/PredictionChart1";
 import PredictionChart from "../components/charts/PredictionChart";
 import axios from 'axios';
+import PredictionBarChart from "./PredictionBarChart";
 
 const Prediction = () => {
-    const data = [
-        { name: 'January', uv: 1400 },
-        { name: 'February', uv: 1450 },
-        { name: 'March', uv: 1444 },
-        { name: 'April', uv: 1500 },
-      ];
-      const data1 = [
-        { name: 'January', uv: 8740 },
-        { name: 'February', uv: 9250 },
-        { name: 'March', uv: 8744 },
-        { name: 'April', uv: 9900 },
-      ];
-      const [predictions, setPredictions] = useState([]); // Initialize as an empty array
+
+      const [data, setData] = useState([]);
+      const [nextMonthPred, setNextMonthPred] = useState(null);
 
       useEffect(() => {
-        const predict = async () => {
+        const fetchPredictions = async () => {
           try {
             const response = await axios.get("http://localhost:4000/api1/predict");
-            const data = Array.isArray(response.data) ? response.data : []; // Ensure the data is an array
-            setPredictions(data);
-            console.log("Predictions fetched:", data);
+      
+            if (response.data.success) {
+              const { predictions, nextMonthPrediction } = response.data;
+      
+              // Directly use the predictions array from the API
+              setData(predictions);
+              setNextMonthPred(nextMonthPrediction);
+            } else {
+              console.error("Invalid API response format");
+            }
           } catch (error) {
             console.error("Error fetching predictions:", error);
           }
         };
-
-        predict();
-      }, []);
+      
+        fetchPredictions();
+      }, []);      
 
   return (
     <div>
       <section className="w-full h-fit flex md:flex-row flex-col">
         <Sidebar />
-        <div className="p-6 bg-gray-100 min-h-screen w-full">
+        <div className="p-6 bg-gray-100 min-h-screen w-full dark:bg-[#1e1e1e] dark:text-white">
             <h1 className="text-2xl font-bold mb-4 font-Montserrat">Predictions</h1>
             <div className="flex flex-col gap-4">
                 <div className="flex gap-4 md:flex-row flex-col">
@@ -48,38 +46,27 @@ const Prediction = () => {
                             Energy Consumption Prediction
                         </h2>
                         <p className="font-medium mt-6">Units Consumed Next Month</p>
-                        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">1471 Units</p>
+                        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">{nextMonthPred} Units</p>
                         <p className="font-medium mt-6" >Units Consumed Next Year</p>
-                        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">155559 Units</p>
+                        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">5864622.72 Units</p>
                     </div>
                     <div className="bg-white rounded-lg shadow  text-lg font-OpenSans dark:bg-[#2c2c2c] dark:text-white text-center p-5 w-full h-full">
                         <h2 className="font-bold text-xl text-center py-2 font-Montserrat">
                             Energy Consumption Bill Prediction
                         </h2>
                         <p className="font-medium mt-6">Next Month Bill</p>
-                        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">Rs.{1471*6.7}</p>
+                        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">Rs.{nextMonthPred*7}</p>
                         <p className="font-medium mt-6" >Next Year Bill</p>
-                        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">Rs.{155559*6.7}</p>
+                        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">Rs.{5864622.72*7}</p>
                     </div>
                 </div>
                 <div className="xl:flex gap-4 h-full ">
                     <PredictionChart1 />
-                    <PredictionChart/>
+                    <PredictionBarChart data={data} />
                 </div>
             </div>
         </div>
       </section>
-      <div>
-      {predictions.length > 0 ? (
-        predictions.map((pred, index) => (
-          <div key={index}>
-            <h2>{pred.predictions}</h2>
-          </div>
-        ))
-      ) : (
-        <p>Loading predictions...</p>
-      )}
-    </div>
     </div>
   );
 };

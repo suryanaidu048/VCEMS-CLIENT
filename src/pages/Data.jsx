@@ -28,13 +28,13 @@ const Data = () => {
   return (
     <section className="w-full h-fit flex md:flex-row flex-col">
       <Sidebar />
-      <div className="p-6 bg-gray-100 min-h-screen w-full">
+      <div className="p-6 bg-gray-100 min-h-screen w-full dark:bg-[#1e1e1e] ">
         <div className='flex justify-between mb-4'>
-        <h1 className="text-2xl font-bold mb-4">Sensor Data Dashboard</h1>
+        <h1 className="text-2xl font-bold mb-4 dark:text-white">Sensor Data Dashboard</h1>
         
         {/* Date Selector */}
         <div className=" flex gap-4 justify-center items-center">
-          <label className="block text-gray-700 text-lg font-bold mb-2" htmlFor="date">
+          <label className="block text-gray-700 text-lg font-bold mb-2 dark:text-white" htmlFor="date">
             Select Date:
           </label>
           <input
@@ -55,9 +55,9 @@ const Data = () => {
 
         {/* Display sensor data in a table */}
         {sensorData.length > 0 && (
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+          <div className="bg-white p-4 rounded-lg shadow-lg dark:bg-[#2c2c2c] dark:text-white">
             <h2 className="text-xl font-semibold mb-4">Sensor Data for {date}</h2>
-            <table className="min-w-full bg-white border border-gray-200">
+            <table className="min-w-full bg-white dark:bg-[#2c2c2c] border border-gray-200">
               <thead>
                 <tr>
                   <th className="py-2 px-4 border">Record ID</th>

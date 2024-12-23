@@ -61,8 +61,8 @@ const Home = () => {
         });
         setMonthlyEnergy(response1.data.totalEnergyConsumption.toFixed(3))
         setHighestkva({
-          today: response3.data.highestKvaToday,
-          month: response3.data.highestKvaMonth
+          today: response3.data.highestKvaToday.toFixed(3),
+          month: response3.data.highestKvaMonth.toFixed(3)
         })
       } catch (error) {
         console.error("Error fetching previous day energy:", error);
