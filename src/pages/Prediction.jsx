@@ -5,6 +5,7 @@ import PredictionChart1 from "../components/charts/PredictionChart1";
 import PredictionChart from "../components/charts/PredictionChart";
 import axios from 'axios';
 import PredictionBarChart from "./PredictionBarChart";
+import { API_URL2 } from "../data/api";
 
 const Prediction = () => {
 
@@ -14,7 +15,7 @@ const Prediction = () => {
       useEffect(() => {
         const fetchPredictions = async () => {
           try {
-            const response = await axios.get("http://localhost:4000/api1/predict");
+            const response = await axios.get(`${API_URL2}/predict`);
       
             if (response.data.success) {
               const { predictions, nextMonthPrediction } = response.data;
