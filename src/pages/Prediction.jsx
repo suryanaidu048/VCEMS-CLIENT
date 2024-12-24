@@ -56,9 +56,9 @@ const Prediction = () => {
                             Energy Consumption Bill Prediction
                         </h2>
                         <p className="font-medium mt-6">Next Month Bill</p>
-                        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">Rs.{nextMonthPred*7}</p>
+                        <p className="bg-[#a4a4e3] mx-4 p-2 my-3 rounded-lg font-semibold">Rs.{nextMonthPred*11}</p>
                         <p className="font-medium mt-6" >Next Year Bill</p>
-                        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">Rs.{5864622.72*7}</p>
+                        <p className="bg-[#a4a4e3] mx-4 my-3 p-2 rounded-lg font-semibold">Rs.{5864622*11}</p>
                     </div>
                 </div>
                 <div className="xl:flex gap-4 h-full ">

@@ -20,7 +20,8 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
   const checkLimit = () => {
     if (kva > 1100 && !alertTriggered) {
       setShowAlert(true);
-      audioRef.current.play();
+      audioRef.current.loop = true; // Loop the alert sound
+      audioRef.current.play(); // Play alert sound
       setAlertTriggered(true); // Set flag to indicate alert has been triggered
     } else if (kva <= 1100 && alertTriggered) {
       setShowAlert(false);
@@ -43,7 +44,7 @@ const RealTimeKvaMeter = ({ kva, todayKva, monthKva }) => {
     audioRef.current.currentTime = 0; // Reset audio
     setAlertTriggered(false); // Reset flag for future alerts
   };
-
+  
   return (
     <div className={`relative bg-white py-1 dark:text-white h-full rounded-lg w-full flex flex-col items-center shadow font-OpenSans dark:bg-[#2c2c2c]`}>
       {/* Top Alert Box */}
