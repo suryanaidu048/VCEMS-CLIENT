@@ -186,7 +186,7 @@ const Home = () => {
               {data?.Total_KVA_meter_70.toFixed(2)}
             </p>
             <p className="value">
-              {-data?.Avg_PF_meter_70.toFixed(2)}
+              {data?.Avg_PF_meter_70.toFixed(2)}
             </p>
             <p className="value">
               {data.TotalNet_KVAH_meter_70.toFixed(1)}
