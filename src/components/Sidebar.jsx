@@ -13,7 +13,7 @@ const Sidebar = () => {
           <img src={vishnu1} className="w-8" alt="Logo" title="Logo" />
         </li>
         <li className="w-full text-lg font-medium cursor-pointer md:my-8 md:mx-2 ml-5 my-6">
-          <Link to="/vishnusociety" title="Home">
+          <Link to="/" title="Home">
             <img src={home} alt="Home" className="w-[30px]" />
           </Link>
         </li>
