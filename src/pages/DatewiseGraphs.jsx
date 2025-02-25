@@ -81,20 +81,20 @@ const DatewiseGraphs = () => {
       const formattedData = response.data.map((entry) => ({
         timestamp: new Date(entry.timestamp).getTime(),
         Total_KVA_meter:
-          parseFloat(entry.Total_KVA_meter_70) +
-          parseFloat(entry.Total_KVA_meter_40) +
-          parseFloat(entry.Total_KVA_meter_69) +
-          parseFloat(entry.Total_KVA_meter_41),
+          parseFloat(entry.Total_KVA_meter_6) +
+          parseFloat(entry.Total_KVA_meter_108) +
+          parseFloat(entry.Total_KVA_meter_201) +
+          parseFloat(entry.Total_KVA_meter_227),
         Total_KW_meter:
-          parseFloat(entry.Total_KW_meter_70) +
-          parseFloat(entry.Total_KW_meter_40) +
-          parseFloat(entry.Total_KW_meter_69) +
-          parseFloat(entry.Total_KW_meter_41),
+          parseFloat(entry.Total_KW_meter_6) +
+          parseFloat(entry.Total_KW_meter_108) +
+          parseFloat(entry.Total_KW_meter_201) +
+          parseFloat(entry.Total_KW_meter_227),
         Total_Energy_meter:
-          parseFloat(entry.TotalNet_KWH_meter_70) +
-          parseFloat(entry.TotalNet_KWH_meter_40) +
-          parseFloat(entry.TotalNet_KWH_meter_69) +
-          parseFloat(entry.TotalNet_KWH_meter_41),
+          parseFloat(entry.TotalNet_KWH_meter_6) +
+          parseFloat(entry.TotalNet_KWH_meter_108) +
+          parseFloat(entry.TotalNet_KWH_meter_201) +
+          parseFloat(entry.TotalNet_KWH_meter_227),
       }));
       setGraphData(formattedData);
     } catch (error) {

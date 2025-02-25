@@ -75,40 +75,40 @@ const Data = () => {
                   <React.Fragment key={data.id}>
                     <tr>
                       <td className="py-2 px-4 border" rowSpan="4">{new Date(data.timestamp).toLocaleTimeString()}</td>
-                      <td className="py-2 px-4 border">Meter 70</td>
-                      <td className="py-2 px-4 border">{data.Total_KW_meter_70}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_70}</td>
-                      <td className="py-2 px-4 border">{data.Total_KVA_meter_70}</td>
-                      <td className="py-2 px-4 border">{data.Avg_PF_meter_70}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_70}</td>
-                      <td className="py-2 px-4 border">{data.energy_consumption_meter_70}</td>
+                      <td className="py-2 px-4 border">Meter 6</td>
+                      <td className="py-2 px-4 border">{data.Total_KW_meter_6}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_6}</td>
+                      <td className="py-2 px-4 border">{data.Total_KVA_meter_6}</td>
+                      <td className="py-2 px-4 border">{data.Avg_PF_meter_6}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_6}</td>
+                      <td className="py-2 px-4 border">{data.energy_consumption_meter_6}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 border">Meter 40</td>
-                      <td className="py-2 px-4 border">{data.Total_KW_meter_40}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_40}</td>
-                      <td className="py-2 px-4 border">{data.Total_KVA_meter_40}</td>
-                      <td className="py-2 px-4 border">{data.Avg_PF_meter_40}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_40}</td>
-                      <td className="py-2 px-4 border">{data.energy_consumption_meter_40}</td>
+                      <td className="py-2 px-4 border">Meter 108</td>
+                      <td className="py-2 px-4 border">{data.Total_KW_meter_108}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_108}</td>
+                      <td className="py-2 px-4 border">{data.Total_KVA_meter_108}</td>
+                      <td className="py-2 px-4 border">{data.Avg_PF_meter_108}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_108}</td>
+                      <td className="py-2 px-4 border">{data.energy_consumption_meter_108}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 border">Meter 69</td>
-                      <td className="py-2 px-4 border">{data.Total_KW_meter_69}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_69}</td>
-                      <td className="py-2 px-4 border">{data.Total_KVA_meter_69}</td>
-                      <td className="py-2 px-4 border">{data.Avg_PF_meter_69}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_69}</td>
-                      <td className="py-2 px-4 border">{data.energy_consumption_meter_69}</td>
+                      <td className="py-2 px-4 border">Meter 201</td>
+                      <td className="py-2 px-4 border">{data.Total_KW_meter_201}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_201}</td>
+                      <td className="py-2 px-4 border">{data.Total_KVA_meter_201}</td>
+                      <td className="py-2 px-4 border">{data.Avg_PF_meter_201}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_201}</td>
+                      <td className="py-2 px-4 border">{data.energy_consumption_meter_201}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4 border">Meter 41</td>
-                      <td className="py-2 px-4 border">{data.Total_KW_meter_41}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_41}</td>
-                      <td className="py-2 px-4 border">{data.Total_KVA_meter_41}</td>
-                      <td className="py-2 px-4 border">{data.Avg_PF_meter_41}</td>
-                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_41}</td>
-                      <td className="py-2 px-4 border">{data.energy_consumption_meter_41}</td>
+                      <td className="py-2 px-4 border">Meter 227</td>
+                      <td className="py-2 px-4 border">{data.Total_KW_meter_227}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KWH_meter_227}</td>
+                      <td className="py-2 px-4 border">{data.Total_KVA_meter_227}</td>
+                      <td className="py-2 px-4 border">{data.Avg_PF_meter_227}</td>
+                      <td className="py-2 px-4 border">{data.TotalNet_KVAH_meter_227}</td>
+                      <td className="py-2 px-4 border">{data.energy_consumption_meter_227}</td>
                     </tr>
                   </React.Fragment>
                 ))}

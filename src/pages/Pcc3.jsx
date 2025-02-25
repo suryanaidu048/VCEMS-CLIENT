@@ -77,7 +77,7 @@ const Pcc3 = () => {
                 <div className="">
 
                 <div className="param1-div">
-                    <Link to='/SingleMeter/69'><h2
+                    <Link to='/SingleMeter/201'><h2
                       className='parameter'
                     >
                      Main meter
@@ -85,28 +85,28 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_69.toFixed(2)}
+                      {data?.Total_KW_meter_201.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_69.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_201.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_69)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_201)}`}
                     >
-                      {data?.Avg_PF_meter_69.toFixed(2)}
+                      {data?.Avg_PF_meter_201.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_69.toFixed(2)}
+                      {data?.Total_KVA_meter_201.toFixed(2)}
                     </p>
                   </div>
 
 
                 <div className="param1-div">
-                    <Link to='/SingleMeter/42'><h2
+                    <Link to='/SingleMeter/226'><h2
                       className='parameter'
                     >
                      11F1 800A TPN ACB
@@ -114,27 +114,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_42.toFixed(2)}
+                      {data?.Total_KW_meter_226.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_42.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_226.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_42)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_226)}`}
                     >
-                      {data?.Avg_PF_meter_42.toFixed(2)}
+                      {data?.Avg_PF_meter_226.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_42.toFixed(2)}
+                      {data?.Total_KVA_meter_226.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/43'><h2
+                    <Link to='/SingleMeter/222'><h2
                       className='parameter'
                     >
                       10F1 400A TPN SFU
@@ -142,27 +142,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_43.toFixed(2)}
+                      {data?.Total_KW_meter_222.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_43.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_222.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_43)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_222)}`}
                     >
-                      {data?.Avg_PF_meter_43.toFixed(2)}
+                      {data?.Avg_PF_meter_222.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_43.toFixed(2)}
+                      {data?.Total_KVA_meter_222.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/44'><h2
+                    <Link to='/SingleMeter/223'><h2
                       className='parameter'
                     >
                       10F2 400A TPN SFU
@@ -170,27 +170,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_44.toFixed(2)}
+                      {data?.Total_KW_meter_223.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_44.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_223.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_44)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_223)}`}
                     >
-                      {data?.Avg_PF_meter_44.toFixed(2)}
+                      {data?.Avg_PF_meter_223.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_44.toFixed(2)}
+                      {data?.Total_KVA_meter_223.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/45'><h2
+                    <Link to='/SingleMeter/224'><h2
                       className='parameter'
                     >
                       Womens Ground Panel
@@ -198,27 +198,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_45.toFixed(2)}
+                      {data?.Total_KW_meter_224.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_45.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_224.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_45)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_224)}`}
                     >
-                      {data?.Avg_PF_meter_45.toFixed(2)}
+                      {data?.Avg_PF_meter_224.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_45.toFixed(2)}
+                      {data?.Total_KVA_meter_224.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/46'><h2
+                    <Link to='/SingleMeter/225'><h2
                       className='parameter'
                     >
                       SVECW Seminar Hall
@@ -226,27 +226,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_46.toFixed(2)}
+                      {data?.Total_KW_meter_225.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_46.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_225.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_46)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_225)}`}
                     >
-                      {data?.Avg_PF_meter_46.toFixed(2)}
+                      {data?.Avg_PF_meter_225.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_46.toFixed(2)}
+                      {data?.Total_KVA_meter_225.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/47'><h2
+                    <Link to='/SingleMeter/218'><h2
                       className='parameter'
                     >
                       9F1 400A TPN SFU
@@ -254,27 +254,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_47.toFixed(2)}
+                      {data?.Total_KW_meter_218.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_47.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_218.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_47)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_218)}`}
                     >
-                      {data?.Avg_PF_meter_47.toFixed(2)}
+                      {data?.Avg_PF_meter_218.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_47.toFixed(2)}
+                      {data?.Total_KVA_meter_218.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/48'><h2
+                    <Link to='/SingleMeter/219'><h2
                       className='parameter'
                     >
                       9F2 400A TPN SFU
@@ -282,27 +282,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_48.toFixed(2)}
+                      {data?.Total_KW_meter_219.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_48.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_219.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_48)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_219)}`}
                     >
-                      {data?.Avg_PF_meter_48.toFixed(2)}
+                      {data?.Avg_PF_meter_219.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_48.toFixed(2)}
+                      {data?.Total_KVA_meter_219.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/49'><h2
+                    <Link to='/SingleMeter/220'><h2
                       className='parameter'
                     >
                       9F3 315A TPN SFU
@@ -310,27 +310,27 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_49.toFixed(2)}
+                      {data?.Total_KW_meter_220.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_49.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_220.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_49)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_220)}`}
                     >
-                      {data?.Avg_PF_meter_49.toFixed(2)}
+                      {data?.Avg_PF_meter_220.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_49.toFixed(2)}
+                      {data?.Total_KVA_meter_220.toFixed(2)}
                     </p>
                   </div>
 
                   <div className="param1-div">
-                    <Link to='/SingleMeter/50'><h2
+                    <Link to='/SingleMeter/221'><h2
                       className='parameter'
                     >
                       9F4 250A TPN SFU
@@ -338,64 +338,373 @@ const Pcc3 = () => {
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KW_meter_50.toFixed(2)}
+                      {data?.Total_KW_meter_221.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.TotalNet_KWH_meter_50.toFixed(2)}
+                      {data?.TotalNet_KWH_meter_221.toFixed(2)}
                     </p>
                     <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_50)}`}
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_221)}`}
                     >
-                      {data?.Avg_PF_meter_50.toFixed(2)}
+                      {data?.Avg_PF_meter_221.toFixed(2)}
                     </p>
                     <p
                       className='param-value'
                     >
-                      {data?.Total_KVA_meter_50.toFixed(2)}
+                      {data?.Total_KVA_meter_221.toFixed(2)}
                     </p>
                   </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/51'><h2 className='parameter'>
+                    <Link to='/SingleMeter/214'><h2 className='parameter'>
                         8F1 400A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_51.toFixed(2)}
+                        {data?.Total_KW_meter_214.toFixed(2)}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_51.toFixed(2)}
+                        {data?.TotalNet_KWH_meter_214.toFixed(2)}
                       </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_51)}`}>
-                        {data?.Avg_PF_meter_51.toFixed(2)}
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_214)}`}>
+                        {data?.Avg_PF_meter_214.toFixed(2)}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_51.toFixed(2)}
+                        {data?.Total_KVA_meter_214.toFixed(2)}
                       </p>
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/52'><h2 className='parameter'>
+                    <Link to='/SingleMeter/215'><h2 className='parameter'>
                     8F2 400A TPN SFU
                       </h2></Link>
                       <p className='param-value'>
-                        {data?.Total_KW_meter_52}
+                        {data?.Total_KW_meter_215}
                       </p>
                       <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_52}
+                        {data?.TotalNet_KWH_meter_215}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_215)}`}>
+                        {data?.Avg_PF_meter_215}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_215}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/216'><h2 className='parameter'>
+                    8F3 315A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_216}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_216}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_216)}`}>
+                        {data?.Avg_PF_meter_216}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_216}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/217'><h2 className='parameter'>
+                    8F4 250A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_217}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_217}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_217)}`}>
+                        {data?.Avg_PF_meter_217}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_217}
+                      </p>
+                    </div>
+    
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/210'><h2 className='parameter'>
+                        6F1 400A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_210}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_210}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_210)}`}>
+                        {data?.Avg_PF_meter_210}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_210}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/211'><h2 className='parameter'>
+                      6F2 400A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_211}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_211}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_211)}`}>
+                        {data?.Avg_PF_meter_211}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_211}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/212'><h2 className="parameter">
+                    6F3 315A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_212}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_212}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_212)}`}>
+                        {data?.Avg_PF_meter_212}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_212}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/213'><h2 className='parameter'>
+                    6F4 250A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_213}
+                      </p>
+                      <p className='param-value'>
+                        {!data?.TotalNet_KWH_meter_213 ? 0 : data?.TotalNet_KWH_meter_213}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_213)}`}>
+                        {data?.Avg_PF_meter_213}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_213}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/206'><h2 className='parameter'>
+                        Womens Ground Panel A/C
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_206}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_206}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_206)}`}>
+                        {data?.Avg_PF_meter_206}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_206}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/208'><h2 className='parameter'>
+                        4F3 315A TPN SFU
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_208}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_208}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_208)}`}>
+                        {data?.Avg_PF_meter_208}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_208}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/209'><h2 className='parameter'>
+                        SVECW Seminar Hall AC'S
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_209}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_209}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_209)}`}>
+                        {data?.Avg_PF_meter_209}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_209}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/204'><h2 className='parameter'>
+                        3F1 800A TPN ACB
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_204}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_204}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_204)}`}>
+                        {data?.Avg_PF_meter_204}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_204}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/205'><h2 className='parameter'>
+                        3F2 800A TPN ACB
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_205}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_205}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_205)}`}>
+                        {data?.Avg_PF_meter_205}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_205}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/202'><h2 className='parameter'>
+                        APRC Panel Supply 
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_202}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_202}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_202)}`}>
+                        {data?.Avg_PF_meter_202}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_202}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/203'><h2 className='parameter'>
+                        Power Room-1 Loop Supply
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_203}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_203}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_203)}`}>
+                        {data?.Avg_PF_meter_203}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_203}
+                      </p>
+                    </div>
+
+                    <h2 className='text-center text-lg font-semibold underline mt-4 my-2'>PCC3-A</h2>
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/227'><h2
+                      className='parameter'
+                    >
+                      Main meter
+                    </h2></Link>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KW_meter_227.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.TotalNet_KWH_meter_227.toFixed(2)}
+                    </p>
+                    <p
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_227)}`}
+                    >
+                      {data?.Avg_PF_meter_227.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KVA_meter_227.toFixed(2)}
+                    </p>
+                  </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/51'><h2
+                      className='parameter'
+                    >
+                      VDC Block 2&3 Lighting
+                    </h2></Link>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KW_meter_51.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.TotalNet_KWH_meter_51.toFixed(2)}
+                    </p>
+                    <p
+                      className={`param-value ${getPFClass(data?.Avg_PF_meter_51)}`}
+                    >
+                      {data?.Avg_PF_meter_51.toFixed(2)}
+                    </p>
+                    <p
+                      className='param-value'
+                    >
+                      {data?.Total_KVA_meter_51.toFixed(2)}
+                    </p>
+                  </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/52'><h2 className='parameter'>
+                        VDC Block 2&3 AC's
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_52.toFixed(2)}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_52.toFixed(2)}
                       </p>
                       <p className={`param-value ${getPFClass(data?.Avg_PF_meter_52)}`}>
-                        {data?.Avg_PF_meter_52}
+                        {data?.Avg_PF_meter_52.toFixed(2)}
                       </p>
                       <p className='param-value'>
-                        {data?.Total_KVA_meter_52}
+                        {data?.Total_KVA_meter_52.toFixed(2)}
                       </p>
                     </div>
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/53'><h2 className='parameter'>
-                    8F3 315A TPN SFU
+                        Mini Auditorium AC's
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_53}
@@ -412,8 +721,26 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param1-div">
+                    <Link to='/SingleMeter/54'><h2 className='parameter'>
+                        Sumedha Hostel AC's
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_54}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_54}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_54)}`}>
+                        {data?.Avg_PF_meter_54}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_54}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
                     <Link to='/SingleMeter/55'><h2 className='parameter'>
-                    8F4 250A TPN SFU
+                        Sita Auditorium AC's
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_55}
@@ -428,28 +755,10 @@ const Pcc3 = () => {
                         {data?.Total_KVA_meter_55}
                       </p>
                     </div>
-    
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/56'><h2 className='parameter'>
-                        6F1 400A TPN SFU
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_56}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_56}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_56)}`}>
-                        {data?.Avg_PF_meter_56}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_56}
-                      </p>
-                    </div>
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/57'><h2 className='parameter'>
-                      6F2 400A TPN SFU
+                        VDC Girls Hostels
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_57}
@@ -464,10 +773,10 @@ const Pcc3 = () => {
                         {data?.Total_KVA_meter_57}
                       </p>
                     </div>
-
+    
                     <div className="param1-div">
-                    <Link to='/SingleMeter/58'><h2 className="parameter">
-                    6F3 315A TPN SFU
+                    <Link to='/SingleMeter/58'><h2 className='parameter'>
+                        VDC Block-1 AC's
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_58}
@@ -482,46 +791,10 @@ const Pcc3 = () => {
                         {data?.Total_KVA_meter_58}
                       </p>
                     </div>
-
+  
                     <div className="param1-div">
-                    <Link to='/SingleMeter/59'><h2 className='parameter'>
-                    6F4 250A TPN SFU
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_59}
-                      </p>
-                      <p className='param-value'>
-                        {!data?.TotalNet_KWH_meter_59 ? 0 : data?.TotalNet_KWH_meter_59}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_59)}`}>
-                        {data?.Avg_PF_meter_59}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_59}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/60'><h2 className='parameter'>
-                        Womens Ground Panel
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_60}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_60}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_60)}`}>
-                        {data?.Avg_PF_meter_60}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_60}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/61'><h2 className='parameter'>
-                       Jewel Lab AC'S
+                    <Link to='/SingleMeter/61'><h2 className="parameter">
+                        SVECW Library AC's
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_61}
@@ -539,7 +812,7 @@ const Pcc3 = () => {
 
                     <div className="param1-div">
                     <Link to='/SingleMeter/62'><h2 className='parameter'>
-                        4F3 315A TPN SFU
+                        CSSD Building
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_62}
@@ -556,26 +829,8 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param1-div">
-                    <Link to='/SingleMeter/63'><h2 className='parameter'>
-                        SVECW Seminar Hall AC'S
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_63}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_63}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_63)}`}>
-                        {data?.Avg_PF_meter_63}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_63}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
                     <Link to='/SingleMeter/64'><h2 className='parameter'>
-                        3F1 800A TPN ACB
+                        Medha Hostel Lighting
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_64}
@@ -592,8 +847,44 @@ const Pcc3 = () => {
                     </div>
 
                     <div className="param1-div">
+                    <Link to='/SingleMeter/59'><h2 className='parameter'>
+                       Geysers
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_59}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_59}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_59)}`}>
+                        {data?.Avg_PF_meter_59}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_59}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
+                    <Link to='/SingleMeter/63'><h2 className='parameter'>
+                        Medha Hostel Geysers
+                      </h2></Link>
+                      <p className='param-value'>
+                        {data?.Total_KW_meter_63}
+                      </p>
+                      <p className='param-value'>
+                        {data?.TotalNet_KWH_meter_63}
+                      </p>
+                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_63)}`}>
+                        {data?.Avg_PF_meter_63}
+                      </p>
+                      <p className='param-value'>
+                        {data?.Total_KVA_meter_63}
+                      </p>
+                    </div>
+
+                    <div className="param1-div">
                     <Link to='/SingleMeter/65'><h2 className='parameter'>
-                        3F2 800A TPN ACB
+                        Hostel Geysers VDC
                       </h2></Link>
                       <p className='param-value'>
                         {data?.Total_KW_meter_65}
@@ -606,333 +897,6 @@ const Pcc3 = () => {
                       </p>
                       <p className='param-value'>
                         {data?.Total_KVA_meter_65}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/66'><h2 className='parameter'>
-                        APRC Panel Supply 
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_66}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_66}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_66)}`}>
-                        {data?.Avg_PF_meter_66}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_66}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/67'><h2 className='parameter'>
-                        Power Room-1 Loop Supply
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_67}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_67}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_67)}`}>
-                        {data?.Avg_PF_meter_67}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_67}
-                      </p>
-                    </div>
-
-                    <h2 className='text-center text-lg font-semibold underline mt-4 my-2'>PCC3-A</h2>
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/41'><h2
-                      className='parameter'
-                    >
-                      Main meter
-                    </h2></Link>
-                    <p
-                      className='param-value'
-                    >
-                      {data?.Total_KW_meter_41.toFixed(2)}
-                    </p>
-                    <p
-                      className='param-value'
-                    >
-                      {data?.TotalNet_KWH_meter_41.toFixed(2)}
-                    </p>
-                    <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_41)}`}
-                    >
-                      {data?.Avg_PF_meter_41.toFixed(2)}
-                    </p>
-                    <p
-                      className='param-value'
-                    >
-                      {data?.Total_KVA_meter_41.toFixed(2)}
-                    </p>
-                  </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/1'><h2
-                      className='parameter'
-                    >
-                      VDC Block 2&3 Lighting
-                    </h2></Link>
-                    <p
-                      className='param-value'
-                    >
-                      {data?.Total_KW_meter_1.toFixed(2)}
-                    </p>
-                    <p
-                      className='param-value'
-                    >
-                      {data?.TotalNet_KWH_meter_1.toFixed(2)}
-                    </p>
-                    <p
-                      className={`param-value ${getPFClass(data?.Avg_PF_meter_1)}`}
-                    >
-                      {data?.Avg_PF_meter_1.toFixed(2)}
-                    </p>
-                    <p
-                      className='param-value'
-                    >
-                      {data?.Total_KVA_meter_1.toFixed(2)}
-                    </p>
-                  </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/2'><h2 className='parameter'>
-                        VDC Block 2&3 AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_2.toFixed(2)}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_2.toFixed(2)}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_2)}`}>
-                        {data?.Avg_PF_meter_2.toFixed(2)}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_2.toFixed(2)}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/3'><h2 className='parameter'>
-                        Mini Auditorium AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_3}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_3}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_3)}`}>
-                        {data?.Avg_PF_meter_3}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_3}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/4'><h2 className='parameter'>
-                        Sumedha Hostel AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_4}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_4}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_4)}`}>
-                        {data?.Avg_PF_meter_4}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_4}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/5'><h2 className='parameter'>
-                        Sita Auditorium AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_5}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_5}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_5)}`}>
-                        {data?.Avg_PF_meter_5}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_5}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/6'><h2 className='parameter'>
-                        VDC Girls Hostels
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_6}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_6}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_6)}`}>
-                        {data?.Avg_PF_meter_6}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_6}
-                      </p>
-                    </div>
-    
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/7'><h2 className='parameter'>
-                        VDC Block-1 AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_7}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_7}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_7)}`}>
-                        {data?.Avg_PF_meter_7}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_7}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/8'><h2 className='parameter'>
-                        VDC Library AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_8}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_8}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_8)}`}>
-                        {data?.Avg_PF_meter_8}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_8}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/9'><h2 className="parameter">
-                        SVECW Library AC's
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_9}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_9}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_9)}`}>
-                        {data?.Avg_PF_meter_9}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_9}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/10'><h2 className='parameter'>
-                        CSSD Building
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_10}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_10}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_10)}`}>
-                        {data?.Avg_PF_meter_10}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_10}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/11'><h2 className='parameter'>
-                        Medha Hostel Lighting
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_11}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_11}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_11)}`}>
-                        {data?.Avg_PF_meter_11}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_11}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/12'><h2 className='parameter'>
-                       Geysers
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_12}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_12}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_12)}`}>
-                        {data?.Avg_PF_meter_12}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_12}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/13'><h2 className='parameter'>
-                        Medha Hostel Geysers
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_13}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_13}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_13)}`}>
-                        {data?.Avg_PF_meter_13}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_13}
-                      </p>
-                    </div>
-
-                    <div className="param1-div">
-                    <Link to='/SingleMeter/14'><h2 className='parameter'>
-                        Hostel Geysers VDC
-                      </h2></Link>
-                      <p className='param-value'>
-                        {data?.Total_KW_meter_14}
-                      </p>
-                      <p className='param-value'>
-                        {data?.TotalNet_KWH_meter_14}
-                      </p>
-                      <p className={`param-value ${getPFClass(data?.Avg_PF_meter_14)}`}>
-                        {data?.Avg_PF_meter_14}
-                      </p>
-                      <p className='param-value'>
-                        {data?.Total_KVA_meter_14}
                       </p>
                     </div>
                     </div>

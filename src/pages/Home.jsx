@@ -20,22 +20,22 @@ const Home = () => {
   const [data, setData] = useState(null);
   const { theme, toggleTheme } = useTheme();
   const [currentEnergy, setCurrentEnergy] = useState({
-    meter_70: null,
-    meter_40: null,
-    meter_69: null,
-    meter_41: null,
+    meter_6: null,
+    meter_108: null,
+    meter_201: null,
+    meter_227: null,
   });
   const [initialEnergyValues, setInitialEnergyValues] = useState({
-    meter_70: null,
-    meter_40: null,
-    meter_69: null,
-    meter_41: null,
+    meter_6: null,
+    meter_108: null,
+    meter_201: null,
+    meter_227: null,
   });
   const [todayConsumption, setTodayConsumption] = useState({
-    meter_70: null,
-    meter_40: null,
-    meter_69: null,
-    meter_41: null,
+    meter_6: null,
+    meter_108: null,
+    meter_201: null,
+    meter_227: null,
   });
   const [monthlyEnergy, setMonthlyEnergy] = useState(null)
   const [highestkva, setHighestkva] = useState({
@@ -54,10 +54,10 @@ const Home = () => {
         const response3 = await axios.get(`${API_URL2}/highest-kva`);
 
         setInitialEnergyValues(response.data.initialEnergyValues || {
-          meter_70: null,
-          meter_40: null,
-          meter_69: null,
-          meter_41: null,
+          meter_6: null,
+          meter_108: null,
+          meter_201: null,
+          meter_227: null,
         });
         setMonthlyEnergy(response1.data.totalEnergyConsumption.toFixed(3))
         setHighestkva({
@@ -80,10 +80,10 @@ const Home = () => {
         const newData = response.data[0];
         setData(newData);
         setCurrentEnergy({
-          meter_70: newData.TotalNet_KWH_meter_70,
-          meter_40: newData.TotalNet_KWH_meter_40,
-          meter_69: newData.TotalNet_KWH_meter_69,
-          meter_41: newData.TotalNet_KWH_meter_41,
+          meter_6: newData.TotalNet_KWH_meter_6,
+          meter_108: newData.TotalNet_KWH_meter_108,
+          meter_201: newData.TotalNet_KWH_meter_201,
+          meter_227: newData.TotalNet_KWH_meter_227,
         });
       } catch (error) {
         console.error("Error fetching sensor data:", error);
@@ -100,22 +100,22 @@ const Home = () => {
     // Calculate consumption based on initial energy and current energy
     if (initialEnergyValues && currentEnergy) {
       setTodayConsumption({
-        meter_70: initialEnergyValues.meter_70 && currentEnergy.meter_70 ? 
-          (currentEnergy.meter_70 - initialEnergyValues.meter_70).toFixed(3) : 0,
-        meter_40: initialEnergyValues.meter_40 && currentEnergy.meter_40 ? 
-          (currentEnergy.meter_40 - initialEnergyValues.meter_40).toFixed(3) : 0,
-        meter_69: initialEnergyValues.meter_69 && currentEnergy.meter_69 ? 
-          (currentEnergy.meter_69 - initialEnergyValues.meter_69).toFixed(3) : 0,
-        meter_41: initialEnergyValues.meter_41 && currentEnergy.meter_41 ? 
-          (currentEnergy.meter_41 - initialEnergyValues.meter_41).toFixed(3) : 0,
+        meter_6: initialEnergyValues.meter_6 && currentEnergy.meter_6 ? 
+          (currentEnergy.meter_6 - initialEnergyValues.meter_6).toFixed(3) : 0,
+        meter_108: initialEnergyValues.meter_108 && currentEnergy.meter_108 ? 
+          (currentEnergy.meter_108 - initialEnergyValues.meter_108).toFixed(3) : 0,
+        meter_201: initialEnergyValues.meter_201 && currentEnergy.meter_201 ? 
+          (currentEnergy.meter_201 - initialEnergyValues.meter_201).toFixed(3) : 0,
+        meter_227: initialEnergyValues.meter_227 && currentEnergy.meter_227 ? 
+          (currentEnergy.meter_227 - initialEnergyValues.meter_227).toFixed(3) : 0,
       });
     }
   }, [initialEnergyValues, currentEnergy]);
 
   const energy = (
-    Number(todayConsumption.meter_70) + 
-    Number(todayConsumption.meter_69) + 
-    Number(todayConsumption.meter_40)
+    Number(todayConsumption.meter_6) + 
+    Number(todayConsumption.meter_201) + 
+    Number(todayConsumption.meter_108)
   ).toFixed(3);
 
   const getPFClass = (avgPF) => {
@@ -177,19 +177,19 @@ const Home = () => {
               PCC1
             </h2></Link>
             <p className="value">
-              {data?.Total_KW_meter_70.toFixed(2)}
+              {data?.Total_KW_meter_6.toFixed(2)}
             </p>
             <p className="value">
-              {data?.TotalNet_KWH_meter_70.toFixed(1)} {/* {todayConsumption.meter_70} */}
+              {data?.TotalNet_KWH_meter_6.toFixed(1)} {/* {todayConsumption.meter_6} */}
             </p>
             <p className="value">
-              {data?.Total_KVA_meter_70.toFixed(2)}
+              {data?.Total_KVA_meter_6.toFixed(2)}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_70.toFixed(2)}
+              {data?.Avg_PF_meter_6.toFixed(2)}
             </p>
             <p className="value">
-              {data.TotalNet_KVAH_meter_70.toFixed(1)}
+              {data.TotalNet_KVAH_meter_6.toFixed(1)}
             </p>
           </div>
           
@@ -198,19 +198,19 @@ const Home = () => {
               PCC2
             </h2></Link>
             <p className="value">
-                {data?.Total_KW_meter_20.toFixed(2)}
+                {data?.Total_KW_meter_108.toFixed(2)}
             </p>
             <p className="value">
-                {data?.TotalNet_KWH_meter_20.toFixed(1)} {/* {todayConsumption.meter_40} */}
+                {data?.TotalNet_KWH_meter_108.toFixed(1)} {/* {todayConsumption.meter_108} */}
             </p>
             <p className="value">
-                {data?.Total_KVA_meter_20.toFixed(2)}
+                {data?.Total_KVA_meter_108.toFixed(2)}
             </p>
             <p className="value">
-              {data?.Avg_PF_meter_20.toFixed(3)}
+              {data?.Avg_PF_meter_108.toFixed(3)}
             </p>
             <p className="value">
-              {data?.TotalNet_KVAH_meter_20.toFixed(1)}
+              {data?.TotalNet_KVAH_meter_108.toFixed(1)}
             </p>
           </div>
           <div className="param-div">
@@ -218,19 +218,19 @@ const Home = () => {
               PCC3
             </h2></Link>
             <p className="value">
-            {data?.Total_KW_meter_69.toFixed(2)}
+            {data?.Total_KW_meter_201.toFixed(2)}
             </p>
             <p className="value">
-            {data?.TotalNet_KWH_meter_69.toFixed(1)} {/* {todayConsumption.meter_69} */}
+            {data?.TotalNet_KWH_meter_201.toFixed(1)} {/* {todayConsumption.meter_201} */}
             </p>
             <p className="value">
-            {data?.Total_KVA_meter_69.toFixed(2)}
+            {data?.Total_KVA_meter_201.toFixed(2)}
             </p>
-            <p className={`value ${getPFClass(data?.Avg_PF_meter_69)}`}>
-            {data?.Avg_PF_meter_69.toFixed(3)}
+            <p className={`value ${getPFClass(data?.Avg_PF_meter_201)}`}>
+            {data?.Avg_PF_meter_201.toFixed(3)}
             </p>
             <p className="value">
-            {data?.TotalNet_KVAH_meter_69.toFixed(1)}
+            {data?.TotalNet_KVAH_meter_201.toFixed(1)}
             </p>
           </div>
         </div>
@@ -238,7 +238,7 @@ const Home = () => {
           {/* <RealTimeEnergyMeter totalEnergy={data?.TotalNet_KWH_meter_1.toFixed(2)} /> */}
           <EnergyUnits energy={energy} monthlyEnergy={monthlyEnergy} />
           <div className="flex flex-col gap-4">
-            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_70 + data?.Total_KVA_meter_20 + data?.Total_KVA_meter_69).toFixed(2)} todayKva={highestkva.today} monthKva = {highestkva.month} />
+            <RealTimeKvaMeter kva={(data?.Total_KVA_meter_6 + data?.Total_KVA_meter_108 + data?.Total_KVA_meter_201).toFixed(2)} todayKva={highestkva.today} monthKva = {highestkva.month} />
             {/* <PowerFactorCharts powerFactor={data?.Avg_PF_meter_1.toFixed(3)} />  */}
           </div>
         </div>
