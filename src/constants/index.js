@@ -11,7 +11,8 @@ import green_fusion from './logos/green-fusion.png'
 import vishnu1 from './logos/vishnu.png'
 import growth from './logos/growth.png'
 import predictions from './logos/predictions.png'
+import tie from './images/tie.jpg'
 
 export {
-    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1, growth, predictions
+    home,chart,power,user,light,dark,pcc,logo,vishnu,green_fusion,vishnu1, growth, predictions, tie
 }

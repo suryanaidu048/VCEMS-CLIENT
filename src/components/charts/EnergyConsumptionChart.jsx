@@ -1,4 +1,4 @@
-/* import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BarChart,
   Bar,
@@ -53,8 +53,9 @@ const EnergyConsumptionChart = () => {
 };
 
 export default EnergyConsumptionChart;
- */
 
+
+/* 
 import React, { useEffect, useState } from 'react';
 import {
   BarChart,
@@ -109,3 +110,4 @@ const EnergyConsumptionChart = () => {
 };
 
 export default EnergyConsumptionChart;
+ */
