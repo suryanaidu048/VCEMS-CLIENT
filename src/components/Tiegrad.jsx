@@ -3,8 +3,8 @@ import { tie } from '../constants'
 
 const Tiegrad = () => {
   return (
-    <div>
-      <img src={tie} alt="" className='w-full h-screen' />
+    <div className='flex justify-center items-center'>
+      <img src={tie} alt="" className='w-10/12 h-screen' />
     </div>
   )
 }
