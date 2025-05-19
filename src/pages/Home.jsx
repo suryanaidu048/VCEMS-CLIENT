@@ -135,9 +135,9 @@ const Home = () => {
     <section className="bg-[#F1F4FC] dark:bg-[#1e1e1e] w-full text-[#1F2937] px-3 h-screen overflow-auto 2xl:px-5">
       <ToastContainer />
       <header className="justify-between flex items-center py-2">
-        <h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
+        <Link to='/'><h1 className="md:text-2xl 2xl:text-5xl text-xl p-4 flex md:gap-3 font-Audiowide font-bold dark:text-[#e4e2e2]">
         Green Fusion IoT Solutions<img src={green_fusion} className="w-20" alt="" /> 
-        </h1> 
+        </h1></Link>
         <span className="flex flex-row justify-center items-center">
           <img
             className="w-[30px] h-[30px] cursor-pointer 2xl:w-[42px] 2xl:h-[42px]"
@@ -151,16 +151,16 @@ const Home = () => {
         </span>
       </header>
       <div className="grid lg:grid-cols-2 gap-4 grid-cols-1 mt- 2xl:mt-6">
-        <div className="w-full flex flex-col justify-around bg-[#a4a4e3] rounded-lg min-[2000px]:text-4xl xl:text-xl text-lg max-[500px]:text-base font-medium shadow font-OpenSans py-4 px-3 2xl:px-7 max-[500px]:px-0">
-          <div className="param-div font-bold font-Montserrat text-lg">
+        <div className="w-full flex flex-col justify-around bg-[#a4a4e3] rounded-lg min-[2000px]:text-4xl xl:text-xl text-lg max-[530px]:text-[12px] font-medium shadow font-OpenSans py-4 px-3 2xl:px-7 max-[500px]:px-0">
+          <div className="param-div font-bold font-Montserrat text-lg max-[530px]:text-base max-[350px]:text-[13px]">
             <h2 className=" value bg-transparent">
               PCC
             </h2>
             <p className="  value bg-transparent pr-2 leading-5">
-              Power<p className="text-sm">(kW)</p>
+              Power<p className="text-sm max-[530px]:text-[11px]">(kW)</p>
             </p>
             <p className="  value bg-transparent pr-2 leading-5">
-              Energy<p className="text-sm">(kWh)</p>
+              Energy<p className="text-sm max-[530px]:text-[11px]">(kWh)</p>
             </p>
             <p className="  value bg-transparent pr-2">
               kVA

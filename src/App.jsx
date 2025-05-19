@@ -14,7 +14,7 @@ import Tiegrad from './components/Tiegrad';
 import Video from './components/Video';
 
 // Home Carousel Component
-const HomeCarousel = () => {
+/* const HomeCarousel = () => {
   const slides = [<Dashboard />, <Tiegrad />, <Video />];
   const durations = [20000, 20000, 142000]; // Dashboard (20s), Tiegrad (20s), Video (2 mins)
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,13 +28,13 @@ const HomeCarousel = () => {
   }, [currentIndex]);
 
   return <div>{slides[currentIndex]}</div>;
-};
+}; */
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomeCarousel />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/graphs" element={<DatewiseGraphs />} />
         <Route path="/Pcc1" element={<Pcc1 />} />
         <Route path="/Pcc2" element={<Pcc2 />} />
