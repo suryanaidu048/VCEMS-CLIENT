@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import moment from 'moment';
 import { useTheme } from '../ThemeContext';
-import { API_URL } from '../../data/api';
+import { API_URL2 } from '../../data/api'; // Should point to `/api/energy-summaries` or similar
 
 const PowerLineChart = () => {
   const [data, setData] = useState([]);
@@ -14,31 +14,22 @@ const PowerLineChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}`); // Adjust the endpoint as needed
-        const currentTime = moment().format('HH:mm');
-
-        // Calculate the sum of Total_KVA_meter_1 and Total_KVA_meter_15
-        const sumKVA = parseFloat(response.data[0].Total_KVA_meter_6) + parseFloat(response.data[0].Total_KVA_meter_108 ) + parseFloat(response.data[0].Total_KVA_meter_201 );
-
-        const newData = {
-          timestamp: currentTime,
-          sumKVA: sumKVA
-        };
-
-        setData(prevData => [...prevData, newData]);
+        const response = await axios.get(`${API_URL2}/energy-summaries`); // Adjust as per route
+        const formattedData = response.data.map(item => ({
+          timestamp: moment(item.timestamp).format('HH:mm'),
+          sumKVA: parseFloat(item.sumKVA),
+        }));
+        setData(formattedData.reverse()); // Oldest first for the chart
       } catch (error) {
-        console.error('Error fetching energy data:', error);
+        console.error('Error fetching energy summaries:', error);
       }
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 30000); // Fetch data every 30 seconds
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className='max-md:py-5 bg-white rounded-lg w-full sm:h-full h-56 p-0 md:p-1 xl:p-3 2xl:p-5 shadow font-OpenSans dark:bg-[#2c2c2c] min-[2200px]:text-2xl 2xl:text-xl text-sm max-[500px]:text-xs font-medium'>
+    <div className='max-md:py-5 bg-white rounded-lg w-full sm:h-full h-56 p-0 md:p-1 xl:p-3 2xl:p-5 shadow font-OpenSans dark:bg-[#2c2c2c] min-[2200px]:text-2xl text-sm max-[500px]:text-xs font-medium'>
       <ResponsiveContainer>
         <LineChart data={data}>
           <XAxis dataKey="timestamp" tick={{ fill: theme === 'light' ? '#000' : '#fff' }} />
