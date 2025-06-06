@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CurrentTime from "../components/CurrentTime";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import { dark, green_fusion, light } from "../constants";
 import { useTheme } from "../components/ThemeContext";
