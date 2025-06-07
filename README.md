@@ -37,7 +37,7 @@ A real-time energy monitoring and management system built with React and Vite. T
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/suryanaidu048/VCEMS-CLIENT.git
    cd vems-client
    ```
 
@@ -77,15 +77,15 @@ src/
 ## Dashboard Screenshots
 
 ### Main Dashboard
-![Main Dashboard](screenshots/dashboard.png)
+![Main Dashboard](./screenshots/dashboard.png)
 *Real-time monitoring of power metrics across multiple PCCs*
 
 ### Energy Consumption Analysis
-![Energy Analysis](screenshots/energy-analysis.png)
+![Energy Analysis](./screenshots/energy-analysis.png)
 *Detailed energy consumption analysis with historical data*
 
 ### Power Factor Monitoring
-![Power Factor](screenshots/power-factor.png)
+![Power Factor](./screenshots/power-factor.png)
 *Power factor monitoring with real-time alerts*
 
 ## Contributing
