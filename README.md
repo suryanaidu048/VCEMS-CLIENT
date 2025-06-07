@@ -1,155 +1,105 @@
-# VCEMS-CLIENT
+# Vishnu Energy Management System (VCEMS)
 
-This project is a React-based client application for the VCEMS (Vishnu Energy Monitoring System). It provides a user interface for monitoring energy consumption, viewing graphs, and accessing various features related to energy management.
-
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+A real-time energy monitoring and management system built with React and Vite. This application provides comprehensive monitoring of power consumption across multiple Power Control Centers (PCCs) with real-time data visualization and alerts.
 
 ## Features
 
-- **Dashboard**: Overview of energy consumption with real-time data.
-- **Graphs**: Visual representation of energy consumption over time.
-- **PCC Monitoring**: Detailed monitoring of different PCCs (Power Consumption Centers).
-- **Predictions**: Energy consumption predictions based on historical data.
-- **Sensor Data**: Access to raw sensor data for detailed analysis.
-- **Dark Mode**: Toggle between light and dark themes for better user experience.
+- Real-time monitoring of power metrics (kW, kWh, kVA, Power Factor)
+- Multiple PCC monitoring (PCC1, PCC2, PCC3)
+- Interactive data visualization with charts and gauges
+- Real-time alerts for energy limit exceedance
+- Dark/Light theme support
+- Responsive design for all devices
+- Historical data analysis
+- Energy consumption predictions
 
 ## Technologies Used
 
-- **React**: Frontend library for building user interfaces.
-- **Vite**: Next-generation frontend tooling.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Axios**: Promise-based HTTP client for making API requests.
-- **Recharts**: Composable charting library built on React components.
-- **React Router**: Declarative routing for React applications.
-- **ESLint**: Linting tool for identifying and fixing problems in JavaScript code.
+- **Frontend Framework**: React 18.3.1
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **HTTP Client**: Axios
+- **Data Visualization**: 
+  - Recharts
+  - React Gauge Chart
+  - React Slick
+- **UI Components**: RSuite
+- **Notifications**: React Toastify
+- **Date Handling**: Moment.js
 
-## Installation
+## Prerequisites
 
-To get started with the project, follow these steps:
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
 
-1. **Clone the repository**:
+## Setup Instructions
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/suryanaidu048/VCEMS-CLIENT.git
-   cd VCEMS-CLIENT
+   git clone [repository-url]
+   cd vems-client
+   ```
 
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
+3. Create a `.env` file in the root directory and add your environment variables:
+   ```
+   VITE_API_URL=your_api_url
+   VITE_API_URL2=your_secondary_api_url
+   ```
 
-Install dependencies:
-npm install
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
+5. Build for production:
+   ```bash
+   npm run build
+   ```
 
+## Project Structure
 
-Start the development server:
-npm run dev
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Main page components
+├── data/          # Data and API configurations
+├── constants/     # Constant values and assets
+├── App.jsx        # Main application component
+└── main.jsx       # Application entry point
+```
 
+## Dashboard Screenshots
 
+### Main Dashboard
+![Main Dashboard](screenshots/dashboard.png)
+*Real-time monitoring of power metrics across multiple PCCs*
 
-Build the project for production:
-npm run build
+### Energy Consumption Analysis
+![Energy Analysis](screenshots/energy-analysis.png)
+*Detailed energy consumption analysis with historical data*
 
+### Power Factor Monitoring
+![Power Factor](screenshots/power-factor.png)
+*Power factor monitoring with real-time alerts*
 
+## Contributing
 
-Preview the production build:
-npm run preview
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
+## License
 
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Usage
+## Support
 
-Once the development server is running, you can access the application at http://localhost:3000. The application provides various routes for different functionalities:
-
-
-
-/: Dashboard with an overview of energy consumption.
-
-/graphs: Graphs showing energy consumption over time.
-
-/Pcc1, /Pcc2, /Pcc3: Detailed monitoring of different PCCs.
-
-/SingleMeter/:id: Detailed view of a single meter.
-
-/sensordata: Access to raw sensor data.
-
-/predictions: Energy consumption predictions.
-
-/video: Embedded video for additional information.
-
-/image: Display of an image related to the project.
-
-
-Project Structure
-
-The project structure is organized as follows:
-
-
-VCEMS-CLIENT/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── CurrentTime.jsx
-│   │   ├── EnergyUnits.jsx
-│   │   ├── Loading.jsx
-│   │   ├── PageNotFound.jsx
-│   │   ├── Panels.jsx
-│   │   ├── Sidebar.jsx
-│   │   ├── ThemeContext.jsx
-│   │   ├── Tiegrad.jsx
-│   │   └── Video.jsx
-│   ├── constants/
-│   │   └── index.js
-│   ├── data/
-│   │   └── api.js
-│   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── DatewiseGraphs.jsx
-│   │   ├── Pcc1.jsx
-│   │   ├── Pcc2.jsx
-│   │   ├── Pcc3.jsx
-│   │   ├── Prediction.jsx
-│   │   ├── PredictionBarChart.jsx
-│   │   ├── SingleMeter.jsx
-│   │   └── Data.jsx
-│   ├── App.css
-│   ├── App.jsx
-│   ├── index.css
-│   ├── main.jsx
-│   └── ...
-├── .gitignore
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-├── vite.config.js
-└── README.md
-
-Contributing
-
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
-
-
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature/your-feature).
-
-Make your changes.
-
-Commit your changes (git commit -m 'Add your feature').
-
-Push to the branch (git push origin feature/your-feature).
-
-Open a pull request.
-
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+For support, email [support@example.com] or create an issue in the repository.
